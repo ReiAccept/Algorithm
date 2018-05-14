@@ -1,8 +1,0 @@
-# depslib dependency file v1.0
-1502010680 source:i:\oi\gsq\c4\main.c
-	<stdio.h>
-	<stdlib.h>
-	<memory.h>
-	<unistd.h>
-	<fcntl.h>
-
