@@ -1,0 +1,5 @@
+##ignore this file##
+*.exe
+*.o
+*.swp
+*.out
