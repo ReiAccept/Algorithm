@@ -7,6 +7,8 @@ int n;
 int a[10010],b[10010];//a[i]表示第i个宝藏的位置,b[i]表示消失的时间
 int d[2][10010][2];
 
+const int INF=19260817;
+
 int main()
 {
     while(scanf("%d",&n)==1)
@@ -15,7 +17,7 @@ int main()
             scanf("%d%d",&a[i],&b[i]);
         int cur=0;
         for(int i=1;i<=n;i++)
-            d[0][i][0]=d[0][i][1]=(b[i]>0)?0:(1<<30);
+            d[0][i][0]=d[0][i][1]=(b[i]>0)?0:INF;
         for(int i=1;i<n;i++)
         {
             cur^=1;//如果k偶数,则k=k+1;若k奇数,则k=k-1,实际上就是如果1就0,如果0就1,滚动数组操作
@@ -23,11 +25,11 @@ int main()
             {
                 d[cur][j][0]=min(d[cur^1][j+1][0]+a[j+1]-a[j],d[cur^1][j+1][1]+a[j+i]-a[j]);
                 d[cur][j][1]=min(d[cur^1][j][0]+a[j+i]-a[j],d[cur^1][j][1]+a[j+i]-a[j+i-1]);
-                d[cur][j][0]=d[cur][j][0]<b[j]?d[cur][j][0]:(1<<30); 
-                d[cur][j][1]=d[cur][j][1]<b[j+i]?d[cur][j][1]:(1<<30);
+                d[cur][j][0]=d[cur][j][0]<b[j]?d[cur][j][0]:INF; 
+                d[cur][j][1]=d[cur][j][1]<b[j+i]?d[cur][j][1]:INF;
             }
         }
-        if(min(d[cur][1][0],d[cur][1][1])==(1<<30))
+        if(min(d[cur][1][0],d[cur][1][1])==INF)
             printf("No solution\n");
         else
             printf("%d\n",min(d[cur][1][0],d[cur][1][1]));
