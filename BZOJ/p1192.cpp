@@ -7,7 +7,7 @@ int main()
 	for(int i=1;;i++)
 	{
 		s*=2;
-        if(s>m){printf("%d",i);break;}	
+        if(s>m){printf("%d",i);break;}
 	}
 	return 0;
 }
