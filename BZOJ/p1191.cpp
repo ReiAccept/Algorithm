@@ -1,4 +1,4 @@
-#include<cstdio>
+ï»¿#include<cstdio>
 #include<cstring>
 
 using namespace std;
@@ -7,16 +7,16 @@ int n,m,ans;
 int grap[1003][1003],jnmj[1003];
 bool used[1003];
 
-bool findx(int x)//´«Èë±äÁ¿xÎªµÚxµÀÌâ 
+bool findx(int x)//ä¼ å…¥å˜é‡xä¸ºç¬¬xé“é¢˜ 
 {
-	for(int i=0;i<n;i++)//Ã¶¾ÙµÄÊÇ½õÄÒÃî¼Æ 
+	for(int i=0;i<n;i++)//æšä¸¾çš„æ˜¯é”¦å›Šå¦™è®¡ 
 	{
-		if(grap[x][i] && !used[i])//¿ÉÒÔÊ¹ÓÃÕâ¸ö½õÄÒÃî¼Æ²¢ÇÒÕâ¸öÃ»ÓĞ±»Ê¹ÓÃ¹ı 
+		if(grap[x][i] && !used[i])//å¯ä»¥ä½¿ç”¨è¿™ä¸ªé”¦å›Šå¦™è®¡å¹¶ä¸”è¿™ä¸ªæ²¡æœ‰è¢«ä½¿ç”¨è¿‡ 
 		{
 			used[i]=true;
-			if(!jnmj[i] || findx(jnmj[i]))//µ±Ç°Ãî¼ÆÎª0(Ã»·ÖÅä¸øÈÎºÎÌâÄ¿)»òµİ¹é¿ÉÒÔÕÒµ½ĞÂµÄ·ÖÅä 
+			if(!jnmj[i] || findx(jnmj[i]))//å½“å‰å¦™è®¡ä¸º0(æ²¡åˆ†é…ç»™ä»»ä½•é¢˜ç›®)æˆ–é€’å½’å¯ä»¥æ‰¾åˆ°æ–°çš„åˆ†é… 
 			{
-				jnmj[i]=x;//·ÖÅä¸øÌâÄ¿ 
+				jnmj[i]=x;//åˆ†é…ç»™é¢˜ç›® 
 				return true;
 			}
 		}
