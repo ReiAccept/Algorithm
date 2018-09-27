@@ -1,0 +1,73 @@
+·基础算法部分
+一、高精度计算
+1. 高精度加法
+http://ybt.ssoier.cn:8088/problem_show.php?pid=1168
+2. 高精度减法
+http://ybt.ssoier.cn:8088/problem_show.php?pid=1169
+3. 高精度乘法
+http://ybt.ssoier.cn:8088/problem_show.php?pid=1307
+4. 高精度除法
+http://ybt.ssoier.cn:8088/problem_show.php?pid=1308
+二、排序
+5. 归并排序
+6. 快速排序
+三、搜索与回溯
+7. 组合的输出
+http://ybt.ssoier.cn:8088/problem_show.php?pid=1317
+8. 自然数拆分
+http://ybt.ssoier.cn:8088/problem_show.php?pid=1318
+四、数论
+9. 快速幂
+Finish
+10. 线性筛素数
+https://www.luogu.org/problemnew/show/P3383
+五、广度优先搜索
+11. 细胞
+http://ybt.ssoier.cn:8088/problem_show.php?pid=1329
+12. 走出迷宫
+http://ybt.ssoier.cn:8088/problem_show.php?pid=1254
+六、动态规划
+13. 最长不下降序列
+http://ybt.ssoier.cn:8088/problem_show.php?pid=1259
+14. 最长公共子序列
+http://ybt.ssoier.cn:8088/problem_show.php?pid=1265
+15. 最大子矩阵
+http://ybt.ssoier.cn:8088/problem_show.php?pid=1282
+
+·数据结构部分
+七、栈与队列
+16. 中缀表达式（数组模拟、STL）
+http://ybt.ssoier.cn:8088/problem_show.php?pid=1358
+17. 循环队列
+
+八、树与二叉树
+18. 找树根和孩子
+http://ybt.ssoier.cn:8088/problem_show.php?pid=1336
+19. 求后序遍历
+http://ybt.ssoier.cn:8088/problem_show.php?pid=1339
+20. FBI树
+http://ybt.ssoier.cn:8088/problem_show.php?pid=1365
+
+九、图论算法
+21. 欧拉回路
+http://ybt.ssoier.cn:8088/problem_show.php?pid=1341
+22. 哈密尔顿环
+
+23. 最短路-floyed
+http://ybt.ssoier.cn:8088/problem_show.php?pid=1342
+24. 最短路-dijkstra
+http://ybt.ssoier.cn:8088/problem_show.php?pid=1381
+25. 最短路-SPFA
+http://ybt.ssoier.cn:8088/problem_show.php?pid=1382
+26. 并查集
+https://www.luogu.org/problemnew/show/P1111
+27. 最小生成树-Kruscal
+https://www.luogu.org/problemnew/show/P3366
+28. 最小生成树-Prim
+https://www.luogu.org/problemnew/show/P3366
+29. 拓扑排序与关键路径
+Finish
+https://www.luogu.org/problemnew/show/P1137
+十、线段树
+https://www.luogu.org/problemnew/show/P3372
+https://www.luogu.org/problemnew/show/P3373
