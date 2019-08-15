@@ -60,14 +60,14 @@ http://ybt.ssoier.cn:8088/problem_show.php?pid=1381
 25. 最短路-SPFA
 http://ybt.ssoier.cn:8088/problem_show.php?pid=1382
 26. 并查集
-https://www.luogu.org/problemnew/show/P1111
+Finish
 27. 最小生成树-Kruscal
-https://www.luogu.org/problemnew/show/P3366
+Finish
 28. 最小生成树-Prim
 https://www.luogu.org/problemnew/show/P3366
 29. 拓扑排序与关键路径
 Finish
-https://www.luogu.org/problemnew/show/P1137
+Finish
 十、线段树
 https://www.luogu.org/problemnew/show/P3372
 https://www.luogu.org/problemnew/show/P3373
