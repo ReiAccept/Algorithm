@@ -1,17 +1,26 @@
-//本题没有AC,我也不知道为什么
 #include<iostream>
 
 using namespace std;
 
-int n;
+int n,ans;
 char g[103][103];
-bool f[103][103];
-string s1="yizhong";
-string s2="gnohziy";
 
-bool check(string s)
+bool not_yz(char a)
 {
-	return (s==s1 || s==s2);
+    if(a=='y'||a=='i'||a=='z'||a=='h'||a=='o'||a=='n'||a=='g')return false;
+    return true;
+}
+
+void findx(int x,int y)
+{
+    if(g[x+1][y+1]=='i'&&g[x+2][y+2]=='z'&&g[x+3][y+3]=='h'&&g[x+4][y+4]=='o'&&g[x+5][y+5]=='n'&&g[x+6][y+6]=='g') ans++;
+    if(g[x-1][y-1]=='i'&&g[x-2][y-2]=='z'&&g[x-3][y-3]=='h'&&g[x-4][y-4]=='o'&&g[x-5][y-5]=='n'&&g[x-6][y-6]=='g') ans++;
+    if(g[x-1][y+1]=='i'&&g[x-2][y+2]=='z'&&g[x-3][y+3]=='h'&&g[x-4][y+4]=='o'&&g[x-5][y+5]=='n'&&g[x-6][y+6]=='g') ans++;
+    if(g[x+1][y-1]=='i'&&g[x+2][y-2]=='z'&&g[x+3][y-3]=='h'&&g[x+4][y-4]=='o'&&g[x+5][y-5]=='n'&&g[x+6][y-6]=='g') ans++;
+
+    if(g[x][y+1]=='i'&&g[x][y+2]=='z'&&g[x][y+3]=='h'&&g[x][y+4]=='o'&&g[x][y+5]=='n'&&g[x][y+6]=='g') ans++;
+    
+    if(g[x+1][y]=='i'&&g[x+2][y]=='z'&&g[x+3][y]=='h'&&g[x+4][y]=='o'&&g[x+5][y]=='n'&&g[x+6][y]=='g') ans++;
 }
 
 int main()
@@ -20,63 +29,12 @@ int main()
 	ios::sync_with_stdio(false);
 	for(int i=1;i<=n;i++)
 		for(int j=1;j<=n;j++)
-			cin>>g[i][j];
-	//横行
-	for(int i=1;i<=n;i++)
-		for(int j=1;j<=n-6;j++)
 		{
-			string s="";
-			for(int k=j;k<j+7;k++)
-				s+=g[i][k];
-			if(check(s))
-				for(int k=j;k<j+7;k++)
-					f[i][k]=true;
-		}
-	//竖行
-	for(int i=1;i<=n;i++)
-		for(int j=1;j<=n-6;j++)
-		{
-			string s="";
-			for(int k=j;k<j+7;k++)
-				s+=g[k][i];
-			if(check(s))
-				for(int k=j;k<j+7;k++)
-					f[k][i]=true;
-		}
-	//斜向
-	for(int i=1;i<=n;i++)
-	{
-		for(int j=1;j<=n-6;j++)
-		{
-			string s="";
-			for(int k=0;k<=6;k++)
-				s=s+g[j+k][i+k];
-			if(check(s))
-				for(int k=0;k<=6;k++)
-					f[j+k][i+k]=true;
-		}
-		for(int j=n;j>=6;j--)
-		{
-			string s="";
-			for(int k=0;k<=6;k++)
-				s=s+g[j-k][i+k];
-			if(check(s))
-				for(int k=0;k<=6;k++)
-					f[j-k][i+k]=true;
-		}
-	}
-	//输出
-	for(int i=1;i<=n;i++)
-	{
-		for(int j=1;j<=n;j++)
-		{
-			if(f[i][j])
-				cout<<g[i][j];
-			else
-				cout<<"*";
-		}
-		if(i!=n)
-			cout<<"\n";
-	}
+            cin>>g[i][j];
+            if(not_yz(g[i][j])) g[i][j]='*';
+        }
+    for(int i=1;i<=n;j++)
+        for(int j=1;j<=n;j++)
+            if(g[i][j]=='y')findx(i,j);
 	return 0;
 }
