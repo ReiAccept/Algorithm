@@ -18,7 +18,7 @@ void dfs(int now,int cur,double len)
         ans=min(ans,len);
         return;
     }
-    for(int i=1;i<=n;i++)
+    for(int i=1; i<=n; i++)
     {
         if(!vis[i])
         {
@@ -32,9 +32,9 @@ void dfs(int now,int cur,double len)
 int main()
 {
     cin>>n;
-    for(int i=1;i<=n;i++) cin>>x[i]>>y[i];
-    for(int i=0;i<=n;i++)
-        for(int j=0;j<=n;j++)
+    for(int i=1; i<=n; i++) cin>>x[i]>>y[i];
+    for(int i=0; i<=n; i++)
+        for(int j=0; j<=n; j++)
             dis[i][j]=sqrt((x[i]-x[j])*(x[i]-x[j])+(y[i]-y[j])*(y[i]-y[j]));
     dfs(0,0,0);
     printf("%.2f\n",ans);
