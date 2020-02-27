@@ -8,7 +8,8 @@ int h[100003];
 
 int main()
 {
-    for(int i=1;cin>>h[i];i++){n=i;}
+    while(cin>>h[++n]);
+    n--;
     for(int i=1;i<=n;i++)
     {
         
