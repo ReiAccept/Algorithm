@@ -22,11 +22,15 @@ void Solve()
         }
     }
     sort(a.begin(),a.end());
-    for (int i = 0, j = 0;; i++, j++) {
-        if (j>=(int)a.size() || i!=a[j]) {
+    int i=0,j=0;
+    while(true)
+    {
+        if (j>=(int)a.size() || i!=a[j]) 
+        {
             cout<<i<<endl;
             return;
         }
+        i++;j++;
     }
 }
 
