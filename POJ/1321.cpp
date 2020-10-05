@@ -6,12 +6,12 @@ int n,k,ans;
 bool vis[20];
 char mp[20][20];
 
-int DFS(int x,int y)
+void DFS(int x,int y)
 {
     if(y>=k)
     {
         ans++;
-        return 0;
+        return;
     }
     for(int i=x;i<n;i++)
     {
@@ -25,7 +25,7 @@ int DFS(int x,int y)
             }
         }
     }
-    return 0;
+    return;
 }
 int main()
 {
