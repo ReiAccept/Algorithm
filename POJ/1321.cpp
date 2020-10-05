@@ -14,17 +14,13 @@ void DFS(int x,int y)
         return;
     }
     for(int i=x;i<n;i++)
-    {
         for(int j=0;j<n;j++)
-        {
             if(!vis[j] && mp[i][j]=='#')
             {
                 vis[j]=true;
                 DFS(i+1,y+1);
                 vis[j]=false;
             }
-        }
-    }
     return;
 }
 int main()
