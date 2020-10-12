@@ -1,20 +1,28 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
+#define int unsigned long long
+#define Mid ((l + r) >> 1)
+#define lson (rt << 1)
+#define rson (rt << 1 | 1)
 #define ll long long
-#define uint unsigned int
 #define ull unsigned long long
+
 using namespace std;
-int qrd(){int a=0,b=1,c=getchar();while(c>'9'||c<'0'){if(c=='-')b=-1;c=getchar();}while(c>='0'&&c<='9')a=a*10+c-48,c=getchar();return a*b;}
 
-int n;
-
-void Solve()
-{
-    n=qrd();
+int read(){
+	char c; int num, f = 1;
+	while(c = getchar(),!isdigit(c)) if(c == '-') f = -1; num = c - '0';
+	while(c = getchar(), isdigit(c)) num = num * 10 + c - '0';
+	return num * f;
 }
 
-int main()
+void work()
 {
-    int T=1;//qrd();
-    while(T--) Solve();
+   return; 
+}
+
+signed main()
+{
+    int Case = 1;//read();
+	while(Case--) work();
     return 0;
 }
