@@ -14,14 +14,34 @@ int read(){
 	return num * f;
 }
 
+char r[300003];
+
 void work()
 {
-   return; 
+    int n=read(),ans=0;
+    bool f1=true,f2=true;
+    scanf("%s",r);
+    for(int i=0;i<n;i++)
+    {
+        if(r[i]=='<')f1=false;
+        if(r[i]=='>')f2=false;
+    }
+    if(f1 || f2)
+    {
+        cout<<n<<endl;
+    }
+    else
+    {
+        if(r[0]=='-' || r[n-1]=='-') ans=1;
+        for(int i=1;i<n;i++)if(r[i-1]=='-' || r[i]=='-')ans++;
+        cout<<ans<<endl;
+    }
+    return;
 }
 
 signed main()
 {
-    int Case = 1;//read();
+    int Case = read();
 	while(Case--) work();
     return 0;
 }
