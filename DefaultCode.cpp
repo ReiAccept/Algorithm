@@ -11,7 +11,7 @@ int read(){char c;int num,f=1;while(c=(char)getchar(),!isdigit(c))if(c=='-')f=-1
 
 void work()
 {
-   return; 
+    return; 
 }
 
 signed main()
