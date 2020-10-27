@@ -17,6 +17,7 @@ void dfs(int x,int fa,int val,bool flag=true){
     for(int i=head[x];i;i=e[i].nxt){
         if(fa==e[i].to) continue;
         flag=false;
+        if(a[e[i].to]+val>m)continue;
         if(a[e[i].to])dfs(e[i].to,x,a[e[i].to]+val);
         else dfs(e[i].to,x,0);
     }

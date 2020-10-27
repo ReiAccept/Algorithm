@@ -1,7 +1,4 @@
 #include <bits/stdc++.h>
-#define Mid ((l + r) >> 1)
-#define lson (rt << 1)
-#define rson (rt << 1 | 1)
 #define ll long long
 #define ull unsigned long long
 
