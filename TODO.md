@@ -35,3 +35,17 @@ https://codeforces.com/contest/1443/problem/C
 https://codeforces.com/contest/1443/problem/D
 
 https://codeforces.com/contest/1443/problem/F
+
+https://codeforces.com/gym/102832/problem/A
+
+https://codeforces.com/gym/102830/problem/A
+
+https://codeforces.com/gym/102830/problem/B
+
+https://codeforces.com/gym/102830/problem/B
+
+https://codeforces.com/gym/102830/problem/C
+
+https://codeforces.com/contest/1005/problem/C
+
+https://codeforces.com/contest/1005/problem/D
