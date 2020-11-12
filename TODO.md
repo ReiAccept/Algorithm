@@ -1,6 +1,6 @@
-https://codeforces.com/contest/1430/problem/D
+<del>https://codeforces.com/contest/1430/problem/D</del> 有点意思的水题
 
-https://codeforces.com/contest/1417/problem/A
+<del>https://codeforces.com/contest/1417/problem/A</del> 傻逼题
 
 https://codeforces.com/contest/1417/problem/B
 
