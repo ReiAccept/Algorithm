@@ -6,23 +6,27 @@ using namespace std;
 
 int read(){char c;int num,f=1;while(c=(char)getchar(),!isdigit(c))if(c=='-')f=-1;num=(int)(c-'0');while(c=(char)getchar(),isdigit(c))num=num*10+(int)(c-'0');return num*f;}
 
-int a[100003];
+int n;
+int a[300003];
 
 void work()
 {
-    int n=read(),T=read(),flag=0;
-    for(int tmp,i=1;i<=n;i++)
+    n=read();
+    for(int i=1;i<=n;i++) a[i]=read();
+    bool AllSame=true;
+    for(int i=2;i<=n && AllSame;i++)if(a[i-1]!=a[i]) AllSame=false;
+    if(AllSame)
     {
-        tmp=read();
-        if(tmp*2<T)printf("1 ");
-        else if(tmp*2>T)printf("0 ");
-        else
-        {
-            printf("%d ",flag);
-            flag^=1;
-        }
+        printf("-1\n");
+        return;
     }
-    printf("\n");
+    int maxn=a[1],maxi=1;
+    for(int i=2;i<=n-1;i++)
+    {
+        if(maxn<=a[i] && (a[i]>a[i-1] || a[i]>a[i+1]))maxi=i,maxn=a[i];
+    }
+    if(a[n]>maxn && a[n]>a[n-1])maxi=n;
+    printf("%d\n",maxi);
     return;
 }
 
@@ -36,4 +40,3 @@ signed main()
     }
     return 0;
 }
-//大于小于分开放就行,正好T/2的话就各方一边

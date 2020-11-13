@@ -1,20 +1,20 @@
 <del>https://codeforces.com/contest/1430/problem/D</del> 有点意思的水题
 
-<del>https://codeforces.com/contest/1417/problem/A</del> 傻逼题
+<del>https://codeforces.com/contest/1417/problem/A</del> 一眼题
 
-https://codeforces.com/contest/1417/problem/B
+<del>https://codeforces.com/contest/1417/problem/B</del> 杂技
 
-https://codeforces.com/contest/1421/problem/A
+<del>https://codeforces.com/contest/1421/problem/A</del> 数学题,有点蛋疼x^a+x^b取最小值x=a^b
 
-https://codeforces.com/contest/1421/problem/B
+<del>https://codeforces.com/contest/1421/problem/B</del> 码农题,g(1,2),g(2,1)以及g(n-1,n),g(n,n-1)
 
-https://codeforces.com/contest/1433/problem/A
+<del>https://codeforces.com/contest/1433/problem/A</del> 背景有趣的一眼题,给大一讲课讲课
 
-https://codeforces.com/contest/1433/problem/C
+<del>https://codeforces.com/contest/1433/problem/C</del> 一眼题,特判+贪一发
 
-https://codeforces.com/contest/1436/problem/A
+<del>https://codeforces.com/contest/1436/problem/A</del> 稍加计算的裸题
 
-https://codeforces.com/contest/1436/problem/B
+<del>https://codeforces.com/contest/1436/problem/B</del> 0&1特殊的非质数,令人烦躁的找规律
 
 https://codeforces.com/contest/1437/problem/A
 
