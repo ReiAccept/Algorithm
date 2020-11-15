@@ -6,13 +6,11 @@ using namespace std;
 
 int read(){char c;int num,f=1;while(c=(char)getchar(),!isdigit(c))if(c=='-')f=-1;num=(int)(c-'0');while(c=(char)getchar(),isdigit(c))num=num*10+(int)(c-'0');return num*f;}
 
-int l,r;
+int n;
 
 void work()
 {
-    l=read();r=read();
-    if(l*2>r)printf("YES\n");
-    else printf("NO\n");
+    n=read();
     return;
 }
 

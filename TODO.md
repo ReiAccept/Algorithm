@@ -16,15 +16,15 @@
 
 <del>https://codeforces.com/contest/1436/problem/B</del> 0&1特殊的非质数,令人烦躁的找规律
 
-https://codeforces.com/contest/1437/problem/A
+<del>https://codeforces.com/contest/1437/problem/A</del> l*2>r ? YES : NO
 
-https://codeforces.com/contest/1437/problem/B
+<del>https://codeforces.com/contest/1437/problem/B</del> 连续的0的个数和连续的1的个数的最大值
 
-https://codeforces.com/contest/1445/problem/A
+<del>https://codeforces.com/contest/1445/problem/A</del> 正反向sort然后相加求是否小于x
 
-https://codeforces.com/contest/1445/problem/B
+<del>https://codeforces.com/contest/1445/problem/B</del> max(a+b,c+d)
 
-https://codeforces.com/contest/1445/problem/C
+https://codeforces.com/contest/1445/problem/C (啊啊啊我数论学的好差啊)
 
 https://codeforces.com/contest/1443/problem/A
 
