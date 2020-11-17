@@ -11,7 +11,8 @@ int n;
 void work()
 {
     n=read();
-    for(int i=2*n;i<4*n;i+=2)printf("%d ",i);
+    printf("%d\n",n);
+    for(int i=1;i<=n;i++) printf("%d ",i);
     printf("\n");
     return;
 }
@@ -26,3 +27,6 @@ signed main()
     }
     return 0;
 }
+/*
+每一次的操作，可以看成将选择的数减去j（与，“每次选一个数，除它以外所有数都加j” 的效果相同），因为要操作的数是1到n，所以我们按顺序选，第一次操作选1，让1减去1，第二次操作选2，以此类推即可
+*/

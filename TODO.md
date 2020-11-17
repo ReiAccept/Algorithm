@@ -26,7 +26,7 @@
 
 https://codeforces.com/contest/1445/problem/C (啊啊啊我数论学的好差啊)
 
-https://codeforces.com/contest/1443/problem/A
+<del>https://codeforces.com/contest/1443/problem/A</del> 输出[2*n,4*n)之间所有的偶数
 
 https://codeforces.com/contest/1443/problem/B
 
