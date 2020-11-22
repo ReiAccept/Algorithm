@@ -49,3 +49,5 @@ https://codeforces.com/gym/102830/problem/C
 https://codeforces.com/contest/1005/problem/C
 
 https://codeforces.com/contest/1005/problem/D
+
+https://vjudge.net/article/187 [kuangbin带你飞]专题1-23

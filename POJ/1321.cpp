@@ -1,39 +1,53 @@
-#include<bits/stdc++.h>
+#include<cstdio>
+#include<iostream>
+#define ll long long
+#define ull unsigned long long
 
 using namespace std;
 
-int n,k,ans;
-bool vis[20];
-char mp[20][20];
+int read(){char c;int num,f=1;while(c=(char)getchar(),!isdigit(c))if(c=='-')f=-1;num=(int)(c-'0');while(c=(char)getchar(),isdigit(c))num=num*10+(int)(c-'0');return num*f;}
 
-void DFS(int x,int y)
+int n,k,ans;
+char g[10][10];
+bool v[10];
+
+void dfs(int c,int cnt)//c->行数 cnt 棋子数
 {
-    if(y>=k)
+    if(cnt==k)
     {
         ans++;
         return;
     }
-    for(int i=x;i<n;i++)
-        for(int j=0;j<n;j++)
-            if(!vis[j] && mp[i][j]=='#')
-            {
-                vis[j]=true;
-                DFS(i+1,y+1);
-                vis[j]=false;
-            }
+    for(int i=1;i<=n;i++)
+    {
+        if(!v[i] && g[c][i]=='#')
+        {
+            v[i]=true;
+            dfs(c+1,cnt+1);
+            v[i]=false;
+        }
+    }
+    if(c<n)dfs(c+1,cnt);
+}
+
+void work()
+{
+    ans=0;
+    for(int i=1;i<=n;i++)
+        for(int j=1;j<=n;j++)
+            cin>>g[i][j];
+    dfs(1,0);
+    cout<<ans<<endl;
     return;
 }
-int main()
+
+signed main()
 {
-    while(cin>>n>>k)
+    int T=1;//read();
+	for(int Case=1;Case<=T;Case++)
     {
-        if(n==-1 && k==-1) break;
-        memset(mp,0,sizeof(mp));
-        memset(vis,0,sizeof(vis));
-        ans=0;
-        for(int i=0;i<n;i++) cin>>mp[i];
-        DFS(0,0);
-        cout<<ans<<endl;
+        //printf("Case #%d: ",Case);
+        while(cin>>n>>k && (n!=-1 && k!=-1)) work();
     }
     return 0;
 }
