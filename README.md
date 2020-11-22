@@ -6,3 +6,5 @@
 ```
 alias cpdef="cp /home/space/Oi/DefaultCode.cpp"
 ```
+
+将很多已经消亡的东西归档
