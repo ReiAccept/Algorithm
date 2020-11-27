@@ -50,4 +50,12 @@ https://codeforces.com/contest/1005/problem/C
 
 https://codeforces.com/contest/1005/problem/D
 
+
+
 https://vjudge.net/article/187 [kuangbin带你飞]专题1-23
+
+POJ1321 水,DFS入门
+
+POJ2251 水,BFS入门
+
+POJ2378 水,BFS入门,但是写的时候眼瞎边界少打一个0找半天
