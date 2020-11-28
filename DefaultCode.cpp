@@ -1,4 +1,4 @@
-//#include<bits/extc++.h>
+#include<bits/extc++.h>
 #include<bits/stdc++.h>
 #define ll long long
 //#define int long long
@@ -6,7 +6,7 @@
 #define MMST(x,y) memset(x,y,sizeof(x))
 
 using namespace std;
-//using namespace __gnu_pbds;
+using namespace __gnu_pbds;
 
 const int INF=0x3f3f3f3f;
 
