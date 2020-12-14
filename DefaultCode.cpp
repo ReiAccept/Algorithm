@@ -1,7 +1,6 @@
 #include<bits/stdc++.h>
 //#include<bits/extc++.h>
-#define ll long long
-//#define int long long
+#define int long long
 //#define int __int128
 //#define int __uint128_t
 #define ull unsigned long long
