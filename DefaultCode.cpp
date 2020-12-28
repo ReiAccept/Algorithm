@@ -2,7 +2,6 @@
 //#include<bits/extc++.h>
 #define int long long
 //#define int __int128
-//#define int __uint128_t
 #define ull unsigned long long
 #define MMST(x,y) memset(x,y,sizeof(x))
 
@@ -16,6 +15,7 @@ void prt(int x){if(x<0){putchar('-');x=-x;}if(x>9)prt(x/10);putchar((char)(x%10+
 
 void work()
 {
+    cout<<"qwq"<<endl;
     return;
 }
 
