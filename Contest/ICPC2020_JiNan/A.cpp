@@ -56,7 +56,7 @@ void work()
 signed main()
 {
     int T=1;//read();
-	for(int Case=1;Case<=T;Case++)
+    for(int Case=1;Case<=T;Case++)
     {
         //printf("Case #%d: ",Case);
         work();

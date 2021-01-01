@@ -16,8 +16,12 @@ void prt(int x){if(x<0){putchar('-');x=-x;}if(x>9)prt(x/10);putchar((char)(x%10+
 void work()
 {
     int ans=0,n;
-    while(cin>>n) ans+=read();
-    cout<<ans<<endl;
+    while(cin>>n)
+    {
+        ans=0;
+        while(n--) ans+=read();
+        cout<<ans<<endl;
+    }
     return;
 }
 

@@ -13,8 +13,14 @@ const int INF=0x3f3f3f3f;
 int read(){char c;int num,f=1;while(c=(char)getchar(),!isdigit(c))if(c=='-')f=-1;num=(int)(c-'0');while(c=(char)getchar(),isdigit(c))num=num*10+(int)(c-'0');return num*f;}
 void prt(int x){if(x<0){putchar('-');x=-x;}if(x>9)prt(x/10);putchar((char)(x%10+'0'));}
 
+int a,b;
+
 void work()
 {
+    while(cin>>a>>b)
+    {
+        cout<<a+b<<endl<<endl;
+    }
     return;
 }
 
