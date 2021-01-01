@@ -15,6 +15,11 @@ void prt(int x){if(x<0){putchar('-');x=-x;}if(x>9)prt(x/10);putchar((char)(x%10+
 
 void work()
 {
+    int a,b;
+    while(cin>>a>>b && (a || b))
+    {
+        cout<<a+b<<endl;
+    }
     return;
 }
 
@@ -28,3 +33,4 @@ signed main()
     }
     return 0;
 }
+

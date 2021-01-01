@@ -15,6 +15,21 @@ void prt(int x){if(x<0){putchar('-');x=-x;}if(x>9)prt(x/10);putchar((char)(x%10+
 
 void work()
 {
+    cout<<"B"<<endl;//1
+    cout<<"ABCD"<<endl;//2
+    cout<<"C"<<endl;//3
+    cout<<"A"<<endl;//4
+    cout<<"ACD"<<endl;//5
+    cout<<"C"<<endl;//6
+    cout<<"B"<<endl;//7
+    cout<<"C"<<endl;//8
+    cout<<"D"<<endl;//9
+    cout<<"D"<<endl;//10
+    cout<<"A"<<endl;//11
+    cout<<"ABC"<<endl;//12
+    cout<<"C"<<endl;//13
+    cout<<"D"<<endl;//14
+    cout<<"AD"<<endl;//15
     return;
 }
 

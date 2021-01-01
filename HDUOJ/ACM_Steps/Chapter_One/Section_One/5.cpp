@@ -15,12 +15,15 @@ void prt(int x){if(x<0){putchar('-');x=-x;}if(x>9)prt(x/10);putchar((char)(x%10+
 
 void work()
 {
+    int n=read(),ans=0;
+    while(n--) ans+=read();
+    cout<<ans<<endl;
     return;
 }
 
 signed main()
 {
-    int T=1;//read();
+    int T=read();
 	for(int Case=1;Case<=T;Case++)
     {
         //printf("Case #%d: ",Case);

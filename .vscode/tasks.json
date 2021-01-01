@@ -4,7 +4,7 @@
 		{
 			"type": "cppbuild",
 			"label": "C/C++: g++.exe build active file",
-			"command": "D:\\CodeBlocks\\MinGW\\bin\\g++.exe",
+			"command": "g++.exe",
 			"args": [
 				"-g",
 				"${file}",
@@ -12,7 +12,7 @@
 				"${fileDirname}\\${fileBasenameNoExtension}.exe"
 			],
 			"options": {
-				"cwd": "D:\\CodeBlocks\\MinGW\\bin"
+				"cwd": "${fileDirname}"
 			},
 			"problemMatcher": [
 				"$gcc"
@@ -21,7 +21,7 @@
 				"kind": "build",
 				"isDefault": true
 			},
-			"detail": "compiler: D:\\CodeBlocks\\MinGW\\bin\\g++.exe"
+			"detail": "compiler: g++.exe"
 		}
 	]
 }
