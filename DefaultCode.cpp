@@ -20,7 +20,7 @@ void work()
 
 signed main()
 {
-    //ios::sync_with_stdio(false);cin.tie(0);
+    //ios::sync_with_stdio(false);cin.tie(NULL);
     int T=1;//read();
     for(int Case=1;Case<=T;Case++)
     {
