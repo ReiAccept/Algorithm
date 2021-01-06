@@ -3,13 +3,13 @@
 	"tasks": [
 		{
 			"type": "cppbuild",
-			"label": "C/C++: g++.exe build active file",
-			"command": "g++.exe",
+			"label": "C/C++: g++ build active file",
+			"command": "g++",
 			"args": [
 				"-g",
 				"${file}",
 				"-o",
-				"${fileDirname}\\${fileBasenameNoExtension}.exe"
+				"${fileDirname}/${fileBasenameNoExtension}.exe"
 			],
 			"options": {
 				"cwd": "${fileDirname}"
@@ -21,7 +21,7 @@
 				"kind": "build",
 				"isDefault": true
 			},
-			"detail": "compiler: g++.exe"
+			"detail": "compiler: g++"
 		}
 	]
 }
