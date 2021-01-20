@@ -4,19 +4,30 @@
 //#define int __int128
 #define ull unsigned long long
 #define mmst0(x) memset(x,0,sizeof(x))
-#define pb(x) push_back(x)
 
 using namespace std;
 //using namespace __gnu_pbds;
 
-const int INF=0x3f3f3f3f,MOD=1e9+7;
+const int INF=0x3f3f3f3f;
 
 int read(){char c;int num,f=1;while(c=(char)getchar(),!isdigit(c))if(c=='-')f=-1;num=(int)(c-'0');while(c=(char)getchar(),isdigit(c))num=num*10+(int)(c-'0');return num*f;}
-//void prt(int x){if(x<0){putchar('-');x=-x;}if(x>9)prt(x/10);putchar((char)(x%10+'0'));} //警告,如非必须(如__int128),请不要使用快写
+void prt(int x){if(x<0){putchar('-');x=-x;}if(x>9)prt(x/10);putchar((char)(x%10+'0'));}
+
+int n,mx,res;
+int a[200003],b[200003];
 
 void work()
 {
-    return;
+    n=read();
+    for(int i =1; i <= n; i++) a[i]=read();
+    for(int i =1; i <= n; i++) b[i]=read();
+    for(int i = 1; i <= n; ++i) 
+    {
+        mx = max(mx, a[i]);
+        res = max(res, mx*b[i]);
+        prt(res);
+        cout<<endl;
+    }
 }
 
 signed main()
