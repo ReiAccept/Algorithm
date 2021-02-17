@@ -12,16 +12,33 @@ typedef unsigned long long ull;
 typedef long double real;
 
 const int INF=0x3f3f3f3f;//0x3f3f3f3f3f3f3f3f;//LLINF
+int n,m;
+const int MOD=100000;
+
+int g[103][103];
+int fa[103];
 
 void work()
 {
+    scanf("%lld%lld",&n,&m);
+    for(int i=0;i<n;i++)
+    {
+        fa[i]=i;
+        for(int j=0;j<n;j++) g[i][j]=-1;
+        g[i][i]=0;
+    }
+    for(int u,v,i=0;i<n;i++)
+    {
+        scanf("%lld%lld",&u,&v);
+
+    }
     return;
 }
 
 signed main()
 {
     //ios::sync_with_stdio(false);cin.tie(NULL);
-    int T=1;//scanf("%lld",&T);
+    int T=1;//read(T);
     for(int Case=1; Case<=T; Case++)
     {
         //printf("Case #%d: ",Case);

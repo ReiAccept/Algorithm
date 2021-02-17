@@ -13,15 +13,28 @@ typedef long double real;
 
 const int INF=0x3f3f3f3f;//0x3f3f3f3f3f3f3f3f;//LLINF
 
+int n,maxn;
+int a[200003];
+map<int,int> f;
+
 void work()
 {
+    f.clear();maxn=0;
+    scanf("%lld",&n);
+    for(int i=1;i<=n;i++) scanf("%lld",a+i);
+    for(int i=1;i<=n;i++)
+    {
+        if(f[i]+a[i]>f[i+a[i]])f[i+a[i]]=f[i]+a[i];
+		maxn=max(maxn,f[i+a[i]]);
+    }
+    printf("%lld\n",maxn);
     return;
 }
 
 signed main()
 {
     //ios::sync_with_stdio(false);cin.tie(NULL);
-    int T=1;//scanf("%lld",&T);
+    int T=1;scanf("%lld",&T);
     for(int Case=1; Case<=T; Case++)
     {
         //printf("Case #%d: ",Case);

@@ -13,15 +13,31 @@ typedef long double real;
 
 const int INF=0x3f3f3f3f;//0x3f3f3f3f3f3f3f3f;//LLINF
 
+int n,al,bb;
+int a[200003];
+
 void work()
 {
+    scanf("%lld",&n);al=bb=0;
+    for(int i=1;i<=n;i++) scanf("%lld",a+i);
+    sort(a+1,a+1+n,[](int a,int b){
+            return a>b;
+            });
+    for(int i=1;i<=n;i++)
+    {
+        if(i%2 && a[i]%2==0)al+=a[i];
+        if(i%2==0 && a[i]%2==1)bb+=a[i];
+    }
+    if(bb>al)printf("Bob\n");
+    else if(al>bb)printf("Alice\n");
+    else printf("Tie\n");
     return;
 }
 
 signed main()
 {
     //ios::sync_with_stdio(false);cin.tie(NULL);
-    int T=1;//scanf("%lld",&T);
+    int T=1;scanf("%lld",&T);
     for(int Case=1; Case<=T; Case++)
     {
         //printf("Case #%d: ",Case);

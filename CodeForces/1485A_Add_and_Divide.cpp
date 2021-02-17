@@ -13,15 +13,34 @@ typedef long double real;
 
 const int INF=0x3f3f3f3f;//0x3f3f3f3f3f3f3f3f;//LLINF
 
+int A,B,res;
+
 void work()
 {
-    return;
+	cin>>A>>B;
+	if(!A)
+    {
+		cout<<0<<endl;
+		return;
+	}
+	res=A+3;
+	for(int i=(B<2?2-B:0); i<res; i++)
+    {
+		int b=B+i,a=A,ans=i;
+		while(a)
+        {
+			a/=b;
+			++ans;
+		}
+		if(ans<res)res=ans;
+	}
+	cout<<res<<endl;
 }
 
 signed main()
 {
     //ios::sync_with_stdio(false);cin.tie(NULL);
-    int T=1;//scanf("%lld",&T);
+    int T=1;scanf("%lld",&T);
     for(int Case=1; Case<=T; Case++)
     {
         //printf("Case #%d: ",Case);

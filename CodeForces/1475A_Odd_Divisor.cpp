@@ -13,15 +13,19 @@ typedef long double real;
 
 const int INF=0x3f3f3f3f;//0x3f3f3f3f3f3f3f3f;//LLINF
 
+int n;
+
 void work()
 {
-    return;
+    scanf("%lld",&n);
+    if(n-(n&(-n))==0)printf("NO\n");
+    else printf("YES\n");
 }
 
 signed main()
 {
     //ios::sync_with_stdio(false);cin.tie(NULL);
-    int T=1;//scanf("%lld",&T);
+    int T=1;scanf("%lld",&T);
     for(int Case=1; Case<=T; Case++)
     {
         //printf("Case #%d: ",Case);
