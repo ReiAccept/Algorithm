@@ -2,12 +2,13 @@
     "configurations": [
         {
             "name": "MinGW",
-            "intelliSenseMode": "gcc-x64",
+            "intelliSenseMode": "windows-gcc-x64",
             "compilerPath": "gcc.exe",
             "includePath": [
                 "${workspaceFolder}"
             ],
-            "cppStandard": "c++11"
+            "cppStandard": "c++11",
+            "cStandard": "c99"
         },
         {
             "name": "Linux",
