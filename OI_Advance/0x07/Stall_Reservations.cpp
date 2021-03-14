@@ -24,7 +24,7 @@ struct Node
 }c[50003];
 
 int n,sum;
-int in[50003];//ÓÃÓÚ´æ´¢Å£ÔÚÄÄ¸öÅ£À¸µÄË³Ğò 
+int in[50003];//ç”¨äºå­˜å‚¨ç‰›åœ¨å“ªä¸ªç‰›æ çš„é¡ºåº 
 priority_queue<Node> q;
 
 void work()
@@ -40,7 +40,7 @@ void work()
     {
         if((!q.empty()) && c[i].l>q.top().r)
         {
-            in[c[i].num]=in[q.top().num];//Å£À¸ĞøÉÏ 
+            in[c[i].num]=in[q.top().num];//ç‰›æ ç»­ä¸Š 
             q.pop();
         }
         else 
