@@ -1,0 +1,37 @@
+{
+    "display_id": "CS1922",
+    "title": "\u8d70\u8ff7\u5bab",
+    "description": {
+        "format": "html",
+        "value": "<p>\u8fd9\u91cc\u6709\u4e2an*n\u7684\u8ff7\u5bab.</p><pre><code>&#039;S&#039; : \u4ee3\u8868\u8d77\u70b9.\n&#039;.&#039; : \u4ee3\u8868\u8def.\n&#039;#&#039; : \u4ee3\u8868\u5899.\n&#039;E&#039; : \u4ee3\u8868\u7ec8\u70b9.\n</code></pre><p>\u73b0\u5728\u6709\u56db\u79cd\u64cd\u4f5c.</p><pre><code>&#039;W&#039; : \u5411\u4e0a\u8d70\u4e00\u6b65.\n&#039;A&#039; : \u5411\u5de6\u8d70\u4e00\u6b65.\n&#039;S&#039; : \u5411\u4e0b\u8d70\u4e00\u6b65.\n&#039;D&#039; : \u5411\u53f3\u8d70\u4e00\u6b65.\n</code></pre><p>\u5f53\u524d\u8fdb\u7684\u65b9\u5411\u662f\u5899\u7684\u65f6\u5019, \u8be5\u6b65\u64cd\u4f5c\u65e0\u6548.</p><p>\u95ee\u6700\u540e(\u6216\u4e2d\u9014)\u80fd\u5426\u5230\u8fbe\u7ec8\u70b9.</p>"
+    },
+    "tags": [
+        "\u7a0b\u5e8f\u8bbe\u8ba1\u57fa\u7840"
+    ],
+    "input_description": {
+        "format": "html",
+        "value": "<p>\u7b2c1\u884c\u8f93\u5165\u4e00\u4e2a\u6574\u6570n($5&lt;=n&lt;=100$), \u4ee3\u8868\u8fd9\u662f\u4e00\u4e2an*n\u7684\u8ff7\u5bab</p><p>\u7b2c2\u884c\u5230\u7b2cn+1\u884c\u6bcf\u884c\u8f93\u5165\u4e00\u4e2a\u957f\u5ea6\u4e3an\u7684\u5b57\u7b26\u4e32, \u4ee3\u8868\u8ff7\u5bab\u7684\u5185\u5bb9, \u4fdd\u8bc1\u6709\u4e00\u4e2a\u8d77\u70b9\u548c\u4e00\u4e2a\u7ec8\u70b9, \u53ea\u4f1a\u51fa\u73b0&#039;S&#039;, &#039;.&#039;, &#039;#&#039;, &#039;E&#039;\u56db\u4e2a\u5b57\u7b26, \u4e14\u8ff7\u5bab\u8fb9\u754c\u6c38\u8fdc\u662f\u5899(&#039;#&#039;).</p><p>\u7b2cn+2\u884c\u8f93\u5165\u4e00\u4e2a\u6b63\u6574\u6570len ($1&lt;=len&lt;=100$), \u4ee3\u8868\u63a5\u4e0b\u6765\u4f1a\u6709\u591a\u5c11\u6b65\u64cd\u4f5c.</p><p>\u7b2cn+3\u884c\u8f93\u5165\u4e00\u4e2a\u5b57\u7b26\u4e32, \u957f\u5ea6\u4e3alen, \u53ea\u4f1a\u51fa\u73b0&#039;W&#039;, &#039;A&#039;, &#039;S&#039;, &#039;D&#039;\u56db\u79cd\u5b57\u7b26.</p>"
+    },
+    "output_description": {
+        "format": "html",
+        "value": "<p>\u5982\u679c\u9014\u4e2d\u6216\u8005\u6700\u540e\u5230\u8fbe\u7ec8\u70b9, \u8f93\u51fa&quot;Yes&quot;.</p><p>\u5426\u5219\u8f93\u51fa&quot;No&quot;. (\u5747\u4e3a\u53cc\u5f15\u53f7\u5185\u5185\u5bb9)</p>"
+    },
+    "test_case_score": null,
+    "hint": {
+        "format": "html",
+        "value": "<ul><li>\u7b2c\u4e00\u6b65\u5411\u5de6.</li><li>\u7b2c\u4e8c\u6b65\u5de6\u9762\u662f\u5899, \u8be5\u6b65\u65e0\u6548.</li><li>\u7b2c\u4e09\u6b65\u5411\u4e0b.</li><li>\u7b2c\u56db\u6b65\u5411\u53f3, \u9047\u89c1\u7ec8\u70b9, \u8f93\u51fa&quot;Yes&quot;, \u7a0b\u5e8f\u7ed3\u675f.</li></ul>"
+    },
+    "time_limit": 1000,
+    "memory_limit": 256,
+    "samples": [
+        {
+            "input": "5\n#####\n#.S.#\n#.E.#\n#...#\n#####\n5\nAASDD\n",
+            "output": "Yes"
+        }
+    ],
+    "template": {},
+    "spj": null,
+    "rule_type": "ACM",
+    "source": "CCUT Online Judge 192.168.2.30",
+    "answers": []
+}

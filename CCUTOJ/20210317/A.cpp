@@ -15,15 +15,37 @@ const int INF=0x3f3f3f3f;//0x3f3f3f3f3f3f3f3f;//LLINF
 
 int read(){int s=0,w=1;char ch=getchar();while(!isdigit(ch)){if(ch=='-')w=-1;ch=getchar();}while(isdigit(ch)){s=(s<<3)+(s<<1)+(ch^48);ch=getchar();} return s*w;}
 
+string a;
+string b="think different";
+
 void work()
 {
+    while(getline(cin,a))
+    {
+        int ans=0;
+        for(int i=0;i<a.size();i++)
+            if(a[i]=='t' || a[i]=='T')
+            {
+                bool flag=true;
+                for(int j=0;j<b.size();j++)
+                {
+                    if(a[i+j]!=b[j] && a[i+j]!=(b[j]-'a'+'A'))
+                    {
+                        flag=false;
+                        break;
+                    }
+                }
+                if(flag) ans++;
+            }
+        cout<<ans<<endl;
+    }
     return;
 }
 
 signed main()
 {
     //ios::sync_with_stdio(false);cin.tie(NULL);
-    signed T=1;read();
+    signed T=1;//read();
     for(signed Case=1; Case<=T; Case++)
     {
         //printf("Case %d: ",Case);
