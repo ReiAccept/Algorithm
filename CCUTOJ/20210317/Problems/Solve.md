@@ -1,108 +1,118 @@
 ```cpp
-string a;
-string b="think different";
-
-void work()
+string a,b="think different";
+signed main()
 {
     while(getline(cin,a))
     {
         int ans=0;
-        for(int i=0;i<a.size();i++)
-            if(a[i]=='t' || a[i]=='T')
+        for(int i=0;i<(int)a.size();i++)
+            if(a[i]=='T' || a[i]=='t')
             {
-                bool flag=true;
-                for(int j=0;j<b.size();j++)
+                int flag=true;
+                for(int j=0;j<(int)b.size() && flag;j++)
                 {
-                    if(a[i+j]!=b[j] && a[i+j]!=(b[j]-'a'+'A'))
-                    {
-                        flag=false;
-                        break;
-                    }
+                    if(a[i+j]==b[j] || a[i+j]==b[j]+'A'-'a') flag=true;
+                    else flag=false;
                 }
                 if(flag) ans++;
             }
         cout<<ans<<endl;
     }
-    return;
+    return 0;
 }
 ```
 
 ```cpp
-void work(int a,int n=1)
-{
-    if(a<=10)
-    {
-        cout<<"1"<<endl;
-        return;
-    }
-    while(a>=10)
-    {
-        a+=5;
-        a/=10;
-        n*=10;
-    }
-    cout<<a*n<<endl;
-    return;
-}
-```
+int n,x;
 
-```cpp
-int n, a[1010], cnt;
-
-void work()
+int main()
 {
-    while (scanf("%d", &n) && n) 
+    ios::sync_with_stdio(false);
+    cin>>n;
+    while(n--)
     {
-        cnt = 0;
-        for (int i = 0; i < n; i++) scanf("%d", &a[i]);
-        for (int j = 1; j < n; j++) 
+        cin>>x;
+        if(x<=10)
         {
-            for (int i = 0; i < n - j; i++) 
-            {
-                if (a[i] > a[i + 1]) {
-                    swap(a[i],a[i+1]);
-                    cnt++;
-                }
-            }
+            cout<<1<<endl;
+            continue;
         }
-        printf("%d\n", cnt);
+        int w=1;
+        while(x>=10)
+        {
+            x+=5;
+            x/=10;
+            w*=10;
+        }
+        cout<<x*w<<endl;
     }
-    return;
+    return 0;
+}
+```
+
+```cpp
+int n;
+int a[1003];
+int main()
+{
+    ios::sync_with_stdio(false);
+    while(cin>>n && n)
+    {
+        int ans=0;
+        for(int i=0;i<n;i++) cin>>a[i];
+        for(int i=1;i<n;i++)
+            for(int j=0;j<n-i;j++)
+                if(a[j]>a[j+1])
+                {
+                    swap(a[j],a[j+1]);
+                    ans++;
+                }
+        cout<<ans<<endl;
+    }
+    return 0;
 }
 ```
 
 ```java
-import java.io.*;
-import java.util.*;
-import java.math.*;
-
-
-public class Main {
-    public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        int Case;
-        Case = sc.nextInt();
-        while(Case > 0) {
-            Case--;
-            BigInteger a =  new BigInteger("0");	
-            BigInteger b = sc.nextBigInteger();
-            BigInteger zero = new BigInteger("0");
-            while(b.intValue() != 0) {
-                a = a.add(b);
-                b = sc.nextBigInteger();
-            }
-            System.out.println(a);
-            System.out.println("");
-        }
-        
+int n;
+string s;
+int num[1003];
+void add()
+{
+    int x=0;
+    reverse(s.begin(),s.end());
+    for(int i=0;i<(int)s.size();i++)
+    {
+        x+=s[i]-'0'+num[i];
+        num[i]=(x%10);
+        x/=10;
     }
+    if(x)num[(int)s.size()]+=x;
+}
+int main()
+{
+    ios::sync_with_stdio(false);
+    cin>>n;
+    while(n--)
+    {
+        memset(num,0,sizeof(num));
+        while(cin>>s && s!="0")add();
+        int len=1000;
+        while(!num[len])len--;
+        while(len>=0)
+        {
+            cout<<num[len];
+            len--;
+        }
+        cout<<endl;
+    }
+    
 }
 ```
 
 ```cpp
 int n,l,sx,sy;
 char g[103][103];
-
 int main()
 {
     ios::sync_with_stdio(false);
@@ -161,10 +171,5 @@ int main()
     }
     return 0;
 }
-```
-
-```cpp
-int read(){int s=0,w=1;char ch=getchar();while(!isdigit(ch)){if(ch=='-')w=-1;ch=getchar();}
-           while(isdigit(ch)){s=(s<<3)+(s<<1)+(ch^48);ch=getchar();} return s*w;}
 ```
 

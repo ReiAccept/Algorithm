@@ -18,7 +18,9 @@ public class D {
                 b = sc.nextBigInteger();
             }
             System.out.println(a);
-            System.out.println("");
+            if(Case>0){
+                System.out.println("");
+            }
         }
         
     }
