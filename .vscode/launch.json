@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Launch D",
+            "request": "launch",
+            "mainClass": "D",
+            "projectName": "Oi_d462116f"
+        },
+        {
             "name": "g++ - 生成和调试活动文件",
             "type": "cppdbg",
             "request": "launch",
