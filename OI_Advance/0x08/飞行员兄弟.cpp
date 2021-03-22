@@ -16,37 +16,27 @@ const int INF=0x3f3f3f3f;//0x3f3f3f3f3f3f3f3f;//LLINF
 int read(){int s=0,w=1;char ch=getchar();while(!isdigit(ch)){if(ch=='-')w=-1;ch=getchar();}while(isdigit(ch)){s=(s<<3)+(s<<1)+(ch^48);ch=getchar();} return s*w;}
 //void prt(int x){if(x<0){putchar('-');x=-x;}if(x>9)prt(x/10);putchar((char)(x%10+'0'));}
 
-char g[5][5],org[5][5];
-int dx[]={
-    -1,0,1,0,0
-},dy[]={
-    0,1,0,-1,0
-};
-
-void turn(int x,int y)
-{
-    for(int i=0;i<5;i++)
-    {
-        int a=x+dx[i],b=y+dy[i];
-        if(a<0 || a>4 || b<0 || b>4) continue;
-    }
-}
+bool g[5][5];
 
 void work()
 {
+    for(int i=1;i<=4;i++)
+        for(int j=1;j<=4;j++)
+        {
+            char tmp; cin>>tmp;
+            if(tmp=='-') g[i][j]=true;
+        }
     return;
 }
 
 signed main()
 {
     //ios::sync_with_stdio(false);cin.tie(NULL);
-    signed T=read();
+    signed T=1;//read();
     for(signed Case=1; Case<=T; Case++)
     {
-        for (int i=0;i<5;i++) cin>>g[i];
         //printf("Case %d: ",Case);
         work();
     }
     return 0;
 }
-

@@ -1,5 +1,5 @@
 #include<bits/stdc++.h>
-#define int long long//__int128
+//#define int long long//__int128
 #define mmst0(x) memset(x,0,sizeof(x))
 #define mmst3f(x) memset(x,0x3f,sizeof(x))
 #define pb(x) emplace_back(x)
@@ -7,8 +7,9 @@
 #define fi first
 #define se second
 using namespace std;
-typedef unsigned long long ull;
+typedef long long ll;
 typedef long double rld;
+typedef unsigned long long ull;
 
 const rld eps = 1e-6;
 const int INF=0x3f3f3f3f;//0x3f3f3f3f3f3f3f3f;//LLINF
