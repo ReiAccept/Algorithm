@@ -28,7 +28,6 @@ signed main()
                 if(!st.empty()) st.top()=(ret*n+st.top())%MOD;
                 else ans=(ans+ret*n)%MOD;
             }
-            
         }
     }
     cout<<ans<<endl;
