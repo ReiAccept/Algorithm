@@ -7,7 +7,7 @@ int read(){int s=0,w=1;char ch=getchar();while(!isdigit(ch)){if(ch=='-')w=-1;ch=
 
 int p;
 struct Node{
-    int v,lza,lzm=1;//nmd ,忘记初始化了
+    int v,lza,lzm=1;
     void operator *= (const int k){
         v=(v*k)%p;lzm=(lzm*k)%p;lza=(lza*k)%p;
     }
@@ -90,7 +90,7 @@ signed main()
     int n=read();int m=read();p=read();
     for(int i=1;i<=n;i++)a[i]=read();
     build(1,1,n);
-    while(m--)
+    for(int i=1;i<=m;i++)
     {
         int op=read(),x=read(),y=read();
         if(op==1) up1(1,1,n,x,y,read());
