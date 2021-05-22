@@ -18,8 +18,27 @@ const int N=(int)1e5+3;
 int read(){int s=0,w=1;char ch=getchar();while(!isdigit(ch)){if(ch=='-')w=-1;ch=getchar();}while(isdigit(ch)){s=(s<<3)+(s<<1)+(ch^48);ch=getchar();} return s*w;}
 //void prt(int x){if(x<0){putchar('-');x=-x;}if(x>9)prt(x/10);putchar((char)(x%10+'0'));}
 
+int m,m2;
+char s[N];
+
 void work()
 {
+    m=read();
+    cin>>(s+1);
+    //m=strlen((s+1));//for debug
+    //m2=m>>1;
+    if(m!=1)
+    {
+        for(int k=2;k<=m;k++)
+        {
+            if(s[k]==s[1])
+            {
+                cout<<"Wrong Answer"<<endl;
+                return;
+            }
+        }
+    }
+    cout<<"Correct"<<endl;
     return;
 }
 

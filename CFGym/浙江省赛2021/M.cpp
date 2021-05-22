@@ -18,8 +18,13 @@ const int N=(int)1e5+3;
 int read(){int s=0,w=1;char ch=getchar();while(!isdigit(ch)){if(ch=='-')w=-1;ch=getchar();}while(isdigit(ch)){s=(s<<3)+(s<<1)+(ch^48);ch=getchar();} return s*w;}
 //void prt(int x){if(x<0){putchar('-');x=-x;}if(x>9)prt(x/10);putchar((char)(x%10+'0'));}
 
+int n,sum;
+
 void work()
 {
+    //for(int i=1;i<=20;i++)sum+=i;cout<<sum/20<<endl;
+    //n=read();
+    cout<<"0.0000"<<endl;
     return;
 }
 

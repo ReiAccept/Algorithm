@@ -13,13 +13,24 @@ typedef unsigned long long ull;
 
 const rld eps = 1e-6;
 const int INF=0x3f3f3f3f;//0x3f3f3f3f3f3f3f3f;//LLINF
-const int N=(int)1e5+3;
+const int N=(int)3e3+3;
 
 int read(){int s=0,w=1;char ch=getchar();while(!isdigit(ch)){if(ch=='-')w=-1;ch=getchar();}while(isdigit(ch)){s=(s<<3)+(s<<1)+(ch^48);ch=getchar();} return s*w;}
 //void prt(int x){if(x<0){putchar('-');x=-x;}if(x>9)prt(x/10);putchar((char)(x%10+'0'));}
 
+int n,m,t;
+int a[N];
+vector<int> e[N];
+
 void work()
 {
+    n=read();m=read();t=read();
+    for(int i=1;i<=n-1;i++) a[i]=read();
+    for(int i=1,u,v;i<=m;i++)
+    {
+        u=read();v=read();
+        e[u].pb(v);
+    }
     return;
 }
 
