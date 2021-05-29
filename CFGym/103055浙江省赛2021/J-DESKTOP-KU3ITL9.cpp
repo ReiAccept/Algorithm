@@ -25,16 +25,20 @@ struct Edge{
     }
 }edge[N];
 
-int cnt,n,m,t;;
-int head[N],a[N],dis[N],dp[N];
+int cnt=1;
+int head[N];
 bool vis[N];
 
-void add(int u, int v, int val){
-    edge[++cnt].to = v;
-    edge[cnt].val = val;
-    edge[cnt].next = head[u];
-    head[u]=cnt;
+void add(int u,int v,int val)//加入u->v的边
+{
+    edge[cnt].to=v;//
+    edge[cnt].next=head[u];
+    edge[cnt].val=val;
+    head[u]=cnt++;//head[u]->cnt
 }
+
+int n,m,t;
+int a[N],dis[N],co[N],dp[N];
 
 priority_queue<Edge> q;
 Edge cur,nex;
@@ -58,6 +62,7 @@ void dijkstra()
             }
         }
     }
+    for(int i = 1; i <= n; ++i)co[i] = dis[i];
 }
 
 void work()
@@ -70,8 +75,8 @@ void work()
         add(u,v,2); add(v,u,2);
     }
     dijkstra();
-    for(int i=1;i<=n;i++)for(int j = dis[i]; j <= t; ++j)dp[j] = max(dp[j], dp[j - dis[i]] + a[i]);
-    for(int i=1;i<=t;i++)printf("%d ",dp[i]);
+    for(int i = 1; i <= n; ++i)for(int j = co[i]; j <= t; ++j)dp[j] = max(dp[j], dp[j - co[i]] + a[i]);
+    for(int i = 1; i <= t; ++i)printf("%d ",dp[i]);
     return;
 }
 
