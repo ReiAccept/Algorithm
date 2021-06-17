@@ -1,3 +1,10 @@
+//我草泥马的
+//NOIP 2018
+//我他妈
+//把这题的调试版本
+//交了上去
+//Fuuuuuuuuuuuuuuuuuuuuuuuuuuuuck
+//我是傻逼
 #include<bits/stdc++.h>
 //#define int long long//__int128
 #define mmst0(x) memset(x,0,sizeof(x))
@@ -13,7 +20,7 @@ typedef unsigned long long ull;
 
 const rld eps = 1e-6;
 const int INF=0x3f3f3f3f;//0x3f3f3f3f3f3f3f3f;//LLINF
-const int MAXN=(int)1e5+3;
+const int N=(int)1e5+3;
 
 int read(){int s=0,w=1;char ch=getchar();while(!isdigit(ch)){if(ch=='-')w=-1;ch=getchar();}while(isdigit(ch)){s=(s<<3)+(s<<1)+(ch^48);ch=getchar();} return s*w;}
 //void prt(int x){if(x<0){putchar('-');x=-x;}if(x>9)prt(x/10);putchar((char)(x%10+'0'));}

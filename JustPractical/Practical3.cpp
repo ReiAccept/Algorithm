@@ -28,15 +28,23 @@ void pushup(int rt)
     t[rt].v=(t[rx].v+t[rx|1].v)%p;
 }
 
-void build(int rt,int l,int r)
-{
-    if(l==r) t[rt].v=a[l]%p;
-    else{
-        int m=(l+r)>>1,rx=rt<<1;
-        build(rx,l,m); build(rx|1,m+1,r);
-        pushup(rt);
-    }
-}
+// void build(int rt,int l,int r)
+// {
+//     if(l==r) t[rt].v=a[l]%p;
+//     else{
+//         int m=(l+r)>>1,rx=rt<<1;
+//         build(rx,l,m); build(rx|1,m+1,r);
+//         pushup(rt);
+//     }
+// }
+
+// void buildzkw(int n)
+// {
+//     int N=1;
+//     while(N<=n+1) N<<=1;
+//     for(int i=N+1;i<=N+n;i++) t[i].v=a[i]%p;
+//     for(int i=N-1;i>=1;i--) pushup(i);
+// }
 
 void pushdown(int rt,int l,int r)
 {
@@ -91,7 +99,8 @@ signed main()
 {
     int n=read(),m=read();p=read();
     for(int i=1;i<=n;i++) a[i]=read();
-    build(1,1,n);
+    //build(1,1,n);
+    //buildzkw(n);
     for(int i=1;i<=m;i++)
     {
         int op=read(),x=read(),y=read();
