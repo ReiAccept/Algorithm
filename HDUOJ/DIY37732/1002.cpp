@@ -18,8 +18,19 @@ const int MAXN=(int)1e5+3;
 int read(){int s=0,w=1;char ch=getchar();while(!isdigit(ch)){if(ch=='-')w=-1;ch=getchar();}while(isdigit(ch)){s=(s<<3)+(s<<1)+(ch^48);ch=getchar();} return s*w;}
 //void prt(int x){if(x<0){putchar('-');x=-x;}if(x>9)prt(x/10);putchar((char)(x%10+'0'));}
 
+int n;
+// 其实map也可以做,而且我觉得map比set更常用(当然这两个不是干一个事情的)
 void work()
 {
+    //set<string> s; 
+    map<string,bool> m;
+    while(n--)
+    {
+        string str; cin>>str;
+        //s.insert(str);
+        m[str]=true;
+    }
+    cout<<m.size()<<endl;
     return;
 }
 
@@ -30,8 +41,7 @@ signed main()
     for(signed Case=1; Case<=T; Case++)
     {
         //printf("Case %d: ",Case);
-        //while(cin>>n)
-        work();
+        while(cin>>n) work();
     }
     return 0;
 }

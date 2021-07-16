@@ -1,5 +1,5 @@
 #include<bits/stdc++.h>
-//#define int long long//__int128
+#define int long long//__int128
 #define mmst0(x) memset(x,0,sizeof(x))
 #define mmst3f(x) memset(x,0x3f,sizeof(x))
 #define pb(x) emplace_back(x)
@@ -18,19 +18,27 @@ const int MAXN=(int)1e5+3;
 int read(){int s=0,w=1;char ch=getchar();while(!isdigit(ch)){if(ch=='-')w=-1;ch=getchar();}while(isdigit(ch)){s=(s<<3)+(s<<1)+(ch^48);ch=getchar();} return s*w;}
 //void prt(int x){if(x<0){putchar('-');x=-x;}if(x>9)prt(x/10);putchar((char)(x%10+'0'));}
 
+int n;
+int f[60]={0,1,2,3,4,6};
+
 void work()
 {
+	for(int i=4;i<=59;i++) f[i]=f[i-3]+f[i-1];
+    while(cin>>n)
+    {
+        if(!n)return;
+        cout<<f[n]<<endl;
+    }
     return;
 }
 
 signed main()
 {
-    //ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr); //freopen(".in", "r", stdin);//freopen(".out", "w", stdout);
+    ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr); //freopen(".in", "r", stdin);//freopen(".out", "w", stdout);
     signed T=1;//(int)read();
     for(signed Case=1; Case<=T; Case++)
     {
         //printf("Case %d: ",Case);
-        //while(cin>>n)
         work();
     }
     return 0;

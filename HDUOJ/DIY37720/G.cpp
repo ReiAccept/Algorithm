@@ -13,13 +13,28 @@ typedef unsigned long long ull;
 
 const rld eps = 1e-6;
 const int INF=0x3f3f3f3f;//0x3f3f3f3f3f3f3f3f;//LLINF
-const int MAXN=(int)1e5+3;
+const int MAXN=(int)1e3+3;
 
 int read(){int s=0,w=1;char ch=getchar();while(!isdigit(ch)){if(ch=='-')w=-1;ch=getchar();}while(isdigit(ch)){s=(s<<3)+(s<<1)+(ch^48);ch=getchar();} return s*w;}
 //void prt(int x){if(x<0){putchar('-');x=-x;}if(x>9)prt(x/10);putchar((char)(x%10+'0'));}
 
+int n,m;
+int w[MAXN],v[MAXN],f[MAXN];
+
 void work()
 {
+
+    while(cin>>m>>n)
+    {
+        if(m==-1&&n==-1) return;
+        mmst0(f);mmst0(w);mmst0(v);
+        for(int i=0; i<n; i++)
+            cin>>w[i]>>v[i];
+        for(int i=0; i<=n; i++)
+            for(int j=m; j>=v[i]; j--)
+                f[j]=max(f[j],f[j-v[i]]+w[i]);
+        cout<<f[m]<<endl;
+    }
     return;
 }
 
@@ -30,7 +45,6 @@ signed main()
     for(signed Case=1; Case<=T; Case++)
     {
         //printf("Case %d: ",Case);
-        //while(cin>>n)
         work();
     }
     return 0;

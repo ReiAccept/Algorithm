@@ -1,5 +1,5 @@
 #include<bits/stdc++.h>
-//#define int long long//__int128
+#define int long long
 #define mmst0(x) memset(x,0,sizeof(x))
 #define mmst3f(x) memset(x,0x3f,sizeof(x))
 #define pb(x) emplace_back(x)
@@ -13,25 +13,41 @@ typedef unsigned long long ull;
 
 const rld eps = 1e-6;
 const int INF=0x3f3f3f3f;//0x3f3f3f3f3f3f3f3f;//LLINF
-const int MAXN=(int)1e5+3;
+const int MAXN=(int)3e6+3;
 
 int read(){int s=0,w=1;char ch=getchar();while(!isdigit(ch)){if(ch=='-')w=-1;ch=getchar();}while(isdigit(ch)){s=(s<<3)+(s<<1)+(ch^48);ch=getchar();} return s*w;}
-//void prt(int x){if(x<0){putchar('-');x=-x;}if(x>9)prt(x/10);putchar((char)(x%10+'0'));}
+void prt(int x){if(x<0){putchar('-');x=-x;}if(x>9)prt(x/10);putchar((char)(x%10+'0'));}
+
+int phi[MAXN];
+void Euler()
+{
+    for (int i = 2; i < MAXN; i++)
+		if (!phi[i])
+			for (int j = i; j < MAXN; j += i)
+			{
+				if (!phi[j]) phi[j] = j;
+				phi[j] = phi[j] / i * (i - 1);
+			}
+	for (int i = 3; i < MAXN; i++)phi[i] += phi[i-1];
+}
+
+signed a,b;
 
 void work()
 {
+    prt(phi[b]-phi[a-1]);puts("");
     return;
 }
 
 signed main()
 {
+    Euler();
     //ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr); //freopen(".in", "r", stdin);//freopen(".out", "w", stdout);
     signed T=1;//(int)read();
     for(signed Case=1; Case<=T; Case++)
     {
         //printf("Case %d: ",Case);
-        //while(cin>>n)
-        work();
+        while(cin>>a>>b) work();
     }
     return 0;
 }

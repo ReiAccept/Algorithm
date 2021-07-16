@@ -18,8 +18,16 @@ const int MAXN=(int)1e5+3;
 int read(){int s=0,w=1;char ch=getchar();while(!isdigit(ch)){if(ch=='-')w=-1;ch=getchar();}while(isdigit(ch)){s=(s<<3)+(s<<1)+(ch^48);ch=getchar();} return s*w;}
 //void prt(int x){if(x<0){putchar('-');x=-x;}if(x>9)prt(x/10);putchar((char)(x%10+'0'));}
 
+int n,m;
+
 void work()
 {
+    set<int> s;
+    for(int i=1;i<=n+m;i++) s.insert(read());
+    for(auto x:s)
+        if(x==*s.begin()) printf("%d",x);
+        else printf(" %d",x);
+    printf("\n");
     return;
 }
 
@@ -30,8 +38,7 @@ signed main()
     for(signed Case=1; Case<=T; Case++)
     {
         //printf("Case %d: ",Case);
-        //while(cin>>n)
-        work();
+        while(cin>>n>>m) work();
     }
     return 0;
 }

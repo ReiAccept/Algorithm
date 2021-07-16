@@ -13,20 +13,31 @@ typedef unsigned long long ull;
 
 const rld eps = 1e-6;
 const int INF=0x3f3f3f3f;//0x3f3f3f3f3f3f3f3f;//LLINF
-const int MAXN=(int)1e5+3;
+const int MAXN=(int)1e2+3;
 
 int read(){int s=0,w=1;char ch=getchar();while(!isdigit(ch)){if(ch=='-')w=-1;ch=getchar();}while(isdigit(ch)){s=(s<<3)+(s<<1)+(ch^48);ch=getchar();} return s*w;}
 //void prt(int x){if(x<0){putchar('-');x=-x;}if(x>9)prt(x/10);putchar((char)(x%10+'0'));}
 
+int n,m;
+int p[MAXN],h[MAXN],c[MAXN],dp[MAXN];
+
 void work()
 {
+    mmst0(dp);
+    int n=read(),m=read();
+    for(int i=1;i<=m;i++)p[i]=read(),h[i]=read(),c[i]=read();
+    for(int i=1;i<=n;i++)
+        for(int j=1;j<=c[i];j++)
+            for(int k=n;k>=p[i];k--)
+                dp[k]=max(dp[k],dp[k-p[i]]+h[i]);
+    cout<<dp[n]<<endl;
     return;
 }
 
 signed main()
 {
     //ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr); //freopen(".in", "r", stdin);//freopen(".out", "w", stdout);
-    signed T=1;//(int)read();
+    signed T=(int)read();
     for(signed Case=1; Case<=T; Case++)
     {
         //printf("Case %d: ",Case);

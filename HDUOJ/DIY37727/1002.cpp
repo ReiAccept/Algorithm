@@ -1,5 +1,5 @@
 #include<bits/stdc++.h>
-//#define int long long//__int128
+#define int long long//__int128
 #define mmst0(x) memset(x,0,sizeof(x))
 #define mmst3f(x) memset(x,0x3f,sizeof(x))
 #define pb(x) emplace_back(x)
@@ -12,6 +12,7 @@ typedef long double rld;
 typedef unsigned long long ull;
 
 const rld eps = 1e-6;
+const int MOD=9973;
 const int INF=0x3f3f3f3f;//0x3f3f3f3f3f3f3f3f;//LLINF
 const int MAXN=(int)1e5+3;
 
@@ -20,13 +21,16 @@ int read(){int s=0,w=1;char ch=getchar();while(!isdigit(ch)){if(ch=='-')w=-1;ch=
 
 void work()
 {
+    int i,n=read(),b=read();
+    for(i=0;i<MOD;i++) if(!((b*i-n)%9973)) break;
+    printf("%lld\n",i);   
     return;
 }
 
 signed main()
 {
     //ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr); //freopen(".in", "r", stdin);//freopen(".out", "w", stdout);
-    signed T=1;//(int)read();
+    signed T=(int)read();
     for(signed Case=1; Case<=T; Case++)
     {
         //printf("Case %d: ",Case);

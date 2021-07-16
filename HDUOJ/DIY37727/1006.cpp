@@ -18,15 +18,28 @@ const int MAXN=(int)1e5+3;
 int read(){int s=0,w=1;char ch=getchar();while(!isdigit(ch)){if(ch=='-')w=-1;ch=getchar();}while(isdigit(ch)){s=(s<<3)+(s<<1)+(ch^48);ch=getchar();} return s*w;}
 //void prt(int x){if(x<0){putchar('-');x=-x;}if(x>9)prt(x/10);putchar((char)(x%10+'0'));}
 
+ll phi(ll n){//欧拉函数模板
+	ll ans = n;
+	for (ll i = 2; i * i <= n; i++)
+		if (n % i == 0){
+			ans = ans / i * (i - 1);
+			do n /= i;
+			while (n % i == 0);
+		}
+	if (n > 1) ans = ans / n * (n - 1);
+	return ans;
+}//模板结束
+
 void work()
 {
+    cout<<phi(read())<<endl;
     return;
 }
 
 signed main()
 {
     //ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr); //freopen(".in", "r", stdin);//freopen(".out", "w", stdout);
-    signed T=1;//(int)read();
+    signed T=(int)read();
     for(signed Case=1; Case<=T; Case++)
     {
         //printf("Case %d: ",Case);
