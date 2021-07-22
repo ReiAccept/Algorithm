@@ -34,7 +34,7 @@ int dig[20];
 int m[20];
 int a, b, n;
 
-Node Dfs(int pos, int sum1, int sum2, bool lim)
+Node dfs(int pos, int sum1, int sum2, bool lim)
 {
     if (pos == -1)
     {
@@ -47,7 +47,7 @@ Node Dfs(int pos, int sum1, int sum2, bool lim)
     for (int i = 0;i <= up;i++)
     {
         if (i == 7) continue;
-        tmp = Dfs(pos-1, (sum1+i)%7, (sum2*10+i)%7, lim && i == up);
+        tmp = dfs(pos-1, (sum1+i)%7, (sum2*10+i)%7, lim && i == up);
         ans.cnt = (ans.cnt + tmp.cnt)%MOD;
         ans.sum = (ans.sum + (i*m[pos]%MOD*tmp.cnt%MOD + tmp.sum)%MOD)%MOD;
         ans.sqr = (ans.sqr + (i*m[pos]%MOD*2%MOD*tmp.sum%MOD+tmp.sqr)%MOD)%MOD;
@@ -65,7 +65,7 @@ int Solve(int x)
         dig[p++] = x%10;
         x /= 10;
     }
-    return Dfs(p-1, 0, 0, 1).sqr;
+    return dfs(p-1, 0, 0, 1).sqr;
 }
 
 void work()
