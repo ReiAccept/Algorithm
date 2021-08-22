@@ -1,4 +1,5 @@
 #include<bits/stdc++.h>
+//#include<bits/extc++.h>
 //#define int long long//__int128
 #define mmst0(x) memset(x,0,sizeof(x))
 #define mmst3f(x) memset(x,0x3f,sizeof(x))
@@ -7,6 +8,7 @@
 #define fi first
 #define se second
 using namespace std;
+//using namespace __gnu_pbds; //If using pbds don't using std!
 typedef long long ll;
 typedef long double rld;
 typedef unsigned long long ull;
