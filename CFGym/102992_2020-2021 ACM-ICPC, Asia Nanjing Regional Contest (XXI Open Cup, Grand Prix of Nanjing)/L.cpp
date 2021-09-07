@@ -22,8 +22,19 @@ inline int read(){int s=0,w=1;char ch=nc();while(!isdigit(ch)){if(ch=='-')w=-1;c
 //inline void read(int &x){char ch=nc();x=0;while (!(ch>='0'&&ch<='9')) ch=nc();while (ch>='0'&&ch<='9') x=(x<<3)+(x<<1)+ch-48,ch=nc();}//根据参数个数自动选择
 //void prt(int x){if(x<0){putchar('-');x=-x;}if(x>9)prt(x/10);putchar((char)(x%10+'0'));}
 
+int n,m;
+int a[MAXN],b[MAXN];
+
 inline void work()
 {
+    n=read();m=read(); b[0]=-INF,b[m+1]=INF;
+    for(int i=1;i<=n;i++) a[i]=read();
+    for(int i=1;i<=m;i++) b[i]=read();
+    sort(a+1,a+1+n); sort(b+1,b+1+1);
+    for(int i=1;i<=m+1;i++)
+    {
+
+    }
     return;
 }
 
