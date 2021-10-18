@@ -7,12 +7,10 @@
 #define mkp(x, y) make_pair(x, y)
 #define fi first
 #define se second
-#define YESS printf("YES\n")
-#define NOO printf("NO\n")
 using namespace std;
 //using namespace __gnu_pbds; //If using pbds don't using std!
 typedef long long ll;
-//typedef long double rld; //use double pls!
+typedef long double rld;
 typedef unsigned long long ull;
 
 const double eps = 1e-6;
@@ -24,11 +22,26 @@ inline int read(){int s=0,w=1;char ch=nc();while(!isdigit(ch)){if(ch=='-')w=-1;c
 //inline void read(int &x){char ch=nc();x=0;while (!(ch>='0'&&ch<='9')) ch=nc();while (ch>='0'&&ch<='9') x=(x<<3)+(x<<1)+ch-48,ch=nc();}//根据参数个数自动选择
 //void prt(int x){if(x<0){putchar('-');x=-x;}if(x>9)prt(x/10);putchar((char)(x%10+'0'));}
 
-inline void work(int Case=1) {
+int n;
+string s;
+
+inline void work(int Case=1)
+{
+    while(cin>>n) {
+        double ans=0;
+        while(n--) {
+            cin>>s;
+            int t=s[s.size()-1]-'0';
+            if(t<=4) ans-=t;
+            else ans+=(10-t);
+        }
+        printf("%.3lf\n",ans/1000.0);
+    }
     return;
 }
 
-signed main() {
+signed main()
+{
     //ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr); //freopen(".in", "r", stdin);//freopen(".out", "w", stdout);
     signed T=1;//(signed)read();//scanf("%d",&T);//cin>>T;
     for(signed Case=1; Case<=T; Case++) {
@@ -38,3 +51,5 @@ signed main() {
     }
     return 0;
 }
+//给你未处理之前的三位小数，然后对这些小数进行保留小数点后两位的四舍五入的操作，求最后误差为多少，并且误差结果保留三位小数
+//题目数据非常的大，不能直接当数字处理，所以字符串输入，然后你会发现，误差之和最后一个数字有关，然后只判断最后一个数字的大小即可；然后将误差的和/1000

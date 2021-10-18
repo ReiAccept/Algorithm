@@ -7,12 +7,10 @@
 #define mkp(x, y) make_pair(x, y)
 #define fi first
 #define se second
-#define YESS printf("YES\n")
-#define NOO printf("NO\n")
 using namespace std;
 //using namespace __gnu_pbds; //If using pbds don't using std!
 typedef long long ll;
-//typedef long double rld; //use double pls!
+typedef long double rld;
 typedef unsigned long long ull;
 
 const double eps = 1e-6;
@@ -24,7 +22,25 @@ inline int read(){int s=0,w=1;char ch=nc();while(!isdigit(ch)){if(ch=='-')w=-1;c
 //inline void read(int &x){char ch=nc();x=0;while (!(ch>='0'&&ch<='9')) ch=nc();while (ch>='0'&&ch<='9') x=(x<<3)+(x<<1)+ch-48,ch=nc();}//根据参数个数自动选择
 //void prt(int x){if(x<0){putchar('-');x=-x;}if(x>9)prt(x/10);putchar((char)(x%10+'0'));}
 
+int m,s,t,walk,blink;
+
 inline void work(int Case=1) {
+    m=read();s=read();t=read();
+    for(int i=1;i<=t;i++) {
+        walk+=17;
+        if(m>=10) {
+            blink+=60;
+            m-=10;
+        } else {
+            m+=4;
+        }
+        walk=max(walk,blink);
+        if(walk>s) {
+            printf("Yes\n%d\n",i);
+            return;
+        }
+    }
+    printf("No\n%d\n",max(walk,blink));
     return;
 }
 
