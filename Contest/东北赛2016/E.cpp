@@ -26,15 +26,58 @@ inline int read(){int s=0,w=1;char ch=nc();while(!isdigit(ch)){if(ch=='-')w=-1;c
 // inline void read(int &x){char ch=nc();x=0;while (!(ch>='0'&&ch<='9')) ch=nc();while (ch>='0'&&ch<='9') x=(x<<3)+(x<<1)+ch-48,ch=nc();} // 根据参数个数自动选择
 // void prt(int x){if(x<0){putchar('-');x=-x;}if(x>9)prt(x/10);putchar((char)(x%10+'0'));}
 
+int n,m;
+int grap[33][33];
+
+bool chk1() {
+    for(int i=1;i<n;i++) {
+        for(int j=i+1;j<=n;j++) {
+            if(grap[1][i]==grap[1][j] || grap[n][i]==grap[n][j]) return true;
+        }
+    }
+    for(int i=1;i<m;i++) {
+        for(int j=i+1;j<=m;j++) {
+            if(grap[i][1]==grap[j][1] || grap[i][m]==grap[j][m]) return true;
+        }
+    }
+    return false;
+}
+
+bool chk2() {
+    for(int i=1;i<=n;i++) {
+        for(int j=1;j<=m;j++) {
+            int &d=grap[i][j];
+            if(d==grap[i-1][j] || d==grap[i+1][j] || d==grap[i][j-1] || d==grap[i][j+1]) return true;
+        }
+    }
+    return false;
+}
+
 inline void work(signed CASE=1,bool FINAL_CASE=false) {
+    n=read(); m=read();
+    for(int i=1;i<=n+1;i++) {
+        for(int j=1;j<=m+1;j++) {
+            grap[i][j]=-1;
+        }
+    }
+    for(int i=1;i<=n;i++) {
+        for(int j=1;j<=m;j++) {
+            grap[i][j]=read();
+        }
+    }
+    if(chk1() || chk2()) {
+        YESS;
+    } else {
+        NOO;
+    }
     return;
 }
 
 signed main() {
     // ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr); //freopen(".in", "r", stdin);//freopen(".out", "w", stdout);
-    signed T=1;//(signed)read();//scanf("%d",&T);//cin>>T;
+    signed T=(signed)read();//scanf("%d",&T);//cin>>T;
     for(signed CASE=1; CASE<=T; CASE++) { //
-        //printf("Case #%d: ",CASE); //printf("Case %d: ",CASE); //printf("Case #%d: \n",CASE); //printf("Case %d: \n",CASE);
+        printf("Case #%d: ",CASE); //printf("Case %d: ",CASE); //printf("Case #%d: \n",CASE); //printf("Case %d: \n",CASE);
         //while(cin>>n) work(n);
         work(CASE,CASE==T);
     }
