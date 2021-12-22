@@ -1,0 +1,1 @@
+{"name":"Local: G2","url":"d:\\OneDrive\\Code\\Algorithm\\Contest\\2021桂林CCPC\\G2.cpp","tests":[{"id":1637064357304,"input":"5\n3\n010\n4\n0100\n7\n0001000\n5\n11111\n6\n010101","output":"2\n2\n4\n0\n1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\OneDrive\\Code\\Algorithm\\Contest\\2021桂林CCPC\\G2.cpp","group":"local","local":true}

@@ -7,8 +7,11 @@
             "includePath": [
                 "${workspaceFolder}"
             ],
-            "cppStandard": "c++14",
-            "cStandard": "c11"
+            "cppStandard": "c++20",
+            "cStandard": "c17",
+            "compilerArgs": [
+                "-std=c++2a"
+            ]
         },
         {
             "name": "Linux",
@@ -17,8 +20,8 @@
             ],
             "defines": [],
             "compilerPath": "/bin/gcc",
-            "cStandard": "c99",
-            "cppStandard": "c++11"
+            "cStandard": "c11",
+            "cppStandard": "c++17"
         }
     ],
     "version": 4

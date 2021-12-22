@@ -1,0 +1,1 @@
+{"name":"Local: E","url":"d:\\Desktop\\ICPC沈阳\\E.cpp","tests":[{"id":1637464101397,"input":"edgnb","output":"1"},{"id":1637464110751,"input":"edgnbedgnbedgnb","output":"3"},{"id":1637464123042,"input":"22222edgnbedgnbedgnb22222","output":"3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Desktop\\ICPC沈阳\\E.cpp","group":"local","local":true}

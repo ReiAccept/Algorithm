@@ -1,0 +1,1 @@
+{"name":"Local: I2","url":"d:\\Desktop\\CCPC哈尔滨\\I2.cpp","tests":[{"id":1638076702418,"input":"3\n5\n1 2 3 4 5\n2\n1 4\n1\n7","output":"3\n3\n1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Desktop\\CCPC哈尔滨\\I2.cpp","group":"local","local":true}

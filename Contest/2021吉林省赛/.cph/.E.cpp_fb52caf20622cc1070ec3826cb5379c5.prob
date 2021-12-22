@@ -1,0 +1,1 @@
+{"name":"Local: E","url":"d:\\Desktop\\吉林省赛\\E.cpp","tests":[{"id":1638241565771,"input":"2\n4\n5 1 3 4\n2\n5 6","output":"Yes\nNo"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Desktop\\吉林省赛\\E.cpp","group":"local","local":true}

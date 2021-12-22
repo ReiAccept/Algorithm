@@ -1,0 +1,1 @@
+{"name":"Local: J","url":"d:\\OneDrive\\Code\\Algorithm\\CFGym\\102823桂林站CCPC2018\\J.cpp","tests":[{"id":1636644853620,"input":"2\n2\n1 3\n3\n1 3 1\n","output":"Case 1: Alice\nCase 2: Bob\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\OneDrive\\Code\\Algorithm\\CFGym\\102823桂林站CCPC2018\\J.cpp","group":"local","local":true}

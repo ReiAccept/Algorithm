@@ -1,0 +1,1 @@
+{"name":"Local: L","url":"d:\\Desktop\\吉林省赛\\L.cpp","tests":[{"id":1638250535058,"input":"3\ndoctor\ndoctor\ndoctor","output":"11\n11\n11"},{"id":1638251080487,"input":"2\ndddddoctor\nddddddd","output":"15\n6"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Desktop\\吉林省赛\\L.cpp","group":"local","local":true}

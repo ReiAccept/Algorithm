@@ -1,0 +1,1 @@
+{"name":"Local: I","url":"d:\\OneDrive\\Code\\Algorithm\\Contest\\2021桂林CCPC\\I.cpp","tests":[{"id":1637058788850,"input":"4\n5\n10101\n8\n11111111\n4\n1100\n4\n0110","output":"4\n16\n3\n3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\OneDrive\\Code\\Algorithm\\Contest\\2021桂林CCPC\\I.cpp","group":"local","local":true}

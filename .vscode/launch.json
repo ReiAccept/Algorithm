@@ -15,6 +15,28 @@
             "environment": [],
             "console": "externalTerminal",
             "preLaunchTask": "C/C++: g++ build active file"
+        },
+        {
+            "name": "GDB调试",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "gdb",
+            "console": "externalTerminal",
+            "preLaunchTask": "C/C++: g++ build active file",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
         }
     ]
 }

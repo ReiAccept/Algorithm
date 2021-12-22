@@ -1,0 +1,1 @@
+{"name":"Local: K","url":"d:\\OneDrive\\Code\\Algorithm\\CFGym\\103389女生赛2021\\K.cpp","tests":[{"id":1636451506712,"input":"10\n|-   |\n| ---|\n|-   |\n|  - |\n| -  |\n|- --|\n| -  |\n|-  -|\n|  - |\n|-- -|","output":"17"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\OneDrive\\Code\\Algorithm\\CFGym\\103389女生赛2021\\K.cpp","group":"local","local":true}

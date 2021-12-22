@@ -1,0 +1,1 @@
+{"name":"Local: A","url":"d:\\OneDrive\\Code\\Algorithm\\CFGym\\102798 CCPC2020威海\\A.cpp","tests":[{"id":1636538677937,"input":"3\n2 2 2\n3 1 10\n11 45 14","output":"16\n120\n616"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\OneDrive\\Code\\Algorithm\\CFGym\\102798 CCPC2020威海\\A.cpp","group":"local","local":true}

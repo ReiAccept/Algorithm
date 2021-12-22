@@ -1,0 +1,1 @@
+{"name":"Local: J","url":"d:\\OneDrive\\Code\\Algorithm\\Contest\\ICPC2021济南\\补题\\J.cpp","tests":[{"id":1636973694808,"input":"3\n1\n1\n1\n2\n2\n1 2\n3 4\n2\n5\n-1 2\n3 -1\n","output":"+\n-\n-\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\OneDrive\\Code\\Algorithm\\Contest\\ICPC2021济南\\补题\\J.cpp","group":"local","local":true}

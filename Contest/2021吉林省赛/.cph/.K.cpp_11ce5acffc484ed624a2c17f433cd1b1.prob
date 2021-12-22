@@ -1,0 +1,1 @@
+{"name":"Local: K","url":"d:\\Desktop\\吉林省赛\\K.cpp","tests":[{"id":1638242295557,"input":"1 2","output":"2"},{"id":1638242317866,"input":"2 2","output":"8"},{"id":1638242323794,"input":"24 20","output":"35996330"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Desktop\\吉林省赛\\K.cpp","group":"local","local":true}

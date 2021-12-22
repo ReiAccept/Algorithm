@@ -1,0 +1,1 @@
+{"name":"Local: I","url":"d:\\OneDrive\\Code\\Algorithm\\CFGym\\102394 CCPC哈尔滨2019\\I.cpp","tests":[{"id":1636718702351,"input":"4\n3\n0 2 2\n3\n0 1 2\n3\n0 2 3\n6\n0 2 2 2 2 5","output":"2\n4\n0\n0"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\OneDrive\\Code\\Algorithm\\CFGym\\102394 CCPC哈尔滨2019\\I.cpp","group":"local","local":true}
