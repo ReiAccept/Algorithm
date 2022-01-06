@@ -13,8 +13,8 @@ struct tree
 int n,m;
 int a[100003];
 
-//隔一段时间写代码,数据名称都记不起来了,Fuck
-//l-->left;r-->right;p-->place(表示当前位置);
+//闅斾竴娈垫椂闂村啓浠ｇ爜,鏁版嵁鍚嶇О閮借涓嶈捣鏉ヤ簡,Fuck
+//l-->left;r-->right;p-->place(琛ㄧず褰撳墠浣嶇疆);
 void build_tree(int l,int r,int p)
 {
 	tr[p].l=l;

@@ -1,0 +1,1 @@
+{"name":"Local: p3373","url":"d:\\OneDrive\\Code\\Algorithm\\Luogu\\p3373.cpp","tests":[{"id":1641444613473,"input":"5 7 38\n1 5 4 2 3\n3 2 5\n1 1 4 1\n3 2 5\n1 2 4 2\n3 2 5\n1 3 5 5\n3 2 5","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\OneDrive\\Code\\Algorithm\\Luogu\\p3373.cpp","group":"local","local":true}

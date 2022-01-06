@@ -1,0 +1,1 @@
+{"name":"Local: 1623A","url":"d:\\OneDrive\\Code\\Algorithm\\Codeforces\\1623A.py","tests":[{"id":1640702819087,"input":"5\n10 10 6 1 2 8\n10 10 9 9 1 1\n9 8 5 6 2 1\n6 9 2 2 5 8\n2 2 1 1 2 1\n","output":"7\n10\n9\n3\n0\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\OneDrive\\Code\\Algorithm\\Codeforces\\1623A.py","group":"local","local":true}

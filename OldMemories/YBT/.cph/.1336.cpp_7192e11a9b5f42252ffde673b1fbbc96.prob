@@ -1,0 +1,1 @@
+{"name":"Local: 1336","url":"d:\\OneDrive\\Code\\Algorithm\\OldMemories\\YBT\\1336.cpp","tests":[{"id":1641214516993,"input":"8 7\n4 1\n4 2\n1 3\n1 5\n2 6\n2 7\n2 8","output":"4\n2 \n6 7 8"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\OneDrive\\Code\\Algorithm\\OldMemories\\YBT\\1336.cpp","group":"local","local":true}

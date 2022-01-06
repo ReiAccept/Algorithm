@@ -1,0 +1,1 @@
+{"name":"Local: 1531","url":"d:\\OneDrive\\Code\\Algorithm\\Luogu\\1531.cpp","tests":[{"id":1641473988798,"input":"5 6\n1 2 3 4 5\nQ 1 5\nU 3 6\nQ 3 4\nQ 4 5\nU 2 9\nQ 1 5","output":"5\n6\n5\n9"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\OneDrive\\Code\\Algorithm\\Luogu\\1531.cpp","group":"local","local":true}
