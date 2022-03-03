@@ -1,0 +1,1 @@
+{"name":"Local: p464_树状数组","url":"d:\\OneDrive\\Code\\Algorithm\\DmyOJ\\p464_树状数组.cpp","tests":[{"id":1646312016118,"input":"1\n10 3\n0 5 2 7 5 4 3 8 7 7\n3 9 6\n4 6 0\n2 4 2","output":"4 0 1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\OneDrive\\Code\\Algorithm\\DmyOJ\\p464_树状数组.cpp","group":"local","local":true}

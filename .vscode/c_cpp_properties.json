@@ -1,7 +1,20 @@
 {
     "configurations": [
         {
-            "name": "MinGW",
+            "name": "MinGW_C",
+            "intelliSenseMode": "windows-gcc-x64",
+            "compilerPath": "C:/mingw64/bin/g++.exe",
+            "includePath": [
+                "${workspaceFolder}"
+            ],
+            "cppStandard": "c++20",
+            "cStandard": "c17",
+            "compilerArgs": [
+                "-std=c++2a"
+            ]
+        },
+        {
+            "name": "MinGW_D",
             "intelliSenseMode": "windows-gcc-x64",
             "compilerPath": "D:/mingw64/bin/g++.exe",
             "includePath": [

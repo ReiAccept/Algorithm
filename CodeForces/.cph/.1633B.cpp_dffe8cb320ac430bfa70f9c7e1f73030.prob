@@ -1,0 +1,1 @@
+{"name":"Local: 1633B","url":"d:\\OneDrive\\Code\\Algorithm\\Codeforces\\1633B.cpp","tests":[{"id":1645032282858,"input":"4\n01\n1010101010111\n00110001000\n1","output":"0\n5\n3\n0"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\OneDrive\\Code\\Algorithm\\Codeforces\\1633B.cpp","group":"local","local":true}

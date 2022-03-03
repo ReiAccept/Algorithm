@@ -1,0 +1,1 @@
+{"name":"Local: p452","url":"d:\\OneDrive\\Code\\Algorithm\\DmyOJ\\p452.cpp","tests":[{"id":1646211240179,"input":"5 5\n3 6 14 16 12\n2 13\n2 16\n1 1 1\n1 2 14\n2 11","output":"11 14 16 16 16"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\OneDrive\\Code\\Algorithm\\DmyOJ\\p452.cpp","group":"local","local":true}
