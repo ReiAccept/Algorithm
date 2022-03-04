@@ -18,7 +18,7 @@ typedef unsigned long long ull;
 
 const double eps = 1e-6;
 const int INF=0x3f3f3f3f;//0x3f3f3f3f3f3f3f3f; // LLINF
-const int MAXN=(int)1e5+3;
+const int MAXN=(int)4e5+3;
 
 inline char nc(){static char buf[100000],*p1=buf,*p2=buf;return p1==p2&&(p2=(p1=buf)+fread(buf,1,100000,stdin),p1==p2)?EOF:*p1++;}
 inline int read(){int s=0,w=1;char ch=nc();while(!isdigit(ch)){if(ch=='-')w=-1;ch=nc();}while(isdigit(ch)){s=(s<<3)+(s<<1)+(ch^48);ch=nc();} return s*w;}
@@ -36,21 +36,33 @@ int findx(int x) {
     return x==fa[x] ? x : fa[x]=findx(fa[x]);
 }
 
-int merge(int u,int v) {
+bool merge(int u,int v) {
     u=findx(u),v=findx(v);
-    return u==v ? false : fa[u]=v,true;
+    return u==v ? false : fa[u]=v;
 }
 
-void chk(int pos,int siz=n) {
-    for(int i=1;i<=n;i++) {
-        fa[i]=i;
+int chk(int mask) {
+    for(int i=1;i<=n;i++) fa[i] = i;
+    int size = n;
+    for(int i=1;i<=m;i++) {
+        if ((e[i].w | mask) == mask && merge(e[i].u, e[i].v)) {
+            size--;
+        }
     }
+    return size == 1;
 }
+
 inline void work(signed CASE=1,bool FINAL_CASE=false) {
     n=read(); m=read();
     for(int u,v,w,i=1;i<=m;i++) {
         e[i].u=read(); e[i].v=read(); e[i].w=read();
     }
+    int ans=(1<<30)-1;
+    for(int i=29;i>=0;i--) {
+        ans ^= (1 << i);
+        if (!chk(ans)) ans ^= (1 << i);
+    }
+    printf("%lld\n",ans);
     return;
 }
 //考虑每一位的贡献，从高到低用并查集判断在某一位全部为0时是否能够组成一棵树。如果可以，则禁用此位为1的所有边，继续向下查找。
