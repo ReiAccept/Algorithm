@@ -1,11 +1,10 @@
 #include<bits/stdc++.h>
 // #include<bits/extc++.h>
-// #define int long long//__int128
+#define int long long//__int128
 #define mmst0(x) memset(x,0,sizeof(x))
 #define mmst3f(x) memset(x,0x3f,sizeof(x))
 #define si(x) scanf("%d",&x)//scanf("%lld",&x) // When define int ll
 #define pb(x) emplace_back(x)
-#define PII pair<int,int>
 #define mkp(x, y) make_pair(x, y)
 #define fi first
 #define se second
@@ -27,10 +26,35 @@ inline int read(){int s=0,w=1;char ch=nc();while(!isdigit(ch)){if(ch=='-')w=-1;c
 // inline void read(int &x){char ch=nc();x=0;while (!(ch>='0'&&ch<='9')) ch=nc();while (ch>='0'&&ch<='9') x=(x<<3)+(x<<1)+ch-48,ch=nc();} // 根据参数个数自动选择
 // void prt(int x){if(x<0){putchar('-');x=-x;}if(x>9)prt(x/10);putchar((char)(x%10+'0'));}
 
-inline void work(signed CASE=1,bool FINAL_CASE=false) {
-    return;
+int n,m;
+int fa[MAXN];
+struct Edge {
+    int u,v,w;
+} e[MAXN];
+
+int findx(int x) {
+    return x==fa[x] ? x : fa[x]=findx(fa[x]);
 }
 
+int merge(int u,int v) {
+    u=findx(u),v=findx(v);
+    return u==v ? false : fa[u]=v,true;
+}
+
+void chk(int pos,int siz=n) {
+    for(int i=1;i<=n;i++) {
+        fa[i]=i;
+    }
+}
+inline void work(signed CASE=1,bool FINAL_CASE=false) {
+    n=read(); m=read();
+    for(int u,v,w,i=1;i<=m;i++) {
+        e[i].u=read(); e[i].v=read(); e[i].w=read();
+    }
+    return;
+}
+//考虑每一位的贡献，从高到低用并查集判断在某一位全部为0时是否能够组成一棵树。如果可以，则禁用此位为1的所有边，继续向下查找。
+//用并查集判断是否可以构成树（联通），如果所有节点的父亲节点相同，则图联通。
 signed main() {
     // ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr); //freopen(".in", "r", stdin);//freopen(".out", "w", stdout);
     signed T=1;//(signed)read();//scanf("%d",&T);//cin>>T;

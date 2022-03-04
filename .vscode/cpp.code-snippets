@@ -10,6 +10,7 @@
             "#define mmst3f(x) memset(x,0x3f,sizeof(x))",
             "#define si(x) scanf(\"%d\",&x)//scanf(\"%lld\",&x) // When define int ll",
             "#define pb(x) emplace_back(x)",
+            "#define PII pair<int,int>",
             "#define mkp(x, y) make_pair(x, y)",
             "#define fi first",
             "#define se second",
