@@ -1,16 +1,14 @@
 #include<bits/stdc++.h>
 // #include<bits/extc++.h>
-// #define int long long//__int128
+#define int long long//__int128
 #define mmst0(x) memset(x,0,sizeof(x))
 #define mmst3f(x) memset(x,0x3f,sizeof(x))
 #define si(x) scanf("%d",&x)//scanf("%lld",&x) // When define int ll
 #define pb(...) emplace_back(__VA_ARGS__)
-#define sz(x) ((int)(x.size()))
 #define PII pair<int,int>
 #define mkp(x, y) make_pair(x, y)
 #define fi first
 #define se second
-#define lowbit(x) (-x&x)
 #define YESS printf("Yes\n")
 #define NOO printf("No\n")
 using namespace std;
@@ -21,7 +19,7 @@ typedef unsigned long long ull;
 
 const double eps = 1e-6;
 const int INF=0x3f3f3f3f;//0x3f3f3f3f3f3f3f3f; // LLINF
-const int MAXN=(int)1e5+3;
+const int MAXN=(int)5e5+3;
 
 inline char nc(){static char buf[100000],*p1=buf,*p2=buf;return p1==p2&&(p2=(p1=buf)+fread(buf,1,100000,stdin),p1==p2)?EOF:*p1++;}
 inline int read(){int s=0,w=1;char ch=nc();while(!isdigit(ch)){if(ch=='-')w=-1;ch=nc();}while(isdigit(ch)){s=(s<<3)+(s<<1)+(ch^48);ch=nc();} return s*w;}
@@ -29,7 +27,39 @@ inline int read(){int s=0,w=1;char ch=nc();while(!isdigit(ch)){if(ch=='-')w=-1;c
 // inline void read(int &x){char ch=nc();x=0;while (!(ch>='0'&&ch<='9')) ch=nc();while (ch>='0'&&ch<='9') x=(x<<3)+(x<<1)+ch-48,ch=nc();} // 根据参数个数自动选择
 // void prt(int x){if(x<0){putchar('-');x=-x;}if(x>9)prt(x/10);putchar((char)(x%10+'0'));}
 
+vector<int> grap[MAXN];
+int n,ans;
+int a[MAXN];
+int dp[MAXN][2];
+
+void dfs(int u,int fa) {
+    dp[u][0]=dp[u][1]=1; // 初始赋值1
+    for (int v : grap[u]) {
+        if(v==fa) {
+            continue;
+        }
+        dfs(v, u);
+        if((a[u]+1)%3==a[v]) {
+            dp[u][0]=max(dp[u][0],dp[v][0]+1); // 递增
+        }
+        if((a[v]+1)%3==a[u]) {
+            dp[u][1]=max(dp[u][1],dp[v][1]+1); // 递减
+        }
+    }
+    ans = max(ans, dp[u][0] + dp[u][1] - 1);//记得减1
+}
+
 inline void work(signed CASE=1,bool FINAL_CASE=false) {
+    n=read();
+    for(int u,v,i=1;i<n;i++) {
+        grap[u=read()].pb(v=read());
+        grap[v].pb(u);
+    }
+    for(int i=1;i<=n;i++) {
+        a[i]=read();
+    }
+    dfs(1,0);
+    printf("%lld\n",ans);
     return;
 }
 
@@ -43,3 +73,5 @@ signed main() {
     }
     return 0;
 }
+
+// https://zhuanlan.zhihu.com/p/481678880 严格鸽，我滴超人

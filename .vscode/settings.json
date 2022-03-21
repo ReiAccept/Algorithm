@@ -6,6 +6,9 @@
         "iostream": "cpp",
         "random": "cpp",
         "cmath": "cpp",
-        "bit": "cpp"
+        "bit": "cpp",
+        "deque": "cpp",
+        "string": "cpp",
+        "vector": "cpp"
     }
 }

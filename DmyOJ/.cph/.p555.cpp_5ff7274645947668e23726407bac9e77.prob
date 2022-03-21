@@ -1,0 +1,1 @@
+{"name":"Local: p555","url":"d:\\OneDrive\\Code\\Algorithm\\DmyOJ\\p555.cpp","tests":[{"id":1647354596291,"input":"4\n6\n48 13 22 -15 16 35\n8\n-1 0 1 -1 0 1 -1 0\n4\n100 -1000 -1000 -1000\n4\n1 1 1 1","output":"13\n2\n-1\n-1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\OneDrive\\Code\\Algorithm\\DmyOJ\\p555.cpp","group":"local","local":true}

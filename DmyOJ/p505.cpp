@@ -1,16 +1,14 @@
 #include<bits/stdc++.h>
 // #include<bits/extc++.h>
-// #define int long long//__int128
+#define int long long//__int128
 #define mmst0(x) memset(x,0,sizeof(x))
 #define mmst3f(x) memset(x,0x3f,sizeof(x))
 #define si(x) scanf("%d",&x)//scanf("%lld",&x) // When define int ll
 #define pb(...) emplace_back(__VA_ARGS__)
-#define sz(x) ((int)(x.size()))
 #define PII pair<int,int>
 #define mkp(x, y) make_pair(x, y)
 #define fi first
 #define se second
-#define lowbit(x) (-x&x)
 #define YESS printf("Yes\n")
 #define NOO printf("No\n")
 using namespace std;
@@ -29,7 +27,30 @@ inline int read(){int s=0,w=1;char ch=nc();while(!isdigit(ch)){if(ch=='-')w=-1;c
 // inline void read(int &x){char ch=nc();x=0;while (!(ch>='0'&&ch<='9')) ch=nc();while (ch>='0'&&ch<='9') x=(x<<3)+(x<<1)+ch-48,ch=nc();} // 根据参数个数自动选择
 // void prt(int x){if(x<0){putchar('-');x=-x;}if(x>9)prt(x/10);putchar((char)(x%10+'0'));}
 
+int n,ans;
+int len[MAXN];
+vector<int> grap[MAXN];
+
+void dfs(int u, int fa) {
+    for (auto v : grap[u]) {
+        if (v != fa) {
+            dfs(v, u);
+            ans += len[u] * len[v] * (n - len[v] - len[u] - 1);
+            len[u] += len[v];
+        }
+    }
+    len[u]++;
+}
+
 inline void work(signed CASE=1,bool FINAL_CASE=false) {
+    n=read();
+    for (int u,v,w,i = 1; i < n; i ++) {
+        grap[u=read()].push_back(v=read());
+        grap[v].push_back(u);
+        w=read();
+    }
+    dfs(1, INF);
+    printf("%lld\n",ans);
     return;
 }
 
@@ -43,3 +64,4 @@ signed main() {
     }
     return 0;
 }
+//https://zhuanlan.zhihu.com/p/480494165
