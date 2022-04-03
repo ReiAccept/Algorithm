@@ -1,0 +1,1 @@
+{"name":"Local: p702","url":"d:\\OneDrive\\Code\\Algorithm\\DmyOJ\\p702.cpp","tests":[{"id":1648989323924,"input":"10 4\n3 1 3 1 2 3 3 2 1 1\n10 10 2 9 7 5 4 7 6 1\n1 4\n7 8\n7 10\n1 8","output":"3\n2\n2\n3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\OneDrive\\Code\\Algorithm\\DmyOJ\\p702.cpp","group":"local","local":true}

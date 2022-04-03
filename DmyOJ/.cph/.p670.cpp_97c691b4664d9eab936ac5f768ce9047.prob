@@ -1,0 +1,1 @@
+{"name":"Local: p670","url":"d:\\OneDrive\\Code\\Algorithm\\DmyOJ\\p670.cpp","tests":[{"id":1648823431484,"input":"6\n6 10\n1 5\n4 8\n2 5\n6 8\n3 5","output":"4"},{"id":1648823817845,"input":"5\n1 1\n1 1\n1 1\n1 1\n1 1","output":"5"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\OneDrive\\Code\\Algorithm\\DmyOJ\\p670.cpp","group":"local","local":true}
