@@ -28,8 +28,8 @@ int find(int u)
 int main()
 {
     n = read(), m = read();
-    for (int i = 1; i <= n * 3; i++) fa[i] = i;
-    for (; m; m--)
+    for(int i = 1; i <= n * 3; i++) fa[i] = i;
+    for(; m; m--)
     {
         int opt = read(), u = read(), v = read();
         if (u > n || v > n)

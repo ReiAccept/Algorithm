@@ -29,13 +29,13 @@ void work()
 	while (k)
 	{
 		int c;
-		for (c = 1; (1ll << (c + 1)) - 2 <= k; c++);
+		for(c = 1; (1ll << (c + 1)) - 2 <= k; c++);
 		cur += c - 1;
 		a[cur] = 1;
 		k -= (1ll << c) - 2;
 	}
 	cout<<cur-1<<endl;
-	for (int i = 1; i < cur; i++) cout<<a[i]<<" ";
+	for(int i = 1; i < cur; i++) cout<<a[i]<<" ";
     cout<<endl;
     return;
 }

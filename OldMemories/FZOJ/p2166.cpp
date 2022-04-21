@@ -17,13 +17,13 @@ int main()
 {
     cin>>a>>b>>p;
     ans=b-a+1;
-    for (int i=a;i<=b;++i)
+    for(int i=a;i<=b;++i)
         f[i]=i;
-    for (int i=2;i<=b;++i)
+    for(int i=2;i<=b;++i)
         if (!np[i])
         {
             if (i>=p)
-                for (int j=i*2;j<=b;j+=i)
+                for(int j=i*2;j<=b;j+=i)
                 {
                     np[j]=true;
                     if (j-i>=a && findx(j)!=findx(j-i))
@@ -33,7 +33,7 @@ int main()
                     }
                 }
             else
-                for (int j=i*2;j<=b;j+=i)
+                for(int j=i*2;j<=b;j+=i)
                     np[j]=true;
         }
     cout<<ans<<endl;

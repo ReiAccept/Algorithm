@@ -48,18 +48,18 @@ int dp[2][MAXN];
 
 inline void work(int CASE,bool FINALCASE) {
     n=read();
-    for (int i = 1; i <= n; i++) {
+    for(int i = 1; i <= n; i++) {
         a[i]=read();
     }
     dp[0][0] = 1;
-    for (int i = 1; i <= n; i++) {
+    for(int i = 1; i <= n; i++) {
         if (a[i]) {
            dp[1][a[i]-1]= (dp[1][a[i]-1] + dp[0][a[i]-1]+dp[1][a[i]-1])%MOD;
         }
         dp[0][a[i]+1]= (dp[0][a[i]+1] + dp[0][a[i]+1]+dp[0][a[i]])%MOD;
         dp[1][a[i]+1] = (dp[1][a[i]+1]*2)%MOD;
     }
-    for (int i = 0; i <= n+1; i++) {
+    for(int i = 0; i <= n+1; i++) {
         ans=(ans+dp[0][i]+dp[1][i])%MOD;
     }
     printf("%lld\n",ans%MOD);
@@ -67,10 +67,10 @@ inline void work(int CASE,bool FINALCASE) {
 
 signed main() {
     int T = (int)read();
-    for (int t = 1; t <= T; t++) {
+    for(int t = 1; t <= T; t++) {
         ans=-1;
         work(t,t==n);
-        for (int i = 0; i <= n+1; i++) {
+        for(int i = 0; i <= n+1; i++) {
             dp[0][i] = dp[1][i] = 0;
         }
     }

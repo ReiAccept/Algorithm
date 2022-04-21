@@ -46,7 +46,7 @@ bool find(string &s,string &t) {
 	while(i<n) {
         cnt[s[i++]-'0']--;
     }
-	for (int i=0;i<10;i++) {
+	for(int i=0;i<10;i++) {
         if (cnt[i]) {
             return false;
         }
@@ -58,19 +58,19 @@ void work(int CASE,bool FINAL_CASE)
 {
     cin>>s>>t;
     int n=sz(s),m=sz(t);
-    for (auto &x:s) {
+    for(auto &x:s) {
         r1=r1*10+(x-'0');
     }
-    for (auto &x:t) {
+    for(auto &x:t) {
         r2=r2*10+(x-'0');
     }
     int ans1=r1,ans2=r2,now=__gcd(r1,r2);
     r1/=now; r2/=now;
-    for (int j=0;j<1<<n;j++)
+    for(int j=0;j<1<<n;j++)
     {
         int r3=0,ctt=0;
         mmst0(cnt);
-        for (int i=0;i<n;i++) {
+        for(int i=0;i<n;i++) {
             if (j>>i&1) {
                 r3=r3*10+s[i]-'0';
             } else {

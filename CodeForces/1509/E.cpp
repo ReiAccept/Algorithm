@@ -28,14 +28,14 @@ void work()
         return;
     }
     iota(a+1, a+n+1, 1);
-    for (int i=60,j;i>=0;i=j)
+    for(int i=60,j;i>=0;i=j)
     {
         j = i-1;
         if (~(k>>i)&((int)1)) continue;
         while (j >= 0 && ((k>>j)&1))j--;
         reverse(a+n-1-i, a+n-j);
     }
-    for (int i=1;i<=n;i++) printf("%lld%c",a[i]," \n"[i==n]);
+    for(int i=1;i<=n;i++) printf("%lld%c",a[i]," \n"[i==n]);
     return;
 }
 

@@ -80,9 +80,9 @@ int main()
 {
     int i,t;
     scanf("%d",&n);
-    for (i=1;i<=n;i++) f[i]=i;         //祖先节点初始化为自己，路径长为0。 
+    for(i=1;i<=n;i++) f[i]=i;         //祖先节点初始化为自己，路径长为0。 
     minn=0x7777777;
-    for (i=1;i<=n;i++)
+    for(i=1;i<=n;i++)
     {
         scanf("%d",&t);
         check(i,t);                    //检查当前两点是否已有边相连接。 

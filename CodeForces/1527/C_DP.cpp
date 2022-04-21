@@ -27,7 +27,7 @@ void work()
     for(int i=1;i<=n;i++) a[i]=read();
     map<int ,int> v;
     int ans=0;
-    for (int i=1;i<=n;i++)
+    for(int i=1;i<=n;i++)
     {
         f[i]=f[i-1]+v[a[i]];
         v[a[i]]+=i;

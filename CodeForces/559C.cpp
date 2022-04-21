@@ -66,7 +66,7 @@ int dfs(int i) {
 	if (vis[i]) return dp[i];
     vis[i]=true; //ATCoder ver -> if(dp[i]) return dp[i]; dont need vis 
 	int res=0;
-	for (int j=1;j<=m+1;j++) {
+	for(int j=1;j<=m+1;j++) {
 		if (j!=i && x[j]<=x[i] && y[j]<=y[i]) {
 			res=(res+(dfs(j)*Cc(x[i]-x[j]+y[i]-y[j],x[i]-x[j]))%MOD)%MOD;
 		}

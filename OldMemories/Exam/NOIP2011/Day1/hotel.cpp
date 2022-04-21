@@ -10,7 +10,7 @@ int main()
     freopen("hotel.in","r",stdin);
     freopen("hotel.out","w",stdout);
     scanf("%d%d%d",&n,&k,&p);
-    for (int i = 1; i <= n; i++)
+    for(int i = 1; i <= n; i++)
     {
         scanf("%d%d",&sd,&xf);
         if (xf<=p)
@@ -33,7 +33,7 @@ struct hotel
 
 int n,k,p,ans,cant;
 
-/*ÊýÑ§·½·¨¡£¡£µ«ÊÇÐ´²»¶ÔQAQ
+/*ï¿½ï¿½Ñ§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð´ï¿½ï¿½ï¿½ï¿½QAQ
 int main()
 {
     freopen("hotel.in","r",stdin);
@@ -53,7 +53,7 @@ int main()
     return 0;
 }
 */
-/*Ô­°æµÄN^2Ëã·¨
+/*Ô­ï¿½ï¿½ï¿½N^2ï¿½ã·¨
 int main()
 {
     freopen("hotel.in","r",stdin);

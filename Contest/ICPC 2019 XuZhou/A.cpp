@@ -28,7 +28,7 @@ bool chk(int l, int r,int res=0)
 {
     if (l > r) return false;
     if (r - l + 1 <= 10) {
-        for (int i = l; i <= r; i++) res ^= i;
+        for(int i = l; i <= r; i++) res ^= i;
     }else {
         while (l % 4 != 0) {
             res ^= l;
@@ -48,8 +48,8 @@ inline void work(int Case=1)
 {
     scanf("%lld%lld%lld", &l, &r, &s);
     int res = -1;
-    for (int i = 0; i <= 4; i++)
-        for (int j = 0; j <= 4; j++) {
+    for(int i = 0; i <= 4; i++)
+        for(int j = 0; j <= 4; j++) {
             if (chk(l + i, r - j)) res = max(res, (r - j) - (l + i) + 1);
         }
     printf("%lld\n", res);

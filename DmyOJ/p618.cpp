@@ -153,12 +153,12 @@ inline void work(signed CASE=1,bool FINAL_CASE=false) {
         }
     }
     build_t(1,1,n);
-    for (int i = maxx; i <= n; i++) {
+    for(int i = maxx; i <= n; i++) {
         if (cal(a[i].fi, que(i - maxx + 1, i))) {
             //[i - m + 1 , i ] 这个区间是满足条件的，我们才开始二分
             int L = 1, R = i - maxx + 1, pos = INF;
             int sum = que(i - maxx + 1 + 1, i);//这里记录下 i 左边 m - 1 个数的和
-            // for (int j = 1; j <= 50; j++) {
+            // for(int j = 1; j <= 50; j++) {
             while(L<=R) {
                 int mid = (L + R) / 2;
                 if (cal(a[i].fi , sum + a[mid].fi)) { // 最大的数是 a[i].val
@@ -172,14 +172,14 @@ inline void work(signed CASE=1,bool FINAL_CASE=false) {
             up2(1,1,n,pos,i,1);
         }
     }
-    for (int i = 1; i <= n; i++) {
+    for(int i = 1; i <= n; i++) {
         if (query(1,1,n,i,i) == 0) {
             ans[++cans]=a[i].se;
         }
     }
     sort(ans+1, ans+1+cans);
     printf("%lld\n",cans);
-    for (int i=1;i<=cans;i++) {
+    for(int i=1;i<=cans;i++) {
         printf("%lld%c",ans[i]," \n"[i==cans]);
     }
     return;

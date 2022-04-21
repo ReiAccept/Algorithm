@@ -25,7 +25,7 @@ void Solve()
         puts("Impossible");
         return;
     }
-    for (int i=0;i<a+b;i++)
+    for(int i=0;i<a+b;i++)
     {
         if (Stack.empty()) Stack.push(i);
         else
@@ -35,9 +35,9 @@ void Solve()
         }
     }
 
-    for (int i = 0; i < a + b; ++i) if (query(Stack.top(), i)) ans[i] = 1;
+    for(int i = 0; i < a + b; ++i) if (query(Stack.top(), i)) ans[i] = 1;
     printf("! ");
-    for (int i = 0; i < a + b; ++i) printf("%d", ans[i]);
+    for(int i = 0; i < a + b; ++i) printf("%d", ans[i]);
 }
 
 int main()

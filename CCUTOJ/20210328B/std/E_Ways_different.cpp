@@ -7,16 +7,16 @@ char route[35];
 
 int main(void) {
     scanf("%d %d %d %d", &n, &m, &d, &w);
-    for (int i = 0; i < n; i++)
+    for(int i = 0; i < n; i++)
         scanf("%s", G[i]);
     int x, y, h, dmg, len;
-    for (int i = 0; i < d; i++) {
+    for(int i = 0; i < d; i++) {
         dmg = 0;
         scanf("%d %d %d %s", &h, &x, &y, route);
         if (G[x][y] == 'P')
             dmg += w;
         len = strlen(route);
-        for (int j = 0; j < len; j++) {
+        for(int j = 0; j < len; j++) {
             switch (route[j]) {
                 case 'W':
                     x--;

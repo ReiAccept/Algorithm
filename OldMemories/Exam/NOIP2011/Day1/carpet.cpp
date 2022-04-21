@@ -9,12 +9,12 @@ int main()
     freopen("carpet.in", "r", stdin);
     freopen("carpet.out", "w", stdout);
     scanf("%d", &n);
-    for (int i = 1; i <= n; i++)
+    for(int i = 1; i <= n; i++)
         scanf("%d%d%d%d", &a[i], &b[i], &g[i], &k[i]);
 
     scanf("%d%d", &x, &y);
     int ans = -1;
-    for (int i = n; i >= 1 && ans == -1; --i)
+    for(int i = n; i >= 1 && ans == -1; --i)
         if (a[i]<=x&&x<=a[i]+g[i] && b[i] <= y && y <= b[i] + k[i])
             ans=i;
     printf("%d\n", ans);

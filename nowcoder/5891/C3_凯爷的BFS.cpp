@@ -38,7 +38,7 @@ int main()
 {
     ios::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
     cin >> n >> m;
-    for (int i = 1, u, v; i <= m; ++i)
+    for(int i = 1, u, v; i <= m; ++i)
     {
         cin >> u >> v;
         e[u].emplace_back(v);
@@ -53,7 +53,7 @@ int main()
     {
         int u = q.front();
         q.pop();
-        for (const int &v : e[u])
+        for(const int &v : e[u])
         {
             if (d[v] != -1) continue;
             d[v] = d[u]+1;

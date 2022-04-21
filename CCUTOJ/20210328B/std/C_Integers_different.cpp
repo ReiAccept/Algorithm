@@ -44,14 +44,14 @@ int lowBit(int x) {
 }
  
 void update(int x, int y) {
-    for (int i = x; i < maxN; i += lowBit(i))
+    for(int i = x; i < maxN; i += lowBit(i))
         bit[i] += y;
     return;
 }
  
 int query(int x) {
     int ret = 0;
-    for (int i = x; i > 0; i -= lowBit(i))
+    for(int i = x; i > 0; i -= lowBit(i))
         ret += bit[i];
     return ret;
 }
@@ -65,13 +65,13 @@ int main(void) {
         memset(bit, 0, sizeof(bit));
         memset(nxt, -1, sizeof(nxt));
         memset(last, -1, sizeof(last));
-        for (int i = 1; i <= n; i++) {
+        for(int i = 1; i <= n; i++) {
             scanf("%d", &tmp);
             arr[i + n] = arr[i] = tmp;
         }
         n *= 2;
         pre[0] = 0;
-        for (int i = 1; i <= n; i++) {
+        for(int i = 1; i <= n; i++) {
             if (vis[arr[i]] == false) {
                 vis[arr[i]] = true;
                 pre[i] = pre[i - 1] + 1;
@@ -81,7 +81,7 @@ int main(void) {
                 nxt[last[arr[i]]] = i;
             last[arr[i]] = i;
         }
-        for (int i = 0; i < m; i++) {
+        for(int i = 0; i < m; i++) {
             scanf("%d %d", &l, &r);
             q[i].l = r;
             q[i].r = l + n / 2;
@@ -89,7 +89,7 @@ int main(void) {
         }
         sort(q, q + m);
         int nowL = 1;
-        for (int i = 0; i < m; i++) {
+        for(int i = 0; i < m; i++) {
             while (nowL < q[i].l) {
                 if (~nxt[nowL])
                     update(nxt[nowL], 1);
@@ -97,7 +97,7 @@ int main(void) {
             }
             ans[q[i].id] = pre[q[i].r] - pre[q[i].l - 1] + query(q[i].r) - query(q[i].l - 1);
         }
-        for (int i = 0; i < m; i++)
+        for(int i = 0; i < m; i++)
             printf("%d\n", ans[i] );
     }
     return 0;

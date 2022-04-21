@@ -12,7 +12,7 @@ void work()
 {
     n=read();
 	vector<int> a(n);
-	for (int i=0;i<n;i++)a[i]=read();
+	for(int i=0;i<n;i++)a[i]=read();
 	sort(a.begin(), a.end());
 	a.resize(unique(a.begin(),a.end())-a.begin());
 	if (a.size()>3)

@@ -23,7 +23,7 @@ void add(int u, int v)
 bool dfs(int u)
 {
     vis[u] = 1;
-    for (int i = head[u]; i; i = edge[i].next)
+    for(int i = head[u]; i; i = edge[i].next)
     {
         int v = edge[i].to;
         if (vis[v] == 1) return false;
@@ -36,7 +36,7 @@ bool dfs(int u)
 
 bool topsort()
 {
-    for (int i = 1; i <= n; ++i)
+    for(int i = 1; i <= n; ++i)
     {
         if (!vis[i] && !dfs(i))
             {
@@ -49,7 +49,7 @@ bool topsort()
 int main()
 {
     cin >> n >> m;
-    for (int i = 1; i <= m; ++i)
+    for(int i = 1; i <= m; ++i)
     {
         int u, v;
         cin >> u >> v;

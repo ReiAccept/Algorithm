@@ -105,7 +105,7 @@ void DFS(int x, int y)
 int main()
 {
     cin>>n>>m;
-    for (int i=0; i<n; i++)
+    for(int i=0; i<n; i++)
         for(int j=0; j<m; j++)
         {
             cin>>g[i][j];
@@ -205,12 +205,12 @@ signed main() {
   ios::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
   while (scanf("%d", &n) == 1) {
     tree.build(1e4);
-    for (int i = 1; i <= n; ++i) {
+    for(int i = 1; i <= n; ++i) {
       scanf("%d", a+i);
       tree.add(a[i], 1);
     }
     double s = 0;
-    for (int i = 1, mx = 2; i <= n; ++i) {
+    for(int i = 1, mx = 2; i <= n; ++i) {
       tree.add(a[i], -1);
       if (a[i] < mx) continue;
       s += tree.query(1, a[i]-1);

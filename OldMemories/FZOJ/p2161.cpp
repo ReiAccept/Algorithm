@@ -23,13 +23,13 @@ inline double slope(const int a, const int b)
 int main() 
 {
     scanf("%d%d",&n,&m);
-    for (int i=1;i<=n;i++) 
+    for(int i=1;i<=n;i++) 
         scanf("%d",&a[i]);
-    for (int i=1;i<=n;i++) 
+    for(int i=1;i<=n;i++) 
         s[i]=s[i-1]+a[i];
-    for (int i=1;i<=n;i++) 
+    for(int i=1;i<=n;i++) 
         f[i]=INT_MAX;
-    for (int j=1;j<=m;j++) 
+    for(int j=1;j<=m;j++) 
     {
         memcpy(g,f,sizeof(f));
         memset(f,0,sizeof(f));

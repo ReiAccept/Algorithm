@@ -32,7 +32,7 @@ int len[MAXN];
 vector<int> grap[MAXN];
 
 void dfs(int u, int fa) {
-    for (auto v : grap[u]) {
+    for(auto v : grap[u]) {
         if (v != fa) {
             dfs(v, u);
             ans += len[u] * len[v] * (n - len[v] - len[u] - 1);
@@ -44,7 +44,7 @@ void dfs(int u, int fa) {
 
 inline void work(signed CASE=1,bool FINAL_CASE=false) {
     n=read();
-    for (int u,v,w,i = 1; i < n; i ++) {
+    for(int u,v,w,i = 1; i < n; i ++) {
         grap[u=read()].push_back(v=read());
         grap[v].push_back(u);
         w=read();

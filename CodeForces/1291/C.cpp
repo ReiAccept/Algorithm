@@ -16,9 +16,9 @@ int main()
         m=read();
         k=read();
         if (k>=m) k=m-1;
-        for (int i=1;i<=n;i++) a[i]=read();
+        for(int i=1;i<=n;i++) a[i]=read();
         ans=0;
-        for (int l=0;l<=k;l++)
+        for(int l=0;l<=k;l++)
         {
             int r=k-l,tmp=2e9;
             for(int i=0,j;i<=m-1-k;i++)

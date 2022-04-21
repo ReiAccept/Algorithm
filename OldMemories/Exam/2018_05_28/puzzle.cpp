@@ -22,8 +22,8 @@ int main()
     freopen("puzzle.in", "r", stdin);
     freopen("puzzle.out", "w", stdout);
     scanf("%d",&n);
-    for (int i=1;i<=n;i++)
-        for (int j=1;j<=n;j++)
+    for(int i=1;i<=n;i++)
+        for(int j=1;j<=n;j++)
         {
             char c;
             cin>>c; //我讨厌这样的输入,辣鸡玩意,scanf工作不正常,非要我加个iostream
@@ -35,8 +35,8 @@ int main()
 		printf("YES");
 		return 0;
 	}
-    for (int i=1;i<=n;i++)
-        for (int j=1;j<=n;j++)
+    for(int i=1;i<=n;i++)
+        for(int j=1;j<=n;j++)
             if (g[i][j])
             {
                 if (check(i,j))//这里写屎了,其实可以合并到check

@@ -3,18 +3,18 @@
 #include<conio.h>
 #include<time.h>
 #include<Windows.h>
-#define PR_Box printf("¡ö")
-#define PR_Gold printf("¡ï")
-#define PR_Ag printf("¡î")
-#define PR_FBird printf("³Â")
-#define PR_DBird printf("§¶")
-#define PR_Land printf("©×©×©Ó")
-#define PR_Bg_TL printf("¨X")
-#define PR_Bg_TR printf("¨[")
-#define PR_Bg_DL printf("¨^")
-#define PR_Bg_DR printf("¨a")
-#define PR_Bg_X printf("¨T")
-#define PR_Bg_Y printf("¨U")
+#define PR_Box printf("ï¿½ï¿½")
+#define PR_Gold printf("ï¿½ï¿½")
+#define PR_Ag printf("ï¿½ï¿½")
+#define PR_FBird printf("ï¿½ï¿½")
+#define PR_DBird printf("ï¿½ï¿½")
+#define PR_Land printf("ï¿½×©×©ï¿½")
+#define PR_Bg_TL printf("ï¿½X")
+#define PR_Bg_TR printf("ï¿½[")
+#define PR_Bg_DL printf("ï¿½^")
+#define PR_Bg_DR printf("ï¿½a")
+#define PR_Bg_X printf("ï¿½T")
+#define PR_Bg_Y printf("ï¿½U")
 #define PR_Blank printf(" ");
 int Grade = 1, C_Gold = 0, C_Ag = 0, Score = 0, Delay_time = 1000, Max_blank = 9, Distance = 18;
 typedef struct Birds {
@@ -128,7 +128,7 @@ void Prt_Bg(Bg * q) {
     int i = 0, k, j;
     while (++i <= 5) {
         if (p -> x > 0 && p -> x <= 78) {
-            for (k = 2; k < p -> y; k++) {
+            for(k = 2; k < p -> y; k++) {
                 Position(p -> x + 1, k);
                 PR_Box;
                 PR_Box;
@@ -145,19 +145,19 @@ void Prt_Bg(Bg * q) {
             PR_Box;
             PR_Blank;
             k = k + p -> l_blank + 1;
-            for (k; k <= 22; k++) {
+            for(k; k <= 22; k++) {
                 Position(p -> x + 1, k);
                 PR_Box;
                 PR_Box;
                 PR_Blank;
             }
             Position(p -> x, 23);
-            for (k = 1; k < Distance / 3 - 2; k++)
+            for(k = 1; k < Distance / 3 - 2; k++)
                 PR_Land;
         }
         p = p -> next;
         if (p -> x == 0) {
-            for (j = 2; j < p -> y; j++) {
+            for(j = 2; j < p -> y; j++) {
                 Position(p -> x + 1, j);
                 PR_Blank;
                 PR_Blank;
@@ -171,7 +171,7 @@ void Prt_Bg(Bg * q) {
             PR_Blank;
             PR_Blank;
             j = j + Max_blank - Grade + 1;
-            for (j; j <= 22; j++) {
+            for(j; j <= 22; j++) {
                 Position(p -> x + 1, j);
                 PR_Blank;
                 PR_Blank;
@@ -189,7 +189,7 @@ void PrtBg() {
     PR_Bg_DL;
     Position(79, 24);
     PR_Bg_DR;
-    for (i = 3; i <= 78; i += 2) {
+    for(i = 3; i <= 78; i += 2) {
         Position(i, 1);
         PR_Bg_X;
         Position(i, 24);
@@ -224,15 +224,15 @@ int CheckYN(Bg * q) {
     return 1;
 }
 void Prtfirst() {
-    printf("¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T\n");
+    printf("ï¿½Tï¿½Tï¿½Tï¿½Tï¿½Tï¿½Tï¿½Tï¿½Tï¿½Tï¿½Tï¿½Tï¿½Tï¿½Tï¿½Tï¿½Tï¿½Tï¿½Tï¿½Tï¿½Tï¿½Tï¿½Tï¿½Tï¿½Tï¿½Tï¿½Tï¿½Tï¿½Tï¿½Tï¿½Tï¿½Tï¿½Tï¿½Tï¿½Tï¿½Tï¿½Tï¿½Tï¿½Tï¿½T\n");
     printf(" \n");
     printf(" \n");
-    printf("                                 ³ÂÐÞÔ¶µÄÐÒ¸£Éú»î                          \n");
-    printf("                                 ÓÎÏ·ËµÃ÷£º\n");
-    printf("                                 1-°´ÉÏ¼ýÍ·Ê¹·ÉÐÐÔ±Æð·É \n");
-    printf("                                 2-µÈ¼¶Ô½¸ß£¬ÄÑ¶ÈÔ½´ó                               \n");
-    printf("                                 ³ÂÐÞÔ¶£¬ÄãÐ¡×ÓµÈ×Å   £¡                        \n");
-    printf("                                 Ã°ÏÕ¿ªÊ¼£¡£¡                               \n");
+    printf("                                 ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½Ò¸ï¿½ï¿½ï¿½ï¿½ï¿½                          \n");
+    printf("                                 ï¿½ï¿½Ï·Ëµï¿½ï¿½ï¿½ï¿½\n");
+    printf("                                 1-ï¿½ï¿½ï¿½Ï¼ï¿½Í·Ê¹ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ \n");
+    printf("                                 2-ï¿½È¼ï¿½Ô½ï¿½ß£ï¿½ï¿½Ñ¶ï¿½Ô½ï¿½ï¿½                               \n");
+    printf("                                 ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½Óµï¿½ï¿½ï¿½   ï¿½ï¿½                        \n");
+    printf("                                 Ã°ï¿½Õ¿ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½                               \n");
     printf("                                 \n");
     printf("  \n");
     printf(" \n");
@@ -246,7 +246,7 @@ void Prtfirst() {
     printf(" \n");
     printf(" \n");
     printf(" \n");
-    printf(" ©×©×©Ó©×©×©Ó©×©×©Ó©×©×©Ó©×©×©Ó©×©×©Ó©×©×©Ó©×©×©Ó©×©×©Ó©×©×©Ó©×©×©Ó©×©×©Ó©×\n");
+    printf(" ï¿½×©×©Ó©×©×©Ó©×©×©Ó©×©×©Ó©×©×©Ó©×©×©Ó©×©×©Ó©×©×©Ó©×©×©Ó©×©×©Ó©×©×©Ó©×©×©Ó©ï¿½\n");
     system("pause");
     Position(1, 1);
     int i = 0;
@@ -285,11 +285,11 @@ void Prtfirst() {
         i = 0;
     }
     Position(38, 10);
-    printf("³ÂÐÞÔ¶£¬×ä£¡\n");
+    printf("ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ä£¡\n");
     Position(38, 10);
-    printf("³ÂÐÞÔ¶£¬×ä£¡\n");
+    printf("ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ä£¡\n");
     Position(38, 10);
-    printf("³ÂÐÞÔ¶£¬×ä£¡\n");
+    printf("ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ä£¡\n");
     Position(1, 25);
     system("pause");
 }

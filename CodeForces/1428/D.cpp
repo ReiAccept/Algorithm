@@ -12,9 +12,9 @@ vector<int> vec;
 int main()
 {
     scanf("%d",&n);
-    for (int i = 1; i <= n; i++) scanf("%d",a+i);
+    for(int i = 1; i <= n; i++) scanf("%d",a+i);
     int cnt = n;
-    for (int i = n; i>=1; i--)
+    for(int i = n; i>=1; i--)
     {
         if (a[i] == 1)
         {
@@ -34,9 +34,9 @@ int main()
             res.emplace_back(y[i], i);
         }
     }
-    for (int i = 1; i <= n; i++) if (a[i] == 2) vec.push_back(i);
+    for(int i = 1; i <= n; i++) if (a[i] == 2) vec.push_back(i);
     sort(vec.begin(), vec.end());
-    for (int i = n; i>=1; i--) 
+    for(int i = n; i>=1; i--) 
         if (a[i] == 3)
         {
             if (vec.empty() || vec.back() < i)
@@ -51,7 +51,7 @@ int main()
             vec.push_back(i);
         }
     printf("%ld\n",res.size());
-    for (auto &p : res) printf("%d %d\n",p.first,p.second);
+    for(auto &p : res) printf("%d %d\n",p.first,p.second);
     return 0;
 }
 

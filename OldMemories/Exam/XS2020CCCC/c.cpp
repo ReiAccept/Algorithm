@@ -9,13 +9,13 @@ void smallestGoodBase(long long N)
 {
     LL n = N;
     LL ans = n - 1;
-    for (int s = 59; s >= 2; --s)
+    for(int s = 59; s >= 2; --s)
     {
         int k = pow(n, 1.0 / s);
         if (k > 1)
         {
             LL sum = 1, mul = 1;
-            for (int i = 1; i <= s; ++i)
+            for(int i = 1; i <= s; ++i)
             {
                 mul *= k;
                 sum += mul;

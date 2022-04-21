@@ -21,14 +21,14 @@ void prt(int x){if(x<0){putchar('-');x=-x;}if(x>9)prt(x/10);putchar((char)(x%10+
 int phi[MAXN];
 void Euler()
 {
-    for (int i = 2; i < MAXN; i++)
+    for(int i = 2; i < MAXN; i++)
 		if (!phi[i])
-			for (int j = i; j < MAXN; j += i)
+			for(int j = i; j < MAXN; j += i)
 			{
 				if (!phi[j]) phi[j] = j;
 				phi[j] = phi[j] / i * (i - 1);
 			}
-	for (int i = 3; i < MAXN; i++)phi[i] += phi[i-1];
+	for(int i = 3; i < MAXN; i++)phi[i] += phi[i-1];
 }
 
 signed a,b;

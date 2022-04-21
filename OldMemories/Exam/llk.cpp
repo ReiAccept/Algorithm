@@ -56,7 +56,7 @@ bool bfs()
     while (!q.empty())
     {
         temp=q.top();
-        for (int i=0; i<=3; i++)
+        for(int i=0; i<=3; i++)
         {
             tempx=temp.x+direct[i][0];
             tempy=temp.y+direct[i][1];
@@ -87,7 +87,7 @@ void creat()
     while (t!=sum)
     {
         a=(int)random(0,26)+1;
-        for (int l=1; l<=2; l++)
+        for(int l=1; l<=2; l++)
         {
             while (1)
             {
@@ -108,16 +108,16 @@ void print()
 {
     char c;
     cout << "  ";
-    for (int i=1; i<=n; i++)
+    for(int i=1; i<=n; i++)
         cout << i%10;
     cout << endl << "  ";
-    for (int i=1; i<=n; i++)
+    for(int i=1; i<=n; i++)
         cout << "-";
     cout << endl;
-    for (int i=1; i<=m; i++)
+    for(int i=1; i<=m; i++)
     {
         cout << i%10 << "|";
-        for (int j=1; j<=n; j++)
+        for(int j=1; j<=n; j++)
         {
             if (map[i][j]!=0)
             {
@@ -129,7 +129,7 @@ void print()
         cout << "|" << endl;
     }
     cout << "  ";
-    for (int i=1; i<=n; i++) cout << "-";
+    for(int i=1; i<=n; i++) cout << "-";
     cout << endl;
 }
 

@@ -56,9 +56,9 @@ inline void work(signed CASE = 1, bool FINAL_CASE = false)
 {
     n=read(); m=read();
     for(int i=0;i<=n+1;i++) grap[i].clear();
-    for (int i = 1; i <= n; i++)
+    for(int i = 1; i <= n; i++)
         in[i] = topo[i] = 0;
-    for (int i = 1; i <= m; i++)
+    for(int i = 1; i <= m; i++)
     {
         t[i]=read(); u[i]=read(); v[i]=read();
         if (t[i] == 1) {
@@ -67,7 +67,7 @@ inline void work(signed CASE = 1, bool FINAL_CASE = false)
         }
     }
     queue<int> q;
-    for (int i = 1; i <= n; i++)
+    for(int i = 1; i <= n; i++)
         if (!in[i])
             q.push(i);
     cnt = 0;
@@ -81,14 +81,14 @@ inline void work(signed CASE = 1, bool FINAL_CASE = false)
             }
         }
     }
-    for (int i = 1; i <= n; i++)
+    for(int i = 1; i <= n; i++)
         if (in[i])
         {
             puts("NO");
             return;
         }
     puts("YES");
-    for (int i = 1; i <= m; i++)
+    for(int i = 1; i <= m; i++)
         if (topo[u[i]] < topo[v[i]])
             printf("%d %d\n", u[i], v[i]);
         else
@@ -100,7 +100,7 @@ signed main()
 {
     // ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr); //freopen(".in", "r", stdin);//freopen(".out", "w", stdout);
     signed T = (signed)read();//scanf("%d",&T);//cin>>T;
-    for (signed CASE = 1; CASE <= T; CASE++)
+    for(signed CASE = 1; CASE <= T; CASE++)
     { //
         //printf("Case #%d: ",CASE); //printf("Case %d: ",CASE); //printf("Case #%d: \n",CASE); //printf("Case %d: \n",CASE);
         //while(cin>>n) work(n);

@@ -18,13 +18,13 @@ int lowbit(int x){
     return -x & x;
 }
 void update(int x){
-    for (int i = x; i <= n; i += lowbit(i)) {
+    for(int i = x; i <= n; i += lowbit(i)) {
         s[i] ++;
     }
 }
 int query(int x){
     int res = 0;
-    for (int i = x; i; i -= lowbit(i)) {
+    for(int i = x; i; i -= lowbit(i)) {
         res += s[i];
     }
     return res;
@@ -32,24 +32,24 @@ int query(int x){
 void solve(){
     cin >> n >> m;
     memset(s,0,4 * (n + 1));
-    for (int i = 1; i <= n; ++i) {
+    for(int i = 1; i <= n; ++i) {
         cin >> a[i].first;
         a[i].second = i;
     }
     sort(a + 1,a + 1 + n);
-    for (int i = 1; i <= m; ++i) {
+    for(int i = 1; i <= m; ++i) {
         cin >> ask[i].l >> ask[i].r >> ask[i].x;
         ask[i].id = i;
     }
     sort(ask + 1,ask + 1 + m);
     int r = 1;
-    for (int i = 1; i <= m; ++i) {
+    for(int i = 1; i <= m; ++i) {
         while (a[r].first <= ask[i].x && r <= n){
             update(a[r++].second);
         }
         res[ask[i].id] = query(ask[i].r) - query(ask[i].l - 1);
     }
-    for (int i = 1; i <= m; ++i) {
+    for(int i = 1; i <= m; ++i) {
         cout << res[i] << ' ';
     }
     cout << endl;

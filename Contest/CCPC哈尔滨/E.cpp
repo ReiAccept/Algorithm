@@ -14,7 +14,7 @@ void work()
 {
     flag=false; m=INF;
     scanf("%lld", &n);
-    for (int i = 1; i <= n; i++) {
+    for(int i = 1; i <= n; i++) {
         scanf("%lld", a + i);
     }
     if(a[1]!=1) {
@@ -26,7 +26,7 @@ void work()
             flag=true;
         }
     }
-    for (int i = 2; i <= n; i++) {
+    for(int i = 2; i <= n; i++) {
         if (a[i] > (a[i - 1] * 2)%m) {
             printf("-1\n");
             return;
@@ -56,7 +56,7 @@ signed main()
 {
     int T;
     scanf("%lld", &T);
-    for (int i = 0; i < T; i++)
+    for(int i = 0; i < T; i++)
     {
         work();
     }

@@ -11,8 +11,8 @@ signed main()
     while (cin>>n) 
     {
         cnt[0] = cnt[1] = 0;
-        for (int i = 0; i < n; i++) cin>>a[i];
-        for (int i = 0; i < n; i++) 
+        for(int i = 0; i < n; i++) cin>>a[i];
+        for(int i = 0; i < n; i++) 
         {
             cnt[a[i]%2]++;
             loc[a[i]%2]=arr[i];

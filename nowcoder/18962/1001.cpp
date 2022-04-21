@@ -26,7 +26,7 @@ inline void work()
 {
     for(int i=0;i<40;i++) a[i]=i+1;
     shuffle(begin(a), end(a), default_random_engine(random_device()()));
-    for (const auto e : a) cout << e << ' ';
+    for(const auto e : a) cout << e << ' ';
     cout << endl;
     return;
 }

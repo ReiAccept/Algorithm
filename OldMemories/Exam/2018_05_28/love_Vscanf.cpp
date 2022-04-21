@@ -32,12 +32,12 @@ int main()
 	freopen("love.in","r",stdin);
 	freopen("love.out","w",stdout);
     scanf("%d%d",&n,&m);
-    for (int i=1;i<=n;i++) 
+    for(int i=1;i<=n;i++) 
 		father[i]=i;
-    for (int i=1;i<=m;i++)
+    for(int i=1;i<=m;i++)
 		scanf("%d%d%d",&a[i].x,&a[i].y,&a[i].v);
 	std::sort(a+1,a+m+1,cmp);
-    for (int i=1;i<=m;i++)
+    for(int i=1;i<=m;i++)
     {
         if (find(a[i].x)==find(a[i].y)) 
 		{

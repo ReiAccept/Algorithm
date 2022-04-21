@@ -33,11 +33,11 @@ int a[MAXN],cot[MAXN];
 
 inline void work(signed CASE=1,bool FINAL_CASE=false) {
     n=read();
-    for (int i=1;i<=n;i++) {
+    for(int i=1;i<=n;i++) {
         cot[a[i]=read()]++;
     }
-    for (int i=1;i<=MAXN;i++) {
-        for (int j=i;j<=MAXN;j+=i) {
+    for(int i=1;i<=MAXN;i++) {
+        for(int j=i;j<=MAXN;j+=i) {
             int mi=min(j/i,i),mx=max(j/i,i);
             int d=mx-mi;
             if (!(d%2)) {

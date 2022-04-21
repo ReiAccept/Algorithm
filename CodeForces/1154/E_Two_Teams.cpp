@@ -17,10 +17,10 @@ struct Node
 void work()
 {
 	n=read();k=read();
-	for (int i=0;i<n;i++) a[i].nl=read(),a[i].i=i;
+	for(int i=0;i<n;i++) a[i].nl=read(),a[i].i=i;
 	sort(a,a+n,[](Node a,Node b){return a.nl>b.nl;});
-	for (int i=0;i<n;i++) q.push(a[i].i);
-	for (int i=0;i<n;i++) idx.insert(i);
+	for(int i=0;i<n;i++) q.push(a[i].i);
+	for(int i=0;i<n;i++) idx.insert(i);
 	string ans(n,'1');
 	while (!idx.empty()) 
     {
@@ -29,20 +29,20 @@ void work()
 		q.pop();
 		vector<int> add;
 		auto it=idx.find(pos);
-		for (int i=0;i<=k;i++) 
+		for(int i=0;i<=k;i++) 
         {
 			add.push_back(*it);
 			if (it==idx.begin()) break;
 			it--;
 		}
 		it=next(idx.find(pos));
-		for (int i=0;i<k;i++) 
+		for(int i=0;i<k;i++) 
         {
 			if (it==idx.end()) break;
 			add.push_back(*it);
 			it++;
 		}
-		for (auto it : add)
+		for(auto it : add)
         {
 			idx.erase(it);
             if(flag) ans[it]='2';

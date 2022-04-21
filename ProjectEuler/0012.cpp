@@ -5,7 +5,7 @@ using namespace std;
 
 int number_of_divisors(int number) {
     int result = 1;
-    for (int i = 2; i * i < number; i++) {
+    for(int i = 2; i * i < number; i++) {
         int power = 0;
         while (number % i == 0) {
             number /= i;

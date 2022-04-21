@@ -70,7 +70,7 @@ signed main()
     // scanf("%lld", &T);
     cin>>T;
     // cout<<T<<endl;
-    for (int i = 0; i < T; i++)
+    for(int i = 0; i < T; i++)
     {
         work();
         for(int i=0;i<=cnt;i++) {

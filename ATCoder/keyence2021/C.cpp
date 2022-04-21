@@ -205,7 +205,7 @@ template <typename T, typename H>
 inline T qpow(const T &a, const H &p, const int &mo = MOD)
 {
     long long res = 1, x = a;
-    for (H i = p; i; i >>= 1, x = x*x%mo)
+    for(H i = p; i; i >>= 1, x = x*x%mo)
         if (i&1) res = res*x%mo;
     return static_cast<T>(res);
 }
@@ -219,16 +219,16 @@ Mint dp[N][N];
 inline void solve()
 {
     n=read();m=read();k=read();
-    for (int i = 1, x, y; i <= k; ++i)
+    for(int i = 1, x, y; i <= k; ++i)
     {
         x=read();y=read();
         cin>>a[x][y];
     }
     dp[1][1]=1;
     int inv3 = inverse(3, MOD);
-    for (int i = 1; i <= n; ++i)
+    for(int i = 1; i <= n; ++i)
     {
-        for (int j = 1; j <= m; ++j)
+        for(int j = 1; j <= m; ++j)
         {
             if (a[i][j] == 'D') dp[i+1][j] += dp[i][j];
             else if (a[i][j] == 'R') dp[i][j+1] += dp[i][j];
@@ -250,7 +250,7 @@ inline void solve()
 signed main()
 {
     int T = 1;
-    for (int t = 1; t <= T; ++t)
+    for(int t = 1; t <= T; ++t)
     {
         solve();
     }

@@ -12,16 +12,16 @@ int main(void)
 {
     ios::sync_with_stdio(false);
     cin>>n;
-    for (int i = 0; i < n; i++)
+    for(int i = 0; i < n; i++)
         scanf("%d%d", &v[i].first, &v[i].second), st[v[i].second - v[i].first + maxn].insert(v[i]);
-    for (int i = 0; i < n; i++)
+    for(int i = 0; i < n; i++)
     {
         scanf("%d",&a[i]);
         a[i]+=maxn;
     }
     bool flag=true;
     pair<int, int> maxs(-INF, -INF);
-    for (int i = 0; i < n; i++)
+    for(int i = 0; i < n; i++)
     {
         if (st[a[i]].empty())
         {
@@ -41,7 +41,7 @@ int main(void)
     if(flag)
     {
         puts("YES");
-        for (int i=0;i<n;i++) printf("%d %d\n", ans[i].first, ans[i].second);
+        for(int i=0;i<n;i++) printf("%d %d\n", ans[i].first, ans[i].second);
     }
     else puts("NO");
     return 0;

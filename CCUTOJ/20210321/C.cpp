@@ -96,12 +96,12 @@ signed main() {
 #endif
   while (scanf("%d", &n) == 1) {
     tree.build(1e4);
-    for (int i = 1; i <= n; ++i) {
+    for(int i = 1; i <= n; ++i) {
       scanf("%d", a+i);
       tree.add(a[i], 1);
     }
     double s = 0;
-    for (int i = 1, mx = 2; i <= n; ++i) {
+    for(int i = 1, mx = 2; i <= n; ++i) {
       tree.add(a[i], -1);
       if (a[i] < mx) continue;
       s += tree.query(1, a[i]-1);

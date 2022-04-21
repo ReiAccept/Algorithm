@@ -47,7 +47,7 @@ void work()
                 score = m;
             s[i++] = m;
         }
-        for (j = 0; j < i; j++)
+        for(j = 0; j < i; j++)
             if (s[j] > score)
                 range++;
         printf("%d\n", range);
@@ -58,7 +58,7 @@ signed main()
 {
     //ios::sync_with_stdio(false);cin.tie(NULL);
     int T = 1; //read();
-    for (int Case = 1; Case <= T; Case++)
+    for(int Case = 1; Case <= T; Case++)
     {
         //printf("Case #%d: ",Case);
         work();

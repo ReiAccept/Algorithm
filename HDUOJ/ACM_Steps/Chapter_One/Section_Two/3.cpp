@@ -41,11 +41,11 @@ void work()
 {
     getline(cin, s);
     l = s.length();
-    for (k = 0, j = -1; k <= l; k++)
+    for(k = 0, j = -1; k <= l; k++)
     {
         if (s[k] == ' ' || k == l)
         {
-            for (i = k - 1; i > j; i--)
+            for(i = k - 1; i > j; i--)
                 cout << s[i];
             if (k != l)
                 cout << ' ';
@@ -60,7 +60,7 @@ void work()
 signed main()
 {
     int T = read();
-    for (int Case = 1; Case <= T; Case++)
+    for(int Case = 1; Case <= T; Case++)
     {
         //printf("Case #%d: ",Case);
         work();

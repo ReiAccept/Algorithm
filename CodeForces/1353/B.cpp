@@ -27,7 +27,7 @@ void work()
 	sort(b,b+n,[](int a,int b){
             return b<a;
             });
-	for (int i=0; i<n;i++)
+	for(int i=0; i<n;i++)
 		if(i<k)ans+=max(a[i],b[i]);
 		else ans+=a[i];
 	cout<<ans<<endl;

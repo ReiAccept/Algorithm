@@ -39,7 +39,7 @@ void dijkstra(int x, ll *dis) {
 		if (vis[u])
 			continue;
 		vis[u] = true;
-		for (auto it : G[u]) {
+		for(auto it : G[u]) {
 			int v = it.se; ll w = it.fi;
 			if (dis[v] > dis[u] + w) {
 				dis[v] = dis[u] + w;
@@ -53,7 +53,7 @@ inline void work(int Case)
 {
     scanf("%lld%lld", &n, &m);
 	int cnt = 0;
-	for (int i = 1; i <= m; i++) {
+	for(int i = 1; i <= m; i++) {
 		int k, u, w;
 		scanf("%lld %lld", &w, &k);
 		cnt++;
@@ -66,12 +66,12 @@ inline void work(int Case)
 		dijkstra(1, d1), dijkstra(n, d2); 
 		printf("Case #%lld: ", Case);
 		int ans = INF;
-		for (int i = 1; i <= n; i++)ans=min(ans, max(d1[i], d2[i]));
+		for(int i = 1; i <= n; i++)ans=min(ans, max(d1[i], d2[i]));
 		if (ans == INF) printf("Evil John\n");
 		else {
 			printf("%lld\n", ans);
 			vector <int> v;
-			for (int i = 1; i <= n; i++) 
+			for(int i = 1; i <= n; i++) 
                 if (max(d1[i], d2[i]) == ans) v.push_back(i);
 			for(int i = 0; i < (int)v.size() - 1; i++) printf("%lld ", v[i]);
 			printf("%lld\n", v[(int)v.size() - 1]);
@@ -87,7 +87,7 @@ signed main()
     for(signed Case=1; Case<=T; Case++) {
         //printf("Case %d: ",Case);
         //while(cin>>n) work(n);
-        for (int i = 0; i < MAXN; i++) G[i].clear();
+        for(int i = 0; i < MAXN; i++) G[i].clear();
 	    mmst3f(d1), mmst3f(d2);
         work(Case);
     }

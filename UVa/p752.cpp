@@ -8,7 +8,7 @@ int judge(int a,int b)
 {
 	if (b>98765)
 		return 0;
-	for (int i=0;i<10;i++)
+	for(int i=0;i<10;i++)
 		vis[i]=0;
 	if (a<10000) 
 		vis[0]=1;
@@ -23,7 +23,7 @@ int judge(int a,int b)
 		b/=10;
 	}
 	int sum=0;
-	for (int i=0;i<10;i++)
+	for(int i=0;i<10;i++)
 		sum+=vis[i];
 	return (sum==10);
 }
@@ -36,7 +36,7 @@ int main()
 		if(T++)
 			printf("\n");
 		int count = 0;
-		for (int i=1234;i<100000;++i)
+		for(int i=1234;i<100000;++i)
 		{
 			if (judge(i,i*n))
 			{ 

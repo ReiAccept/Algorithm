@@ -23,10 +23,10 @@ void work()
     while (scanf("%d", &n) && n) 
     {
         cnt = 0;
-        for (int i = 0; i < n; i++) scanf("%d", &a[i]);
-        for (int j = 1; j < n; j++) 
+        for(int i = 0; i < n; i++) scanf("%d", &a[i]);
+        for(int j = 1; j < n; j++) 
         {
-            for (int i = 0; i < n - j; i++) 
+            for(int i = 0; i < n - j; i++) 
             {
                 if (a[i] > a[i + 1]) {
                     swap(a[i],a[i+1]);

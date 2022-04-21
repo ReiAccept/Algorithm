@@ -21,14 +21,14 @@ int read(){int s=0,w=1;char ch=getchar();while(!isdigit(ch)){if(ch=='-')w=-1;ch=
 int phi[MAXN];
 void Euler()
 {
-    for (int i = 2; i < MAXN; i++)
+    for(int i = 2; i < MAXN; i++)
 		if (!phi[i])
-			for (int j = i; j < MAXN; j += i)
+			for(int j = i; j < MAXN; j += i)
 			{
 				if (!phi[j]) phi[j] = j;
 				phi[j] = phi[j] / i * (i - 1);
 			}
-	for (int i = 3; i < MAXN; i++)phi[i] += phi[i-1];
+	for(int i = 3; i < MAXN; i++)phi[i] += phi[i-1];
     phi[1]=1;
 }
 

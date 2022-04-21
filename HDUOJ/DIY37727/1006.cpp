@@ -20,7 +20,7 @@ int read(){int s=0,w=1;char ch=getchar();while(!isdigit(ch)){if(ch=='-')w=-1;ch=
 
 ll phi(ll n){//欧拉函数模板
 	ll ans = n;
-	for (ll i = 2; i * i <= n; i++)
+	for(ll i = 2; i * i <= n; i++)
 		if (n % i == 0){
 			ans = ans / i * (i - 1);
 			do n /= i;

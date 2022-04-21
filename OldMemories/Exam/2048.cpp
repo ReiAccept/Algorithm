@@ -70,8 +70,8 @@ int main() {
 	return 0;
 }
 void init() {
-	for (int i = 0; i < 4; i++) {
-		for (int j = 0; j < 4; j++) {
+	for(int i = 0; i < 4; i++) {
+		for(int j = 0; j < 4; j++) {
 			cells[i][j] = 0;
 		}
 	}
@@ -95,8 +95,8 @@ void refresh() {
 	}
 	cout << "     *****************************" << endl;
 	cout << endl << endl;
-	for (int i = 0; i < 4; i++) {
-		for (int j = 0; j < 4; j++) {
+	for(int i = 0; i < 4; i++) {
+		for(int j = 0; j < 4; j++) {
 			if (cells[i][j] == 0)
 				cout << setw(8) << "□";
 			else
@@ -125,8 +125,8 @@ void randomNumber() {
 }
  
 bool full() {
-	for (int i = 0; i < 4; i++)
-		for (int j = 0; j < 4; j++)
+	for(int i = 0; i < 4; i++)
+		for(int j = 0; j < 4; j++)
 			if (cells[i][j] == 0)
 				return false;
 	return true;
@@ -134,14 +134,14 @@ bool full() {
 void clickUp() {
 	if (GameOver()||!canMoveUp())//游戏结束或者不能上移则不执行
 		return;
-	for (int col = 0; col < 4; col++)
+	for(int col = 0; col < 4; col++)
 		upCol(col);
 	randomNumber();
 	refresh();
 }
 bool canMoveUp() {
-	for (int col = 0; col < 4; col++)
-		for (int row = 1; row < 4; row++) {
+	for(int col = 0; col < 4; col++)
+		for(int row = 1; row < 4; row++) {
 			if (cells[row][col] != 0 && cells[row - 1][col] == 0)
 				return true;//某个数字上面为空时为真
 			if (cells[row][col] != 0 && (cells[row][col] == cells[row - 1][col]))
@@ -150,7 +150,7 @@ bool canMoveUp() {
 	return false;//不可以上移
 }
 void upCol(int col) {
-	for (int row = 0; row < 4;) {
+	for(int row = 0; row < 4;) {
 		int current = cells[row][col];
 		int nextRow = getNextInCol(col, row + 1, 1);
 		if (nextRow == -1)
@@ -186,15 +186,15 @@ void clickDown() {
 		return;
 	if (!canMoveDown())
 		return;
-	for (int col = 0; col < 4; col++) {
+	for(int col = 0; col < 4; col++) {
 		downCol(col);
 	}
 	randomNumber();
 	refresh();
 }
 bool canMoveDown() {
-	for (int col = 0; col < 4; col++)
-		for (int row = 0; row < 3; row++){
+	for(int col = 0; col < 4; col++)
+		for(int row = 0; row < 3; row++){
 			if (cells[row][col] != 0 && cells[row + 1][col] == 0)
 				return true;
 			if (cells[row][col] != 0 && (cells[row][col] == cells[row + 1][col]))
@@ -203,7 +203,7 @@ bool canMoveDown() {
 	return false;
 }
 void downCol(int col) {
-	for (int row = 3; row >= 0;) {
+	for(int row = 3; row >= 0;) {
 		int current = cells[row][col];
 		int nextRow = getNextInCol(col, row - 1, -1);
 		if (nextRow == -1)
@@ -227,14 +227,14 @@ void downCol(int col) {
 void clickLeft() {
 	if (GameOver()|| !canMoveLeft())
 		return;
-	for (int row = 0; row < 4; row++)
+	for(int row = 0; row < 4; row++)
 		leftCol(row);
 	randomNumber();
 	refresh();
 }
 bool canMoveLeft() {
 	for(int col=1;col<4;col++)
-		for (int row = 0; row < 4; row++) {
+		for(int row = 0; row < 4; row++) {
 			if (cells[row][col] != 0 && cells[row][col - 1] == 0)
 				return true;
 			if (cells[row][col] != 0 && (cells[row][col] == cells[row][col - 1]))
@@ -243,7 +243,7 @@ bool canMoveLeft() {
 	return false;
 }
 void leftCol(int row) {
-	for (int col = 0; col < 4;) {
+	for(int col = 0; col < 4;) {
 		int current = cells[row][col];
 		int nextCol = getNextInRow(row, col + 1, 1);
 		if (nextCol == -1)
@@ -276,14 +276,14 @@ int getNextInRow(int row, int startCol, int step) {
 void clickRight() {
 	if (GameOver() || !canMoveRight())
 		return;
-	for (int row = 0; row < 4; row++)
+	for(int row = 0; row < 4; row++)
 		rightCol(row);
 	randomNumber();
 	refresh();
 }
 bool canMoveRight() {
 	for(int col=0;col<3;col++)
-		for (int row = 0; row < 4; row++) {
+		for(int row = 0; row < 4; row++) {
 			if (cells[row][col] != 0 && cells[row][col + 1] == 0)
 				return true;
 			if (cells[row][col] != 0 && cells[row][col] == cells[row][col + 1])
@@ -292,7 +292,7 @@ bool canMoveRight() {
 	return false;
 }
 void rightCol(int row) {
-	for (int col = 3; col >= 0;) {
+	for(int col = 3; col >= 0;) {
 		int current = cells[row][col];
 		int nextCol = getNextInRow(row, col - 1, -1);
 		if (nextCol == -1)
@@ -322,8 +322,8 @@ bool GameOver() {
 	return true;
 }
 bool Success() {
-	for (int i = 0; i < 4; i++)
-		for (int j = 0; j < 4; j++)
+	for(int i = 0; i < 4; i++)
+		for(int j = 0; j < 4; j++)
 			if (cells[i][j] == 2048) {
 				nowState = State::Success;
 				return true;

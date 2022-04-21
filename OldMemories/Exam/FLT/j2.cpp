@@ -752,7 +752,7 @@ namespace std
 
 
     {
-      for (size_t __n = 0; __n < _Nm; ++__n)
+      for(size_t __n = 0; __n < _Nm; ++__n)
  swap(__a[__n], __b[__n]);
     }
 
@@ -2066,7 +2066,7 @@ namespace std
 
       ;
 
-      for (; __first1 != __last1; ++__first1, ++__first2)
+      for(; __first1 != __last1; ++__first1, ++__first2)
  std::iter_swap(__first1, __first2);
       return __first2;
     }
@@ -2155,7 +2155,7 @@ namespace std
         static _OI
         __copy_m(_II __first, _II __last, _OI __result)
         {
-   for (; __first != __last; ++__result, ++__first)
+   for(; __first != __last; ++__result, ++__first)
      *__result = *__first;
    return __result;
  }
@@ -2288,7 +2288,7 @@ namespace std
         __copy_move_b(_BI1 __first, _BI1 __last, _BI2 __result)
         {
    typename iterator_traits<_BI1>::difference_type __n;
-   for (__n = __last - __first; __n > 0; --__n)
+   for(__n = __last - __first; __n > 0; --__n)
      *--__result = *--__last;
    return __result;
  }
@@ -2363,7 +2363,7 @@ namespace std
     __fill_a(_ForwardIterator __first, _ForwardIterator __last,
        const _Tp& __value)
     {
-      for (; __first != __last; ++__first)
+      for(; __first != __last; ++__first)
  *__first = __value;
     }
 
@@ -2374,7 +2374,7 @@ namespace std
       const _Tp& __value)
     {
       const _Tp __tmp = __value;
-      for (; __first != __last; ++__first)
+      for(; __first != __last; ++__first)
  *__first = __tmp;
     }
 
@@ -2407,7 +2407,7 @@ namespace std
     __gnu_cxx::__enable_if<!__is_scalar<_Tp>::__value, _OutputIterator>::__type
     __fill_n_a(_OutputIterator __first, _Size __n, const _Tp& __value)
     {
-      for (__decltype(__n + 0) __niter = __n;
+      for(__decltype(__n + 0) __niter = __n;
     __niter > 0; --__niter, ++__first)
  *__first = __value;
       return __first;
@@ -2419,7 +2419,7 @@ namespace std
     __fill_n_a(_OutputIterator __first, _Size __n, const _Tp& __value)
     {
       const _Tp __tmp = __value;
-      for (__decltype(__n + 0) __niter = __n;
+      for(__decltype(__n + 0) __niter = __n;
     __niter > 0; --__niter, ++__first)
  *__first = __tmp;
       return __first;
@@ -2451,7 +2451,7 @@ namespace std
         static bool
         equal(_II1 __first1, _II1 __last1, _II2 __first2)
         {
-   for (; __first1 != __last1; ++__first1, ++__first2)
+   for(; __first1 != __last1; ++__first1, ++__first2)
      if (!(*__first1 == *__first2))
        return false;
    return true;
@@ -2531,7 +2531,7 @@ namespace std
       typedef std::__lc_rai<_Category1, _Category2> __rai_type;
 
       __last1 = __rai_type::__newlast1(__first1, __last1, __first2, __last2);
-      for (; __first1 != __last1 && __rai_type::__cnd2(__first2, __last2);
+      for(; __first1 != __last1 && __rai_type::__cnd2(__first2, __last2);
     ++__first1, ++__first2)
  {
    if (__comp(__first1, __first2))
@@ -2693,7 +2693,7 @@ namespace std
      
       ;
 
-      for (; __first1 != __last1; ++__first1, ++__first2)
+      for(; __first1 != __last1; ++__first1, ++__first2)
  if (!bool(__binary_pred(*__first1, *__first2)))
    return false;
       return true;
@@ -3309,7 +3309,7 @@ namespace std
         static void
         __destroy(_ForwardIterator __first, _ForwardIterator __last)
  {
-   for (; __first != __last; ++__first)
+   for(; __first != __last; ++__first)
      std::_Destroy(std::__addressof(*__first));
  }
     };
@@ -3349,7 +3349,7 @@ namespace std
       _Allocator& __alloc)
     {
       typedef __gnu_cxx::__alloc_traits<_Allocator> __traits;
-      for (; __first != __last; ++__first)
+      for(; __first != __last; ++__first)
  __traits::destroy(__alloc, std::__addressof(*__first));
     }
 
@@ -3381,7 +3381,7 @@ namespace std
    _ForwardIterator __cur = __result;
    try
      {
-       for (; __first != __last; ++__first, ++__cur)
+       for(; __first != __last; ++__first, ++__cur)
   std::_Construct(std::__addressof(*__cur), *__first);
        return __cur;
      }
@@ -3439,7 +3439,7 @@ namespace std
    _ForwardIterator __cur = __first;
    try
      {
-       for (; __cur != __last; ++__cur)
+       for(; __cur != __last; ++__cur)
   std::_Construct(std::__addressof(*__cur), __x);
      }
    catch(...)
@@ -3490,7 +3490,7 @@ namespace std
    _ForwardIterator __cur = __first;
    try
      {
-       for (; __n > 0; --__n, ++__cur)
+       for(; __n > 0; --__n, ++__cur)
   std::_Construct(std::__addressof(*__cur), __x);
        return __cur;
      }
@@ -3544,7 +3544,7 @@ namespace std
       try
  {
    typedef __gnu_cxx::__alloc_traits<_Allocator> __traits;
-   for (; __first != __last; ++__first, ++__cur)
+   for(; __first != __last; ++__first, ++__cur)
      __traits::construct(__alloc, std::__addressof(*__cur), *__first);
    return __cur;
  }
@@ -3594,7 +3594,7 @@ namespace std
       try
  {
    typedef __gnu_cxx::__alloc_traits<_Allocator> __traits;
-   for (; __cur != __last; ++__cur)
+   for(; __cur != __last; ++__cur)
      __traits::construct(__alloc, std::__addressof(*__cur), __x);
  }
       catch(...)
@@ -3620,7 +3620,7 @@ namespace std
       try
  {
    typedef __gnu_cxx::__alloc_traits<_Allocator> __traits;
-   for (; __n > 0; --__n, ++__cur)
+   for(; __n > 0; --__n, ++__cur)
      __traits::construct(__alloc, std::__addressof(*__cur), __x);
    return __cur;
  }
@@ -4240,7 +4240,7 @@ namespace std
       _Map_pointer __cur;
       try
  {
-   for (__cur = __nstart; __cur < __nfinish; ++__cur)
+   for(__cur = __nstart; __cur < __nfinish; ++__cur)
      *__cur = this->_M_allocate_node();
  }
       catch(...)
@@ -4256,7 +4256,7 @@ namespace std
     _M_destroy_nodes(_Map_pointer __nstart,
        _Map_pointer __nfinish)
     {
-      for (_Map_pointer __n = __nstart; __n < __nfinish; ++__n)
+      for(_Map_pointer __n = __nstart; __n < __nfinish; ++__n)
  _M_deallocate_node(*__n);
     }
 # 828 "C:/Program Files (x86)/CodeBlocks/MinGW/lib/gcc/mingw32/5.1.0/include/c++/bits/stl_deque.h" 3
@@ -5089,7 +5089,7 @@ namespace std
       std::input_iterator_tag)
       {
         iterator __cur = begin();
-        for (; __first != __last && __cur != end(); ++__cur, ++__first)
+        for(; __first != __last && __cur != end(); ++__cur, ++__first)
           *__cur = *__first;
         if (__first == __last)
           _M_erase_at_end(__cur);
@@ -5147,7 +5147,7 @@ namespace std
       _Map_pointer __cur;
       try
         {
-          for (__cur = this->_M_impl._M_start._M_node;
+          for(__cur = this->_M_impl._M_start._M_node;
         __cur < this->_M_impl._M_finish._M_node;
         ++__cur)
             std::__uninitialized_fill_a(*__cur, *__cur + _S_buffer_size(),
@@ -5174,7 +5174,7 @@ namespace std
         this->_M_initialize_map(0);
         try
           {
-            for (; __first != __last; ++__first)
+            for(; __first != __last; ++__first)
 
 
 
@@ -5201,7 +5201,7 @@ namespace std
         _Map_pointer __cur_node;
         try
           {
-            for (__cur_node = this->_M_impl._M_start._M_node;
+            for(__cur_node = this->_M_impl._M_start._M_node;
                  __cur_node < this->_M_impl._M_finish._M_node;
                  ++__cur_node)
        {
@@ -5592,7 +5592,7 @@ namespace std
      deque<_Tp, _Alloc>::
      _M_destroy_data_aux(iterator __first, iterator __last)
      {
-       for (_Map_pointer __node = __first._M_node + 1;
+       for(_Map_pointer __node = __first._M_node + 1;
      __node < __last._M_node; ++__node)
   std::_Destroy(*__node, *__node + _S_buffer_size(),
          _M_get_Tp_allocator());
@@ -5623,12 +5623,12 @@ namespace std
       size_type __i;
       try
         {
-          for (__i = 1; __i <= __new_nodes; ++__i)
+          for(__i = 1; __i <= __new_nodes; ++__i)
             *(this->_M_impl._M_start._M_node - __i) = this->_M_allocate_node();
         }
       catch(...)
         {
-          for (size_type __j = 1; __j < __i; ++__j)
+          for(size_type __j = 1; __j < __i; ++__j)
             _M_deallocate_node(*(this->_M_impl._M_start._M_node - __j));
           throw;
         }
@@ -5648,12 +5648,12 @@ namespace std
       size_type __i;
       try
         {
-          for (__i = 1; __i <= __new_nodes; ++__i)
+          for(__i = 1; __i <= __new_nodes; ++__i)
             *(this->_M_impl._M_finish._M_node + __i) = this->_M_allocate_node();
         }
       catch(...)
         {
-          for (size_type __j = 1; __j < __i; ++__j)
+          for(size_type __j = 1; __j < __i; ++__j)
             _M_deallocate_node(*(this->_M_impl._M_finish._M_node + __j));
           throw;
         }
@@ -5714,7 +5714,7 @@ namespace std
     {
       typedef typename _Deque_iterator<_Tp, _Tp&, _Tp*>::_Self _Self;
 
-      for (typename _Self::_Map_pointer __node = __first._M_node + 1;
+      for(typename _Self::_Map_pointer __node = __first._M_node + 1;
            __node < __last._M_node; ++__node)
  std::fill(*__node, *__node + _Self::_S_buffer_size(), __value);
 
@@ -6316,7 +6316,7 @@ namespace std
         _M_range_initialize(_InputIterator __first,
        _InputIterator __last, std::input_iterator_tag)
         {
-   for (; __first != __last; ++__first)
+   for(; __first != __last; ++__first)
 
 
 
@@ -6804,7 +6804,7 @@ namespace std
   inline void
   __fill_bvector(_Bit_iterator __first, _Bit_iterator __last, bool __x)
   {
-    for (; __first != __last; ++__first)
+    for(; __first != __last; ++__first)
       *__first = __x;
   }
 
@@ -7236,7 +7236,7 @@ template<typename _Alloc>
     flip()
     {
       _Bit_type * const __end = this->_M_impl._M_end_addr();
-      for (_Bit_type * __p = this->_M_impl._M_start._M_p; __p != __end; ++__p)
+      for(_Bit_type * __p = this->_M_impl._M_start._M_p; __p != __end; ++__p)
         *__p = ~*__p;
     }
 
@@ -7288,7 +7288,7 @@ template<typename _Alloc>
       _M_initialize_range(_InputIterator __first, _InputIterator __last,
      std::input_iterator_tag)
       {
- for (; __first != __last; ++__first)
+ for(; __first != __last; ++__first)
    push_back(*__first);
       }
 
@@ -7338,7 +7338,7 @@ template<typename _Alloc>
       std::input_iterator_tag)
       {
  iterator __cur = begin();
- for (; __first != __last && __cur != end(); ++__cur, ++__first)
+ for(; __first != __last && __cur != end(); ++__cur, ++__first)
    *__cur = *__first;
  if (__first == __last)
    _M_erase_at_end(__cur);
@@ -7389,7 +7389,7 @@ template<typename _Alloc>
       _M_insert_range(iterator __pos, _InputIterator __first,
         _InputIterator __last, std::input_iterator_tag)
       {
- for (; __first != __last; ++__first)
+ for(; __first != __last; ++__first)
    {
      __pos = insert(__pos, *__first);
      ++__pos;
@@ -7582,7 +7582,7 @@ namespace std
       std::input_iterator_tag)
       {
  pointer __cur(this->_M_impl._M_start);
- for (; __first != __last && __cur != this->_M_impl._M_finish;
+ for(; __first != __last && __cur != this->_M_impl._M_finish;
       ++__cur, ++__first)
    *__cur = *__first;
  if (__first == __last)
@@ -7802,7 +7802,7 @@ namespace std
       _M_range_insert(iterator __pos, _InputIterator __first,
         _InputIterator __last, std::input_iterator_tag)
       {
- for (; __first != __last; ++__first)
+ for(; __first != __last; ++__first)
    {
      __pos = insert(__pos, *__first);
      ++__pos;
@@ -8040,7 +8040,7 @@ namespace std
       _Compare __comp)
     {
       _Distance __parent = 0;
-      for (_Distance __child = 1; __child < __n; ++__child)
+      for(_Distance __child = 1; __child < __n; ++__child)
  {
    if (__comp(__first + __parent, __first + __child))
      return __child;
@@ -10843,7 +10843,7 @@ namespace __gnu_cxx
     char_traits<_CharT>::
     compare(const char_type* __s1, const char_type* __s2, std::size_t __n)
     {
-      for (std::size_t __i = 0; __i < __n; ++__i)
+      for(std::size_t __i = 0; __i < __n; ++__i)
  if (lt(__s1[__i], __s2[__i]))
    return -1;
  else if (lt(__s2[__i], __s1[__i]))
@@ -10867,7 +10867,7 @@ namespace __gnu_cxx
     char_traits<_CharT>::
     find(const char_type* __s, std::size_t __n, const char_type& __a)
     {
-      for (std::size_t __i = 0; __i < __n; ++__i)
+      for(std::size_t __i = 0; __i < __n; ++__i)
         if (eq(__s[__i], __a))
           return __s + __i;
       return 0;
@@ -12201,7 +12201,7 @@ namespace std
       typedef typename __ostream_type::ios_base __ios_base;
 
       const _CharT __c = __out.fill();
-      for (; __n > 0; --__n)
+      for(; __n > 0; --__n)
  {
    const typename _Traits::int_type __put = __out.rdbuf()->sputc(__c);
    if (_Traits::eq_int_type(__put, _Traits::eof()))
@@ -12529,7 +12529,7 @@ namespace __cxx11 {
         _S_copy_chars(_CharT* __p, _Iterator __k1, _Iterator __k2)
 
         {
-   for (; __k1 != __k2; ++__k1, ++__p)
+   for(; __k1 != __k2; ++__k1, ++__p)
      traits_type::assign(*__p, *__k1);
  }
 
@@ -14168,7 +14168,7 @@ namespace std
 
       if (__n <= __size)
  {
-   for (; __pos <= __size - __n; ++__pos)
+   for(; __pos <= __size - __n; ++__pos)
      if (traits_type::eq(__data[__pos], __s[0])
   && traits_type::compare(__data + __pos + 1,
      __s + 1, __n - 1) == 0)
@@ -14226,7 +14226,7 @@ namespace std
  {
    if (--__size > __pos)
      __size = __pos;
-   for (++__size; __size-- > 0; )
+   for(++__size; __size-- > 0; )
      if (traits_type::eq(_M_data()[__size], __c))
        return __size;
  }
@@ -14239,7 +14239,7 @@ namespace std
     find_first_of(const _CharT* __s, size_type __pos, size_type __n) const
     {
       ;
-      for (; __n && __pos < this->size(); ++__pos)
+      for(; __n && __pos < this->size(); ++__pos)
  {
    const _CharT* __p = traits_type::find(__s, __n, _M_data()[__pos]);
    if (__p)
@@ -14275,7 +14275,7 @@ namespace std
     find_first_not_of(const _CharT* __s, size_type __pos, size_type __n) const
     {
       ;
-      for (; __pos < this->size(); ++__pos)
+      for(; __pos < this->size(); ++__pos)
  if (!traits_type::find(__s, __n, _M_data()[__pos]))
    return __pos;
       return npos;
@@ -14286,7 +14286,7 @@ namespace std
     basic_string<_CharT, _Traits, _Alloc>::
     find_first_not_of(_CharT __c, size_type __pos) const
     {
-      for (; __pos < this->size(); ++__pos)
+      for(; __pos < this->size(); ++__pos)
  if (!traits_type::eq(_M_data()[__pos], __c))
    return __pos;
       return npos;
@@ -14922,7 +14922,7 @@ namespace std
       bool __ret = true;
       if (_M_names[1])
 
- for (size_t __i = 0; __ret && __i < _S_categories_size - 1; ++__i)
+ for(size_t __i = 0; __ret && __i < _S_categories_size - 1; ++__i)
    __ret = __builtin_strcmp(_M_names[__i], _M_names[__i + 1]) == 0;
       return __ret;
     }
@@ -15202,7 +15202,7 @@ namespace std
 
 
 
-      for (;;)
+      for(;;)
  {
    const int __res = _M_compare(__p, __q);
    if (__res)
@@ -15244,7 +15244,7 @@ namespace std
 
 
 
-   for (;;)
+   for(;;)
      {
 
        size_t __res = _M_transform(__c, __p, __len);
@@ -15284,7 +15284,7 @@ namespace std
     do_hash(const _CharT* __lo, const _CharT* __hi) const
     {
       unsigned long __val = 0;
-      for (; __lo < __hi; ++__lo)
+      for(; __lo < __hi; ++__lo)
  __val =
    *__lo + ((__val << 7)
      | (__val >> (__gnu_cxx::__numeric_traits<unsigned long>::
@@ -17270,7 +17270,7 @@ namespace std
     _OutIter
     __write(_OutIter __s, const _CharT* __ws, int __len)
     {
-      for (int __j = 0; __j < __len; __j++, ++__s)
+      for(int __j = 0; __j < __len; __j++, ++__s)
  *__s = __ws[__j];
       return __s;
     }
@@ -19645,14 +19645,14 @@ namespace std
       while (__ctr--)
  {
    *__s++ = __sep;
-   for (char __i = __gbeg[__idx]; __i > 0; --__i)
+   for(char __i = __gbeg[__idx]; __i > 0; --__i)
      *__s++ = *__first++;
  }
 
       while (__idx--)
  {
    *__s++ = __sep;
-   for (char __i = __gbeg[__idx]; __i > 0; --__i)
+   for(char __i = __gbeg[__idx]; __i > 0; --__i)
      *__s++ = *__first++;
  }
 
@@ -20062,7 +20062,7 @@ namespace std
 
 
    _M_callbacks = __cb;
-   for (int __i = 0; __i < __rhs._M_word_size; ++__i)
+   for(int __i = 0; __i < __rhs._M_word_size; ++__i)
      __words[__i] = __rhs._M_word[__i];
    _M_word = __words;
    _M_word_size = __rhs._M_word_size;
@@ -20750,7 +20750,7 @@ namespace std
        } __pg (new _CharT[__clen]);
 
        _CharT *__ws = __pg.__get();
-       for (size_t __i = 0; __i < __clen; ++__i)
+       for(size_t __i = 0; __i < __clen; ++__i)
   __ws[__i] = __out.widen(__s[__i]);
        __ostream_insert(__out, __ws, __clen);
      }

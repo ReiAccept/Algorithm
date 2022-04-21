@@ -16,7 +16,7 @@ void work()
     if (p1>p2) swap(p1,p2),swap(v1,v2);
     ans=min(ans,max(p2/v2,(n-p1)/v1));
     l=p1,r=p2;
-    for (int i=1; i<=100; i++)
+    for(int i=1; i<=100; i++)
     {
         mid=(l+r)/2.0;
         double ans1=calc(mid,p1,v1),ans2=calc(n-mid,p2-mid,v2);

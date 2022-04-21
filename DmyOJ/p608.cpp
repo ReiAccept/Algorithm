@@ -35,10 +35,10 @@ stack<int> stk;
 
 inline void work(signed CASE=1,bool FINAL_CASE=false) {
     n=read(); k=read();
-    for (int i = 1; i <= n; i++) {
+    for(int i = 1; i <= n; i++) {
         last[a[i]=read()]=i;
     } 
-    for (int i = 1; i <= n; i++) {
+    for(int i = 1; i <= n; i++) {
         if(!instk[a[i]]) {
             while (stk.size() && stk.top() > a[i] && last[stk.top()] > i) {
                 instk[stk.top()]=false;

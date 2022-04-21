@@ -64,7 +64,7 @@ ll Cc(ll x, ll y) {
 int dfs(int i) {
 	if (dp[i]) return dp[i];
 	int res=0;
-	for (int j=1;j<=m+1;j++) {
+	for(int j=1;j<=m+1;j++) {
 		if (j!=i && x[j]<=x[i] && y[j]<=y[i]) {
 			res=(res+(dfs(j)*Cc(x[i]-x[j]+y[i]-y[j],x[i]-x[j]))%MOD)%MOD;
 		}

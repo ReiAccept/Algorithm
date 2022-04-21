@@ -41,7 +41,7 @@ bool G[MAXN][MAXN];
 void topsort()
 {
     queue<int> q;
-    for (int i = 1; i <= n; i++)
+    for(int i = 1; i <= n; i++)
     {
         if (ind[i] == 1)
             q.push(i); //找到入度为 1 的字母
@@ -52,7 +52,7 @@ void topsort()
         q.pop();
         sum++; //统计遍历到的字母数
         int temp;
-        for (int i = 1; i <= n; i++)
+        for(int i = 1; i <= n; i++)
         {
             if (G[i][u])
             {
@@ -61,7 +61,7 @@ void topsort()
             }
         }
         link[u] = temp;
-        for (int i = 1; i <= n; i++)
+        for(int i = 1; i <= n; i++)
         {
             if (G[temp][i]) //将与该数字有关的边全部删除
             {
@@ -77,14 +77,14 @@ void topsort()
 
 inline void work(signed CASE=1,bool FINAL_CASE=false) {
         scanf("%d", &n);
-    for (int i = 1; i <= n; i++)
+    for(int i = 1; i <= n; i++)
     {
         scanf("%d%d%d%d", &co[i].x1, &co[i].x2, &co[i].y1, &co[i].y2);
     }
-    for (int i = 1; i <= n; i++)
+    for(int i = 1; i <= n; i++)
     {
         scanf("%d%d", &pos[i].x, &pos[i].y);
-        for (int j = 1; j <= n; j++)
+        for(int j = 1; j <= n; j++)
         {
             if (pos[i].x >= co[j].x1 && pos[i].x <= co[j].x2 && pos[i].y >= co[j].y1 && pos[i].y <= co[j].y2)
             {
@@ -98,7 +98,7 @@ inline void work(signed CASE=1,bool FINAL_CASE=false) {
         puts("None");
     else
     {
-        for (int i = 1; i <= n; i++)
+        for(int i = 1; i <= n; i++)
         {
             printf("%c %d\n", 'A' + i - 1, link[i]);
         }

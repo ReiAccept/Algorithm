@@ -29,15 +29,15 @@ void work()
         int cnt = 0,k=0;
         memset(in, 0, sizeof(in));
         memset(res, 0, sizeof(res));
-        for (int from,to,i = 0; i < m; i++)
+        for(int from,to,i = 0; i < m; i++)
         {
             from=read(); to=read();
             in[from]++;
             v[to].push_back(from);
         }
-        for (int i = 0; i < n; i++)
+        for(int i = 0; i < n; i++)
         {
-            for (int j = 1; j <= n; j++)
+            for(int j = 1; j <= n; j++)
                 if (!in[j])
                 {
                     cnt++;
@@ -46,7 +46,7 @@ void work()
                     break;
                 }
             int len = (int)v[k].size();
-            for (int j = 1; j <= len; j++)
+            for(int j = 1; j <= len; j++)
             {
                 long index = v[k].at(j - 1);
                 in[index]--;
@@ -56,7 +56,7 @@ void work()
         if (cnt == n)
         {
             int ans = 0;
-            for (int i = 1; i <= n; i++) ans += res[i];
+            for(int i = 1; i <= n; i++) ans += res[i];
             printf("%lld\n", ans + 888 * n);
         }
         else printf("-1\n");

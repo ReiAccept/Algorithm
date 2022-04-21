@@ -34,7 +34,7 @@ int dp[MAXN][2];
 
 void dfs(int u,int fa) {
     dp[u][0]=dp[u][1]=1; // 初始赋值1
-    for (int v : grap[u]) {
+    for(int v : grap[u]) {
         if(v==fa) {
             continue;
         }

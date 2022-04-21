@@ -34,9 +34,9 @@ string s[50010];
 inline void work(signed CASE=1,bool FINAL_CASE=false) {
     mmst3f(indeg);
     cin >> n;
-    for (int i = 1; i <= n; i++)
+    for(int i = 1; i <= n; i++)
         cin >> s[i];
-    for (int i = 1; i < n; i++) {
+    for(int i = 1; i < n; i++) {
         if (s[i] == s[i + 1] || s[i + 1].find(s[i]) == 0)
             continue;
         if (s[i].find(s[i + 1]) == 0) {
@@ -64,22 +64,22 @@ inline void work(signed CASE=1,bool FINAL_CASE=false) {
         }
     }
     queue<int> q;
-    for (int i = 1; i < 30; i++)
+    for(int i = 1; i < 30; i++)
         if (!indeg[i]) q.push(i);
     while (!q.empty()) {
         int x = q.front(); q.pop();
         ans[++tot] = x;
-        for (int i = 1; i < 30; i++) {
+        for(int i = 1; i < 30; i++) {
             if (grap[x][i] && !(--indeg[i])) {
                 q.push(i);
             }
         }
     }
-    for (int i = 1; i <= tot; i++)
+    for(int i = 1; i <= tot; i++)
         h[ans[i]] = i;
     string puz, res;
     cin >> puz;
-    for (int i = 0; i < puz.length(); i++) {
+    for(int i = 0; i < puz.length(); i++) {
         if (!h[puz[i] - 'a' + 1]) {
             puts("0");
             return;

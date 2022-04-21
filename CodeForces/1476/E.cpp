@@ -11,14 +11,14 @@ int main()
 { 
     scanf("%d%d%d", &n, &m, &k);
     
-    for (int i = 0; i < n; i++)
+    for(int i = 0; i < n; i++)
     {
         string str;
         cin >> str;
         mp[str] = i;
     }
     bool ck = false;
-    for (int i = 0; i < m; i++)
+    for(int i = 0; i < m; i++)
     {
         string str;
         cin >> str;
@@ -28,10 +28,10 @@ int main()
         bool flag = false;
         if (ck) continue;
 
-        for (int j = 0; j < (1 << k); j++)
+        for(int j = 0; j < (1 << k); j++)
         {
             string tmp = str;
-            for (int x = 0; x < k; x++) if ((j >> x) & 1) tmp[x] = '_';
+            for(int x = 0; x < k; x++) if ((j >> x) & 1) tmp[x] = '_';
             if (mp.count(tmp))
                 if (mp[tmp] == mk) flag = true;
                 else
@@ -51,7 +51,7 @@ int main()
         {
             int u=q.front(); q.pop();
             res.push_back(u);
-            for (int v : adj[u])
+            for(int v : adj[u])
             {
                 ind[v]--;
                 if (!ind[v]) q.push(v);

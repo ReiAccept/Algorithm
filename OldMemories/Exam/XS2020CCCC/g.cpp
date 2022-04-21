@@ -14,13 +14,13 @@ bool f(int l, int r)
     if (f(l, mid) || f(mid+1, r)) return true;
     map<long long, int> mp;
     long long sum = 0;
-    for (int i=mid+1; i<=r; i++)
+    for(int i=mid+1; i<=r; i++)
     {
         sum=(sum+a[i])%k;
         mp[sum]++;
     }
     sum = 0;
-    for (int i=mid; i>=l; i--)
+    for(int i=mid; i>=l; i--)
     {
         sum = (sum+a[i])%k;
         if (mp[(k-sum)%k]) return true;

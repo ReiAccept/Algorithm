@@ -11,7 +11,7 @@ int main()
     {
         scanf("%d%d", &n, &m);
         count = 0;
-        for (int i = 1; i <= n * m; i++)
+        for(int i = 1; i <= n * m; i++)
         {
             scanf("%d", &index);
             if ( index ) count++;

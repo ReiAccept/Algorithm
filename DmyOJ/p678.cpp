@@ -36,7 +36,7 @@ set<string>sst;
 bool flag;
 void dfs1(int st, int ed, string &a, string &b) {
     if (st > ed) {
-        for (int i = 0; i < min(sz(a), sz(b)); i++) {
+        for(int i = 0; i < min(sz(a), sz(b)); i++) {
             if (a[i] != b[i]) {
                 return;
             }
@@ -54,7 +54,7 @@ void dfs1(int st, int ed, string &a, string &b) {
 
 void cal(string a, string b) {
     reverse(a.begin(), a.end()); reverse(b.begin(), b.end());
-    for (int i = 0; i < min(sz(a), sz(b)); i++) {
+    for(int i = 0; i < min(sz(a), sz(b)); i++) {
         if (a[i] != b[i]) {
             return;
         }

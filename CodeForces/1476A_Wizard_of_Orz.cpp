@@ -25,7 +25,7 @@ void work()
         return;
     }
     cout << s;
-    for (int i = 3; i < n; i++) cout << (i - 3) % 10;
+    for(int i = 3; i < n; i++) cout << (i - 3) % 10;
     cout<<endl;	
 }
 

@@ -21,7 +21,7 @@ int main()
 {
     int n;
     cin >> n;
-    for (int i = 1; i <= n; i++)
+    for(int i = 1; i <= n; i++)
     {
         int x, y;
         int x=i%10;
@@ -29,8 +29,8 @@ int main()
         a[y][x]++;
     }
     int ans = 0;
-    for (int i = 1; i < 10; i++)
-        for (int j = 1; j < 10; j++)
+    for(int i = 1; i < 10; i++)
+        for(int j = 1; j < 10; j++)
             ans = ans + a[i][j] * a[j][i];
     cout << ans << endl;
     return 0;

@@ -44,7 +44,7 @@ Node dfs(int pos, int sum1, int sum2, bool lim)
     if (!lim && F[pos][sum1][sum2].cnt != -1) return F[pos][sum1][sum2];
     int up = lim ? dig[pos] : 9;
     Node ans(0, 0, 0), tmp;
-    for (int i = 0;i <= up;i++)
+    for(int i = 0;i <= up;i++)
     {
         if (i == 7) continue;
         tmp = dfs(pos-1, (sum1+i)%7, (sum2*10+i)%7, lim && i == up);
@@ -77,7 +77,7 @@ void work()
 
 signed main()
 {
-    m[0] = 1; for (int i = 1;i < 20;i++) m[i] = m[i-1]*10;
+    m[0] = 1; for(int i = 1;i < 20;i++) m[i] = m[i-1]*10;
     //ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr); //freopen(".in", "r", stdin);//freopen(".out", "w", stdout);
     signed T=(int)read();
     for(signed Case=1; Case<=T; Case++)

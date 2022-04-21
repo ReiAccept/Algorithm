@@ -36,7 +36,7 @@ bool divide(int a)
 
 bool isp(int x)
 {
-    for (int i = 2; i <= sqrt(x); i++) {
+    for(int i = 2; i <= sqrt(x); i++) {
         if (x % i == 0) return false;
     }
     return true;
@@ -51,7 +51,7 @@ void work()
         return;
     }
     int cnt = 0;
-    for (int i = l; i <= r; i++) {
+    for(int i = l; i <= r; i++) {
         if (isp(i)) cnt++;
     }
     if (3 * cnt < r - l + 1) printf("Yes\n");

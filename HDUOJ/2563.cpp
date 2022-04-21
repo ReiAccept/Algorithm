@@ -7,7 +7,7 @@ int t,f[21]= {1,3};
 int main ()
 {
 
-    for (int i=2; i<21; i++) f[i] = f[i - 1] * 2 + f[i - 2];
+    for(int i=2; i<21; i++) f[i] = f[i - 1] * 2 + f[i - 2];
     cin >> t;
     while ( t-- )
     {

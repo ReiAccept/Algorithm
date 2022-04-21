@@ -596,7 +596,7 @@ int lcm(int a,int b) {return a*b/gcd(a,b);}
 //匈牙利查找过程
 bool find(int x){
 	int i,j;
-	for (j=1;j<=m;j++){    //扫描每个妹子
+	for(j=1;j<=m;j++){    //扫描每个妹子
 		if (line[x][j]==true && used[j]==false)      
 		//如果有暧昧并且还没有标记过(这里标记的意思是这次查找曾试图改变过该妹子的归属问题，但是没有成功，所以就不用瞎费工夫了）
 		{
@@ -611,7 +611,7 @@ bool find(int x){
 	return false;
 }  
 //在主程序我们这样做： 
-for (i=1;i<=n;i++)
+for(i=1;i<=n;i++)
 {
 	memset(used,0,sizeof(used));    //这个在每一步中清空
 	if find(i) all+=1;

@@ -20,8 +20,8 @@ ll ok(ll need) {
 
 bool gao(int x) {
 	int limit = 5000;	
-	for (ll a = -limit; a <= limit; ++a) {
-		for (ll b = -limit; b <= limit; ++b) {
+	for(ll a = -limit; a <= limit; ++a) {
+		for(ll b = -limit; b <= limit; ++b) {
 			ll need = 1ll * x - a * a * a - b * b * b;
 			ll c = ok(need);
 			if (abs(c) <= 5000) {
@@ -36,7 +36,7 @@ bool gao(int x) {
 int main() {
 	int cnt = 0;
 	int Y = -12345678;
-	for (int i = 0; i <= 200; ++i) {
+	for(int i = 0; i <= 200; ++i) {
 		if (!gao(i)) {
 			cout << Y << " " << Y << " " << Y << endl;
 		}

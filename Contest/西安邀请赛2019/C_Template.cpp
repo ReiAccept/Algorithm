@@ -99,7 +99,7 @@ int main()
 		vector<point>sol;
 		int cnt = gettangents(a, o, sol);
 		double ans = 99999999;
-		for (int i = 0; i < cnt; i++)
+		for(int i = 0; i < cnt; i++)
 		{
 			double dis = getlen(a - sol[i]);
 			sol[i] = (sol[i] - a) * (sqrt(dis * dis - o.r * o.r)) / dis + a;

@@ -10,15 +10,15 @@ int main ()
     while (cin >> N)
 	{
         int a[20];
-        for (int i = 0;i < N;i++)
+        for(int i = 0;i < N;i++)
             cin >> a[i];
         long long maxn = 0;
         long long ans = 1;
-        for (int i = 0;i < N;i++)
-            for (int j = i;j < N;j++)
+        for(int i = 0;i < N;i++)
+            for(int j = i;j < N;j++)
 			{
                 ans = 1;
-                for (int k = i;k <= j;k++)
+                for(int k = i;k <= j;k++)
                     ans *= a[k];
                 maxn = max (maxn,ans);
 			}

@@ -39,7 +39,7 @@ void update(int x) {
 }
 
 int query(int x,int res=0){
-    for (int i=x;i!=0;i-=lowbit(i)) {
+    for(int i=x;i!=0;i-=lowbit(i)) {
         res+=s[i];
     }
     return res;
@@ -52,7 +52,7 @@ inline void work(signed CASE=1,bool FINAL_CASE=false) {
     }
     sort(a+1,a+1+n);
     for(int i=1;i<=n;i++) {
-        for (int j=1;j<n;j++) {
+        for(int j=1;j<n;j++) {
             int l=(a[i].se-1)*j+2,r=min(j*a[i].se+1,n);
             if(l>r) {
                 break;

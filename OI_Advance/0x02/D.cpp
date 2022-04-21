@@ -43,7 +43,7 @@ signed main()
     signed T=read();
     for(signed Case=1; Case<=T; Case++)
     {
-        for (int i=0;i<5;i++) cin>>g[i];
+        for(int i=0;i<5;i++) cin>>g[i];
         //printf("Case %d: ",Case);
         work();
     }

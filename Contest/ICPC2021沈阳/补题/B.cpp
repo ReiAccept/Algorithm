@@ -21,7 +21,7 @@ vector<pair<int,int>> G[MAXN];
 
 void dfs(int u) {
     vis[u]=1;
-    for (auto [v,w]: G[u]) {
+    for(auto [v,w]: G[u]) {
         if(vis[v]) {
             if (a[v]!=(a[u]^w)) {
                 puts("-1");
@@ -29,7 +29,7 @@ void dfs(int u) {
             }
         } else {
             a[v]=(a[u]^w);
-            for (int j=0;j<30;j++) {
+            for(int j=0;j<30;j++) {
                 c[j][(a[v]>>j)&1]++;
             }
             dfs(v);
@@ -47,7 +47,7 @@ signed main() {
     for(int i=1;i<=n;i++) {
         if(!vis[i]) {
             dfs(i);
-            for (int j=0;j<30;j++) {
+            for(int j=0;j<30;j++) {
                 ans+=1ll*min(c[j][0]+1,c[j][1])*(1<<j);
                 c[j][0]=c[j][1]=0;
             }

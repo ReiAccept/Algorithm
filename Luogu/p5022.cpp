@@ -47,11 +47,11 @@ void addl(int x,int y)//加边
 
 bool topsort(){
     int l=0,r=0;
-    for (int i=1;i<=n;i++) 
+    for(int i=1;i<=n;i++) 
       if(in[i]==1) q[++r]=i;
     while(l<r) {
         int now=q[++l];
-        // for (int i=ls[now];i;i=a[i].next){
+        // for(int i=ls[now];i;i=a[i].next){
         for(auto y: grap[now]) {
             // int y=a[i].to;
             if(in[y]>1){

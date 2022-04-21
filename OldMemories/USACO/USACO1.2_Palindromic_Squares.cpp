@@ -15,7 +15,7 @@ void printdata(int x)
 {
   int a[30],i=0;
   while (x>0) a[++i]=x%B,x/=B;
-  for (;i;cout<<CH[ a[i--] ]);
+  for(;i;cout<<CH[ a[i--] ]);
 }
  
 void handle( int x )
@@ -23,7 +23,7 @@ void handle( int x )
   int a[30],n=0,xx=x*x;
   while (xx>0)  a[++n]=xx%B,xx/=B;
   int t=n;
-  for (;(n>0)&&(a[n]==a[t-n+1]);--n);
+  for(;(n>0)&&(a[n]==a[t-n+1]);--n);
   if (n==0) printdata(x),cout<<' ',printdata(x*x),cout<<endl;
 }
  
@@ -32,6 +32,6 @@ int main()
   freopen("palsquare.in","r",stdin);
   freopen("palsquare.out","w",stdout);
   cin>>B;
-  for (int i=1;i<=MAX;i++) handle(i);
+  for(int i=1;i<=MAX;i++) handle(i);
   return 0;
 }

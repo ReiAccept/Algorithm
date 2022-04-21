@@ -11,13 +11,13 @@ string s;
 void Solve()
 {
     n=qrd();
-    for (int i=1;i<=n;i++) 
+    for(int i=1;i<=n;i++) 
     {
         cin>>s;
         if(s[0]!='-' && (int)s.size()<9) 
         {
             int x=0;
-            for (int j=0;j<(int)s.size();j++) x=x*10+s[j]-'0';
+            for(int j=0;j<(int)s.size();j++) x=x*10+s[j]-'0';
             a.push_back(x);
         }
     }

@@ -18,7 +18,7 @@ void work()
 {
     n=read();a=read();
     rot = n - a;
-    for (int i = 1; i < n; i++)
+    for(int i = 1; i < n; i++)
     {
         a=read();
         (a += ((i & 1) ? n - rot : rot)) %= n;

@@ -21,11 +21,11 @@ void work()
 {
     int n=read();
     vector<int> a(n);
-    for (int i=0;i<n;i++)a[i]=read();
+    for(int i=0;i<n;i++)a[i]=read();
     sort(a.begin(), a.end());
     vector<vector<int> > dp(n, vector<int>(n));
-    for (int d=1;d<n;d++)
-        for (int i=0;i+d<n;i++)
+    for(int d=1;d<n;d++)
+        for(int i=0;i+d<n;i++)
             dp[i][i+d]=min(dp[i][i+d-1],dp[i+1][i+d])+a[i+d]-a[i];
     cout<<dp[0][n-1]<<endl;
     return;

@@ -52,7 +52,7 @@ signed main()
 {
     int T;
     scanf("%lld", &T);
-    for (int i = 0; i < T; i++)
+    for(int i = 0; i < T; i++)
     {
         work();
         for(int i=0;i<=cnt;i++) {

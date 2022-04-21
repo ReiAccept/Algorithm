@@ -1,0 +1,1 @@
+{"name":"Local: p707","url":"d:\\OneDrive\\Code\\Algorithm\\DmyOJ\\p707.cpp","tests":[{"id":1649411967001,"input":"(\n()\n()()\n(()\n(())","output":"0\n1\n3\n1\n2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\OneDrive\\Code\\Algorithm\\DmyOJ\\p707.cpp","group":"local","local":true}

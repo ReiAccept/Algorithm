@@ -12,7 +12,7 @@ int main()
     {
         cin >> s;
         bool flag=true;
-        for (unsigned int i=0;i<s.length();i++)
+        for(unsigned int i=0;i<s.length();i++)
         {
             if(s[i]=='?')
             {
@@ -26,7 +26,7 @@ int main()
                 s[i]=(char)('a'+t);
             }
         }
-        for (unsigned int i=1;i<s.length();i++) if(s[i]==s[i-1]) flag=false;
+        for(unsigned int i=1;i<s.length();i++) if(s[i]==s[i-1]) flag=false;
         cout<<(flag?s:"-1")<<endl;
     }
     return 0;
