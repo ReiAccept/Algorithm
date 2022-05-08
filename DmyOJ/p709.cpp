@@ -50,7 +50,7 @@ inline void work(signed CASE=1,bool FINAL_CASE=false) {
 
 // void slove() { // 我的不好懂，不如看这里严格鸽的 // https://zhuanlan.zhihu.com/p/494298933
 //     cin >> n;
-//     for(int i = 1; i <= n; i++)cin >> a[i];
+//     for(int i=1;i<=n;i++)cin >> a[i];
 //     for(int i = 2; i <= n; i++) {
 //         if (a[i] > a[i - 1]) {
 //             dp[i][1] = max(dp[i - 1][0], dp[i - 1][1] + a[i] - a[i - 1]);

@@ -1,0 +1,1 @@
+{"name":"Local: C","url":"d:\\OneDrive\\Code\\Algorithm\\Codeforces\\1678\\C.cpp","tests":[{"id":1652019773085,"input":"3\n6\n5 3 6 1 4 2\n4\n1 2 3 4\n10\n5 1 6 2 8 3 4 10 9 7","output":"3\n0\n28"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\OneDrive\\Code\\Algorithm\\Codeforces\\1678\\C.cpp","group":"local","local":true}

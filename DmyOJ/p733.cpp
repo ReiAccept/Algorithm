@@ -75,7 +75,7 @@ int qpow(int a ,int b)
 
 inline void work(signed CASE=1,bool FINAL_CASE=false) {
     n=read(); k=read();
-    for(int i = 1; i <= n; i++) {
+    for(int i=1;i<=n;i++) {
         int p = 1, q = 1;
         int val=read();
         while (val > 1) {

@@ -27,7 +27,7 @@ void work()
 {
     sum=0;
     scanf("%lld", &n);
-    for(int i = 1; i <= n; i++) {
+    for(int i=1;i<=n;i++) {
         scanf("%lld", a + i);
         sum+=a[i];
         add_bin(a[i]);

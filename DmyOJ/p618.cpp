@@ -172,7 +172,7 @@ inline void work(signed CASE=1,bool FINAL_CASE=false) {
             up2(1,1,n,pos,i,1);
         }
     }
-    for(int i = 1; i <= n; i++) {
+    for(int i=1;i<=n;i++) {
         if (query(1,1,n,i,i) == 0) {
             ans[++cans]=a[i].se;
         }

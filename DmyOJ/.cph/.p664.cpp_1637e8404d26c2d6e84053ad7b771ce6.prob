@@ -1,0 +1,1 @@
+{"name":"Local: p664","url":"d:\\OneDrive\\Code\\Algorithm\\DmyOJ\\p664.cpp","tests":[{"id":1650809249272,"input":"3\n5 999996\n6 99995\n7 9994","output":"17\n23\n29"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\OneDrive\\Code\\Algorithm\\DmyOJ\\p664.cpp","group":"local","local":true}

@@ -34,7 +34,7 @@ string s[50010];
 inline void work(signed CASE=1,bool FINAL_CASE=false) {
     mmst3f(indeg);
     cin >> n;
-    for(int i = 1; i <= n; i++)
+    for(int i=1;i<=n;i++)
         cin >> s[i];
     for(int i = 1; i < n; i++) {
         if (s[i] == s[i + 1] || s[i + 1].find(s[i]) == 0)

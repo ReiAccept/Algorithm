@@ -76,7 +76,7 @@ void dfs3(int u) {
 
 inline void work(signed CASE=1,bool FINAL_CASE=false) {
     n=read();
-	for(int i = 1; i <= n; i++) a[i]=read();
+	for(int i=1;i<=n;i++) a[i]=read();
 	for(int i = 1, u, v; i < n; i++) {
         grap[u=read()].pb(v=read()); grap[v].pb(u);
 	}
@@ -86,7 +86,7 @@ inline void work(signed CASE=1,bool FINAL_CASE=false) {
 	}
 	ins(a[n], a[n], -1); ins(a[1], a[1], 1);
 	dfs3(1);
-	for(int i = 1; i <= n; i++) printf("%d\n", d[i]);
+	for(int i=1;i<=n;i++) printf("%d\n", d[i]);
     return;
 }
 

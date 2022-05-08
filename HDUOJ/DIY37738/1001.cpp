@@ -39,7 +39,7 @@ void work()
 			V[u].push_back(v);
 			ind[v]++;
 		}
-		for(int i = 1; i <= n; i++) if (!ind[i]) q.push(i);
+		for(int i=1;i<=n;i++) if (!ind[i]) q.push(i);
 		while(!q.empty()) 
         {
 			int now = q.top(); q.pop();

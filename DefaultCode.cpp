@@ -7,8 +7,9 @@
 #define pb(...) emplace_back(__VA_ARGS__)
 #define sz(x) ((int)(x.size()))
 #define PII pair<int,int>
+#define PCI pair<char,int>
 #define PIS pair<int,string>
-#define mkp(x, y) make_pair(x, y)
+#define mkp(...) make_pair(__VA_ARGS__)
 #define fi first
 #define se second
 #define lowbit(x) ((-(x))&(x))
@@ -20,7 +21,7 @@ typedef long long ll;
 // typedef long double rld; // use double pls!
 typedef unsigned long long ull;
 
-const double eps = 1e-6;
+const double eps=1e-6;
 const int INF=0x3f3f3f3f;//0x3f3f3f3f3f3f3f3f; // LLINF
 const int MAXN=(int)1e5+3,MOD=(int)1e9+7;
 

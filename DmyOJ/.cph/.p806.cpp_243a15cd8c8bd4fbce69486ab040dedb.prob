@@ -1,0 +1,1 @@
+{"name":"Local: p806","url":"d:\\OneDrive\\Code\\Algorithm\\DmyOJ\\p806.cpp","tests":[{"id":1650864020151,"input":"4\n1 6 7 12\n3 5 10 11","output":"21"},{"id":1650864026585,"input":"2\n1 2\n1 1000000000","output":"1999999998"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\OneDrive\\Code\\Algorithm\\DmyOJ\\p806.cpp","group":"local","local":true}

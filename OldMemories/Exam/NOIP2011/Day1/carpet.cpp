@@ -9,7 +9,7 @@ int main()
     freopen("carpet.in", "r", stdin);
     freopen("carpet.out", "w", stdout);
     scanf("%d", &n);
-    for(int i = 1; i <= n; i++)
+    for(int i=1;i<=n;i++)
         scanf("%d%d%d%d", &a[i], &b[i], &g[i], &k[i]);
 
     scanf("%d%d", &x, &y);

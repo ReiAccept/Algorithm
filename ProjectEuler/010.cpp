@@ -86,7 +86,7 @@ namespace MillerRabin { //对 1e18 的超大素数判定 ,需要 #define int lon
     }   
 }
 
-namespace Liner { //线性筛（欧拉筛）复杂度为 O(N),1e8可用，基本上取代了埃氏筛
+namespace Euler { //线性筛（欧拉筛）复杂度为 O(N),1e8可用，基本上取代了埃氏筛
     int prime[MAXN+3],pcnt;
     bool siv[MAXN+3];
 
@@ -118,9 +118,9 @@ inline void work(int Case=1) {
     }
     prt(ans); puts("");
     ans=0;
-    Liner::work();
-    for(int i=1;i<=Liner::pcnt;i++) {
-        ans+=Liner::prime[i];
+    Euler::work();
+    for(int i=1;i<=Euler::pcnt;i++) {
+        ans+=Euler::prime[i];
     }
     prt(ans); puts("");
     return;

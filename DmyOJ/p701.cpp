@@ -62,10 +62,10 @@ struct node { int i, j, k; };
 
 inline void work(signed CASE=1,bool FINAL_CASE=false) {
     cin >> n >> m;
-    for(int i = 1; i <= n; i++)for(int j = 1; j <= m; j++)cin >> col[i][j];
+    for(int i=1;i<=n;i++)for(int j=1;j<=m;j++) cin >> col[i][j];
  
     vector<node>ans;
-    for(int i = 1; i <= n; i++)for(int j = 1; j <= m; j++) {
+    for(int i=1;i<=n;i++)for(int j=1;j<=m;j++)  {
         if (check(i, j)) {
             push(i, j);
             ans.push_back({ i,j,check(i,j) }); color(i, j);//放入答案
@@ -84,7 +84,7 @@ inline void work(signed CASE=1,bool FINAL_CASE=false) {
             }
     }
  
-    int flag = 0; for(int i = 1; i <= n; i++)for(int j = 1; j <= m; j++)flag += (!inque[i][j]);
+    int flag = 0; for(int i=1;i<=n;i++)for(int j=1;j<=m;j++) flag += (!inque[i][j]);
     if (flag)cout << "-1";
     else {
         cout << ans.size() << endl;

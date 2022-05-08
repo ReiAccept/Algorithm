@@ -25,7 +25,7 @@ void work()
     int u = 0, d = 0, l = 0, r = 0;
     long long ans = 0;
     M[make_pair(0, 0)] = 1;
-    for(int i = 1; i <= n; i++)
+    for(int i=1;i<=n;i++)
     {
         u += c[i] == 'U';
         d += c[i] == 'D';

@@ -41,9 +41,9 @@ void work()
 {
     while (n = read())
     {
-        for(int i = 1; i <= n; i++)
+        for(int i=1;i<=n;i++)
             a[i] = read();
-        for(int i = 1; i <= n; i++)
+        for(int i=1;i<=n;i++)
             b[i] = read();
         sort(a + 1, a + 1 + n, [](int x, int y) { return x > y; });
         sort(b + 1, b + 1 + n, [](int x, int y) { return x > y; });

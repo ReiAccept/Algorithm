@@ -39,7 +39,7 @@ void work()
     cin>>n;
     sum=0;
     ans=0;
-    for(int i = 1; i <= n; i++) {
+    for(int i=1;i<=n;i++) {
         cin>>a[i];
         sum+=a[i];
         add_bin(a[i]);

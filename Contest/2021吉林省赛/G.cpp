@@ -12,7 +12,7 @@ int r[MAXN], c[MAXN], h[MAXN], l[MAXN], hf1[MAXN], lf1[MAXN];
 signed main()
 {
     scanf("%d", &n);
-    for(int i = 1; i <= n; i++)
+    for(int i=1;i<=n;i++)
     {
         for(int j = 1; j <= n; j++)
         {
@@ -29,16 +29,16 @@ signed main()
             }
         }
     }
-    for(int i = 1; i <= n; i++)
+    for(int i=1;i<=n;i++)
     {
         scanf("%d", &r[i]);
     }
-    for(int i = 1; i <= n; i++)
+    for(int i=1;i<=n;i++)
     {
         scanf("%d", &c[i]);
     }
     queue<pair<int, int>> q;
-    for(int i = 1; i <= n; i++)
+    for(int i=1;i<=n;i++)
     {
         for(int j = 1; j <= n; j++)
         {
@@ -243,7 +243,7 @@ signed main()
             }
         }
     }
-    for(int i = 1; i <= n; i++)
+    for(int i=1;i<=n;i++)
     {
         for(int j = 1; j <= n; j++)
         {

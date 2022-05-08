@@ -1,0 +1,1 @@
+{"name":"Local: E","url":"d:\\OneDrive\\Code\\Algorithm\\CFGym\\102220_14th东北赛\\E.cpp","tests":[{"id":1650697611192,"input":"2\n5 3\n5 1","output":"7 11 13 14 19\n1 2 4 8 16"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\OneDrive\\Code\\Algorithm\\CFGym\\102220_14th东北赛\\E.cpp","group":"local","local":true}

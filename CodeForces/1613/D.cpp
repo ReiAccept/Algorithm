@@ -48,11 +48,11 @@ int dp[2][MAXN];
 
 inline void work(int CASE,bool FINALCASE) {
     n=read();
-    for(int i = 1; i <= n; i++) {
+    for(int i=1;i<=n;i++) {
         a[i]=read();
     }
     dp[0][0] = 1;
-    for(int i = 1; i <= n; i++) {
+    for(int i=1;i<=n;i++) {
         if (a[i]) {
            dp[1][a[i]-1]= (dp[1][a[i]-1] + dp[0][a[i]-1]+dp[1][a[i]-1])%MOD;
         }

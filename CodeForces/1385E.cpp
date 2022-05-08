@@ -56,7 +56,7 @@ inline void work(signed CASE = 1, bool FINAL_CASE = false)
 {
     n=read(); m=read();
     for(int i=0;i<=n+1;i++) grap[i].clear();
-    for(int i = 1; i <= n; i++)
+    for(int i=1;i<=n;i++)
         in[i] = topo[i] = 0;
     for(int i = 1; i <= m; i++)
     {
@@ -67,7 +67,7 @@ inline void work(signed CASE = 1, bool FINAL_CASE = false)
         }
     }
     queue<int> q;
-    for(int i = 1; i <= n; i++)
+    for(int i=1;i<=n;i++)
         if (!in[i])
             q.push(i);
     cnt = 0;
@@ -81,7 +81,7 @@ inline void work(signed CASE = 1, bool FINAL_CASE = false)
             }
         }
     }
-    for(int i = 1; i <= n; i++)
+    for(int i=1;i<=n;i++)
         if (in[i])
         {
             puts("NO");

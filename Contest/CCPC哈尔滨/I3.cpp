@@ -34,7 +34,7 @@ int lst() {
 void work()
 {
     scanf("%lld", &n);
-    for(int i = 1; i <= n; i++) {
+    for(int i=1;i<=n;i++) {
         scanf("%lld", a + i);
         add_bin(a[i]);
     }

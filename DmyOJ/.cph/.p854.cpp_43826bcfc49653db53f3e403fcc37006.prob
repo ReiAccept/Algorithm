@@ -1,0 +1,1 @@
+{"name":"Local: p854","url":"d:\\OneDrive\\Code\\Algorithm\\DmyOJ\\p854.cpp","tests":[{"id":1651330451156,"input":"2\n1 1 1\n1 1 1\n1 1 1\n1 2 3\n4 5 6\n7 8 9","output":"9\n7"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\OneDrive\\Code\\Algorithm\\DmyOJ\\p854.cpp","group":"local","local":true}

@@ -21,7 +21,7 @@ int main()
 {
     int n;
     cin >> n;
-    for(int i = 1; i <= n; i++)
+    for(int i=1;i<=n;i++)
     {
         int x, y;
         int x=i%10;

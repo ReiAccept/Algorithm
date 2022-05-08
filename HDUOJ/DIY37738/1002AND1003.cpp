@@ -56,7 +56,7 @@ void work()
         if (cnt == n)
         {
             int ans = 0;
-            for(int i = 1; i <= n; i++) ans += res[i];
+            for(int i=1;i<=n;i++) ans += res[i];
             printf("%lld\n", ans + 888 * n);
         }
         else printf("-1\n");

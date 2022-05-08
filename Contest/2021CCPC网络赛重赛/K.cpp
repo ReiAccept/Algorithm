@@ -47,7 +47,7 @@ inline void work(int Case=1)
 	memset(vis, 0, sizeof(int) * (n + 10));
 	memset(ans, 0, sizeof(int) * (n + 10));
 	memset(nxt, 0, sizeof(int) * (n + 10));
-	for(int i = 1; i <= n; i++) {
+	for(int i=1;i<=n;i++) {
 		pre[i] = i;
 		ver[i].clear();
 	}
@@ -56,12 +56,12 @@ inline void work(int Case=1)
 		ver[x].push_back(y);
 		ver[y].push_back(x);
 	}
-	for(int i = 1; i <= n; i++) {
+	for(int i=1;i<=n;i++) {
 		a[i].id = i;
 		a[i].v = read();
 	}
 	sort(a + 1, a + 1 + n, cmp);
-	for(int i = 1; i <= n; i++) {
+	for(int i=1;i<=n;i++) {
 		int x = a[i].id;
 		vis[x] = 1;
 		for(auto y : ver[x]) if(vis[y]) {
@@ -72,7 +72,7 @@ inline void work(int Case=1)
 		}
 	}
 	
-	for(int i = 1; i <= n; i++) {
+	for(int i=1;i<=n;i++) {
 		printf("%d\n", dfs(i));
 	}
     return;

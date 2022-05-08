@@ -14,7 +14,7 @@ void work()
 {
     flag=false; m=INF;
     scanf("%lld", &n);
-    for(int i = 1; i <= n; i++) {
+    for(int i=1;i<=n;i++) {
         scanf("%lld", a + i);
     }
     if(a[1]!=1) {

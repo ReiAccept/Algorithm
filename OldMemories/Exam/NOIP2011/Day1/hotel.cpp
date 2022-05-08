@@ -10,7 +10,7 @@ int main()
     freopen("hotel.in","r",stdin);
     freopen("hotel.out","w",stdout);
     scanf("%d%d%d",&n,&k,&p);
-    for(int i = 1; i <= n; i++)
+    for(int i=1;i<=n;i++)
     {
         scanf("%d%d",&sd,&xf);
         if (xf<=p)

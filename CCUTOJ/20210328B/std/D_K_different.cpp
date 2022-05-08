@@ -4,9 +4,9 @@ int main(void) {
     int arr[1005];
     int n, q, x;
     scanf("%d", &n);
-    for(int i = 1; i <= n; i++)
+    for(int i=1;i<=n;i++)
         scanf("%d", &arr[i]);
-    for(int i = 1; i <= n; i++)
+    for(int i=1;i<=n;i++)
         for(int j = 1; j <= n; j++)
             if (arr[i] < arr[j]) {
                 int tmp = arr[i];

@@ -22,7 +22,7 @@ int main()
         scanf("%s", c + 1);
         int n = (int)strlen(c + 1);
         int tmp = n,now=1;
-        for(int i = 1; i <= n; i++)pre[i] = i - 1, nxt[i] = i + 1;
+        for(int i=1;i<=n;i++)pre[i] = i - 1, nxt[i] = i + 1;
         while(now != n + 1)
         {
             if(!pre[now] || c[now] == 'A')

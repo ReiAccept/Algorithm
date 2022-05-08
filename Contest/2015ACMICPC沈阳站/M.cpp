@@ -66,12 +66,12 @@ inline void work(int Case)
 		dijkstra(1, d1), dijkstra(n, d2); 
 		printf("Case #%lld: ", Case);
 		int ans = INF;
-		for(int i = 1; i <= n; i++)ans=min(ans, max(d1[i], d2[i]));
+		for(int i=1;i<=n;i++)ans=min(ans, max(d1[i], d2[i]));
 		if (ans == INF) printf("Evil John\n");
 		else {
 			printf("%lld\n", ans);
 			vector <int> v;
-			for(int i = 1; i <= n; i++) 
+			for(int i=1;i<=n;i++) 
                 if (max(d1[i], d2[i]) == ans) v.push_back(i);
 			for(int i = 0; i < (int)v.size() - 1; i++) printf("%lld ", v[i]);
 			printf("%lld\n", v[(int)v.size() - 1]);

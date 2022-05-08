@@ -65,13 +65,13 @@ int main(void) {
         memset(bit, 0, sizeof(bit));
         memset(nxt, -1, sizeof(nxt));
         memset(last, -1, sizeof(last));
-        for(int i = 1; i <= n; i++) {
+        for(int i=1;i<=n;i++) {
             scanf("%d", &tmp);
             arr[i + n] = arr[i] = tmp;
         }
         n *= 2;
         pre[0] = 0;
-        for(int i = 1; i <= n; i++) {
+        for(int i=1;i<=n;i++) {
             if (vis[arr[i]] == false) {
                 vis[arr[i]] = true;
                 pre[i] = pre[i - 1] + 1;
