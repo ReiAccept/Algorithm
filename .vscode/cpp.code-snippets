@@ -12,6 +12,7 @@
             "#define pb(...) emplace_back(__VA_ARGS__)",
             "#define sz(x) ((int)(x.size()))",
             "#define PII pair<int,int>",
+            "#define PCI pair<char,int>",
             "#define PIS pair<int,string>",
             "#define mkp(x, y) make_pair(x, y)",
             "#define fi first",
