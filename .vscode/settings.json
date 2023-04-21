@@ -27,6 +27,7 @@
         "regex": "cpp",
         "valarray": "cpp",
         "numeric": "cpp",
-        "thread": "cpp"
+        "thread": "cpp",
+        "tuple": "cpp"
     }
 }

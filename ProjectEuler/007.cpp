@@ -58,7 +58,7 @@ namespace Liner { //线性筛（欧拉筛）复杂度为 O(N),1e8可用，基本
     int prime[MAXN+3],pcnt;
     bool siv[MAXN+3];
 
-    int work(int TARGET)  {
+    int work(int TARGET) {
         for(int i=2;i<=MAXN;i++) {
             if(!siv[i]) {
                 prime[++pcnt]=i;
