@@ -10,17 +10,12 @@
             "cwd": "${workspaceFolder}",
             "environment": [],
             "externalConsole": false,
-            "preLaunchTask": "CPPBuild"
-        }, {
-            "name": "Run_externalConsole",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": true,
+            "linux": {
+                "MIMode": "gdb"
+              },
+              "osx": {
+                "MIMode": "lldb"
+              },
             "preLaunchTask": "CPPBuild"
         }
     ]
