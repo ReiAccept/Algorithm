@@ -29,10 +29,9 @@ inline void work(int CASE,bool FINAL_CASE) {
 }
 
 int main() {
-    // ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr); // freopen(".in", "r", stdin);// freopen(".out", "w", stdout);
+    // ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);
     signed T=1;// scanf("%d",&T);// cin>>T;
     for(signed CASE=1; CASE<=T; CASE++) {
-        // printf("Case %d: ",CASE);
         work(CASE,CASE==T);
         if(CASE!=T) { }
     }
