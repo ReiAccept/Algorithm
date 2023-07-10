@@ -3,7 +3,7 @@
 	"tasks": [
 		{
 			"type": "cppbuild",
-			"label": "C/C++: g++ build active file",
+			"label": "CPPBuild",
 			"command": "g++",
 			"args": [
 				"-g",
