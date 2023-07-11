@@ -11,8 +11,6 @@
             "#define pb(...) emplace_back(__VA_ARGS__)",
             "#define sz(x) ((int)(x.size())) // since C++20 std::ssize() is better",
             "#define mkp(...) make_pair(__VA_ARGS__)",
-            "#define fi first",
-            "#define se second",
             "#define lowbit(x) ((-(x))&(x))",
             "using namespace std;",
             "// using namespace __gnu_pbds; // If using pbds don't using std!",

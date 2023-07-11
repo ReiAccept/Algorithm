@@ -20,33 +20,37 @@ typedef pair<int,string> PIS;
 const double eps=1e-6;
 const int INF=0x3f3f3f3f;
 const ll LLINF=0x3f3f3f3f3f3f3f3f;
-const int MAXN=(int)1e5+3,MOD=(int)1e9+7;
+const int MAXN=(int)1e2+3,MOD=(int)1e9+7;
 
 inline int rnd(int x) {mt19937 mrand(random_device{}()); return mrand()%x;};
 
-int a,b;
-int m[5][5];
+int n;
+int a[MAXN][MAXN],ans[MAXN][MAXN];
 
 inline void work(int CASE,bool FINAL_CASE) {
-    cin>>a>>b;
-    for(int i=1;i<=3;i++) {
-        for(int j=1;j<=3;j++) {
-            if(m[i][j]==a && (m[i][j+1]==b || m[i][j-1]==b/* || m[i+1][j]==b || m[i-1][j]==b */)) {
-                printf("Yes");
-                return;
-            }
+    scanf("%d",&n);
+    for(int i=1;i<=n;i++) {
+        for(int j=1;j<=n;j++) {
+            scanf("%1d",&a[i][j]);
+            ans[i][j]=a[i][j];
         }
     }
-    printf("No");
+    for(int i=1;i<n;i++) {
+        ans[1][i+1] = a[1][i];
+        ans[i+1][n] = a[i][n];
+        ans[n][i] = a[n][i+1];
+        ans[i][1] = a[i+1][1];
+    }
+    for(int i=1;i<=n;i++) {
+        for(int j=1;j<=n;j++) {
+            printf("%d",ans[i][j]);
+        }
+        puts("");
+    }
     return;
 }
 
 int main() {
-    for(int cnt=1,i=1;i<=3;i++) {
-        for(int j=1;j<=3;j++) {
-            m[i][j]=cnt++;
-        }
-    }
     // ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);
     signed T=1;// scanf("%d",&T);// cin>>T;
     for(signed CASE=1; CASE<=T; CASE++) {

@@ -24,30 +24,30 @@ const int MAXN=(int)1e5+3,MOD=(int)1e9+7;
 
 inline int rnd(int x) {mt19937 mrand(random_device{}()); return mrand()%x;};
 
-int a,b;
-int m[5][5];
+int n,k,cnt;
+vector<pair<int,int> > p;
 
 inline void work(int CASE,bool FINAL_CASE) {
-    cin>>a>>b;
-    for(int i=1;i<=3;i++) {
-        for(int j=1;j<=3;j++) {
-            if(m[i][j]==a && (m[i][j+1]==b || m[i][j-1]==b/* || m[i+1][j]==b || m[i-1][j]==b */)) {
-                printf("Yes");
-                return;
-            }
+    cin>>n>>k;
+    for(int a,b,i=1;i<=n;i++) {
+        cin>>a>>b;
+        p.pb(mkp(a,b));
+    }
+    sort(p.rbegin(),p.rend());
+    for(auto x:p) {
+        if(k-x.se >= 0) {
+            k-=x.se;
+            cnt++;
+        } else {
+            break;
         }
     }
-    printf("No");
+    cout<< (cnt==n ? 1 : p[cnt].fi+1) << endl;
     return;
 }
 
 int main() {
-    for(int cnt=1,i=1;i<=3;i++) {
-        for(int j=1;j<=3;j++) {
-            m[i][j]=cnt++;
-        }
-    }
-    // ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);
+    ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);
     signed T=1;// scanf("%d",&T);// cin>>T;
     for(signed CASE=1; CASE<=T; CASE++) {
         work(CASE,CASE==T);
