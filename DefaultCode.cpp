@@ -1,5 +1,4 @@
 #include<bits/stdc++.h>
-// #include<bits/extc++.h>
 #define mmst0(x) memset(x,0,sizeof(x))
 #define mmst3f(x) memset(x,0x3f,sizeof(x))
 #define all(x) (x).begin(),(x).end()
@@ -10,7 +9,7 @@
 #define se second
 #define lowbit(x) ((-(x))&(x))
 using namespace std;
-// using namespace __gnu_pbds; // If using pbds don't using std!
+
 typedef long long ll;
 typedef unsigned long long ull;
 typedef pair<int,int> PII;
