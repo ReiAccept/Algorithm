@@ -1,6 +1,6 @@
 {
-    "python.pythonPath": "D:\\Python\\Python39\\python.exe",
     "files.associations": {
+        "iostream": "cpp"
         "*.tcc": "cpp",
         "ostream": "cpp",
         "iostream": "cpp",
