@@ -22,8 +22,21 @@ const int MAXN=(int)1e5+3,MOD=(int)1e9+7;
 
 inline int rnd(int x) {mt19937 mrand(random_device{}()); return mrand()%x;};
 
+int ans;
+string s;
+
 inline void work(int CASE,bool FINAL_CASE) {
-    
+    cin>>s;
+    for(int i=0;i<s.size();i++) {
+        for(int j=i;j<s.size();j++) {
+            string a=s.substr(i,j-i+1);
+            string b(a.rbegin(),a.rend());
+            if(a==b) {
+                ans=max(ans,(int)a.size());
+            }
+        }
+    } 
+    cout<<ans<<endl;
     return;
 }
 

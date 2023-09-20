@@ -1,0 +1,1 @@
+{"name":"Local: b","url":"/Users/rei/Algorithm/AtCoder/abc320/b.cpp","tests":[{"id":1695226409227,"input":"TOYOTA","output":"5"},{"id":1695226425145,"input":"ABCDEFG","output":"1"},{"id":1695226433345,"input":"AAAAAAAAAA","output":"10"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/rei/Algorithm/AtCoder/abc320/b.cpp","group":"local","local":true}

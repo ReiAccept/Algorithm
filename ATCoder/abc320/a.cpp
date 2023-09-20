@@ -22,8 +22,11 @@ const int MAXN=(int)1e5+3,MOD=(int)1e9+7;
 
 inline int rnd(int x) {mt19937 mrand(random_device{}()); return mrand()%x;};
 
+ll a,b;
+
 inline void work(int CASE,bool FINAL_CASE) {
-    
+    cin>>a>>b;
+    cout<<(ll)pow(a,b)+(ll)pow(b,a)<<endl;
     return;
 }
 

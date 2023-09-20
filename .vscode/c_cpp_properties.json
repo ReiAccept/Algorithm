@@ -5,21 +5,21 @@
             "defines": [],
             "compilerPath": "/usr/bin/gcc",
             "cStandard": "c17",
-            "cppStandard": "c++17"
+            "cppStandard": "c++20"
         },{
             "name": "Mac",
             "includePath": [],
             "defines": [],
             "compilerPath": "/usr/bin/clang",
             "cStandard": "c17",
-            "cppStandard": "c++17"
+            "cppStandard": "c++20"
         },{
             "name": "Win32",
             "includePath": [],
             "defines": [],
             "compilerPath": "C:/mingw64/bin/gcc.exe",
             "cStandard": "c17",
-            "cppStandard": "c++17"
+            "cppStandard": "c++20"
         }
     ],
     "version": 4

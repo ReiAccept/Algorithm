@@ -1,0 +1,1 @@
+{"name":"Local: a","url":"/Users/rei/Algorithm/AtCoder/abc320/a.cpp","tests":[{"id":1695223496822,"input":"2 8","output":"320"},{"id":1695223519771,"input":"9 9","output":"774840978"},{"id":1695223527735,"input":"5 6","output":"23401"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/rei/Algorithm/AtCoder/abc320/a.cpp","group":"local","local":true}
