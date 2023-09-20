@@ -1,13 +1,25 @@
 {
     "configurations": [{
             "name": "Linux",
-            "includePath": [
-                // "${workspaceFolder}/**"
-            ],
+            "includePath": [],
             "defines": [],
-            "compilerPath": "/bin/gcc",
+            "compilerPath": "/usr/bin/gcc",
             "cStandard": "c17",
-            "cppStandard": "c++23"
+            "cppStandard": "c++17"
+        },{
+            "name": "Mac",
+            "includePath": [],
+            "defines": [],
+            "compilerPath": "/usr/bin/clang",
+            "cStandard": "c17",
+            "cppStandard": "c++17"
+        },{
+            "name": "Win32",
+            "includePath": [],
+            "defines": [],
+            "compilerPath": "C:/mingw64/bin/gcc.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++17"
         }
     ],
     "version": 4

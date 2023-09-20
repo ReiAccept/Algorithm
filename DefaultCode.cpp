@@ -1,4 +1,5 @@
-#include<bits/stdc++.h>
+#include<random>
+#include<iostream>
 #define mmst0(x) memset(x,0,sizeof(x))
 #define mmst3f(x) memset(x,0x3f,sizeof(x))
 #define all(x) (x).begin(),(x).end()
