@@ -25,10 +25,10 @@ impl Solution {
             let sum = l1.as_ref().map_or(0, |x| x.val) + l2.as_ref().map_or(0, |x| x.val) + carry;
             carry = sum / 10;
 
-            let sum_node = cur.insert(Box::new(ListNode::new(sum % 10)));
-            cur = &mut sum_node.next;
-            l1 = l1.and_then(|node| node.next);
-            l2 = l2.and_then(|node| node.next);
+            let node = cur.insert(Box::new(ListNode::new(sum % 10)));
+            cur = &mut node.next;
+            l1 = l1.and_then(|x| x.next);
+            l2 = l2.and_then(|x| x.next);
         }
         return head;
     }
