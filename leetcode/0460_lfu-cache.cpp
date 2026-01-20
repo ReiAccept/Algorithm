@@ -1,69 +1,55 @@
 class LFUCache {
-    int cap;
+    int cap, fmin; // 容量上限, 最低使用频率
     typedef list<int> LI;
-
-    int min_freq = 0;
-
-    struct Node{
-        int freq, val;
-        LI::iterator it;
+    struct Node {
+        int freq, val;   // 频率, val
+        LI::iterator it; // 指向频率链表中当前key的指针
     };
-
-    unordered_map<int, LI> use;
-    unordered_map<int, Node> c;
-
+    unordered_map<int, Node> m;  // key-val 关系 map
+    unordered_map<int, LI> freq; // 访问次数-list<key> 关系 map
 public:
-    LFUCache(int capacity) {
-        cap = capacity;
-    }
-    
-    void recent(int key) {
-        int freq = c[key].freq;
-        int val = c[key].val;
-        auto it = c[key].it;
+    LFUCache(int capacity) { cap = capacity; }
 
-        use[freq].erase(it);
-        if (use[freq].size()<=0) {
-            use.erase(freq);
-            if (freq == min_freq) {
-                min_freq++;
-            }
+    void freq_plus(int key) {
+        auto [freq, val, it] = m[key];
+
+        this->freq[freq].erase(it);
+
+        if (0 == this->freq[freq].size() && fmin == freq) { // 若当前freq等于最小ferq, 且没没有同样为当前freq的key
+            fmin++;
         }
 
-        use[freq+1].push_front(key);
-        c[key]={freq+1, val, use[freq+1].begin()};
-
+        this->freq[freq + 1].push_front(key);
+        m[key] = {freq + 1, val, this->freq[freq + 1].begin()};
     }
 
     int get(int key) {
-        if (c.count(key)) {
-            recent(key);
-            return c[key].val;
+        if (!m.count(key)) {
+            return -1;
         }
-        return -1;
+        freq_plus(key);
+        return m[key].val;
     }
-    
+
     void put(int key, int value) {
-        if (c.count(key)) {
-            c[key].val = value;
-            recent(key);
+        // 已存在的节点
+        if (m.count(key)) {
+            m[key].val = value;
+            freq_plus(key);
             return;
         }
 
-        if (c.size() >= cap) {
-            int rm = use[min_freq].back();
-            use[min_freq].pop_back();
-            c.erase(rm);
-
-            if (use[min_freq].size()==0) {
-                use.erase(min_freq);
-            }
+        // 删除多余节点
+        // 由于塞进新节点会把 fmin 置为 1 所以要先删节点再加节点
+        if (m.size() >= cap) {
+            m.erase(freq[fmin].back());
+            freq[fmin].pop_back();
         }
 
-        min_freq=1;
-
-        use[1].push_front(key);
-        c[key]= {1, value, use[1].begin()};
+        // 新节点
+        freq[1].push_front(key);
+        m[key] = {1, value, freq[1].begin()};
+        fmin = 1;
     }
 };
 
